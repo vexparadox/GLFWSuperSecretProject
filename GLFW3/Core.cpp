@@ -8,14 +8,14 @@
 
 #include "Core.hpp"
 
-void Core::draw(){
-    Graphics::drawRect(30, 30, 50, 50);
+void Core::setup(){
+    std::cout << Runner::windowHeight;
 }
 
 void Core::update(){
     
 }
 
-void Core::setup(){
-    std::cout << Runner::windowHeight;
+void Core::draw(){
+    Graphics::drawRect(30, 30, 50, 50);
 }
