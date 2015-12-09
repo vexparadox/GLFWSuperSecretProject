@@ -7,9 +7,11 @@
 //
 
 #include <iostream>
+#include "Runner.hpp"
+#include "Core.hpp"
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
-    return 0;
+int main(void)
+{
+    //start a new runner
+    Runner(720, 480, new Core);
 }
