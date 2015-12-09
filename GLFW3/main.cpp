@@ -13,5 +13,5 @@
 int main(void)
 {
     //start a new runner
-    Runner(720, 480, "Title of Window",new Core);
+    Runner(720, 480, 30, "Title of Window",new Core);
 }

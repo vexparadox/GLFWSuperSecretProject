@@ -12,9 +12,11 @@
 #include "BaseCore.hpp"
 class Runner{
     BaseCore c;
+    float currentTime, lastTime;
+    bool fps(int framerate);
 public:
     static float windowWidth, windowHeight;
-    Runner(float windowWidth, float windowHeight, const char* title, BaseCore* c);
+    Runner(float windowWidth, float windowHeight, int frameRate, const char* title, BaseCore* c);
 };
 
 #endif /* Runner_hpp */

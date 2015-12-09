@@ -10,7 +10,7 @@
 float Runner::windowWidth = 0;
 float Runner::windowHeight = 0;
 
-Runner::Runner(float windowWidth, float windowHeight, const char* title,BaseCore* c){
+Runner::Runner(float windowWidth, float windowHeight, int frameRate,const char* title,BaseCore* c){
     Runner::windowWidth = windowWidth;
     Runner::windowHeight = windowHeight;
     //assign the core to the pointer
@@ -46,6 +46,9 @@ Runner::Runner(float windowWidth, float windowHeight, const char* title,BaseCore
     //the game loop
     while (!glfwWindowShouldClose(window))
     {
+        if(fps(frameRate)){
+            continue;
+        }
         int width, height;
         //set view port
         glfwGetFramebufferSize(window, &width, &height);
@@ -58,8 +61,8 @@ Runner::Runner(float windowWidth, float windowHeight, const char* title,BaseCore
         glOrtho(0.f, windowWidth, windowWidth, 0.f, 0.f, 1.f);
         glMatrixMode(GL_MODELVIEW);
         glLoadIdentity();
-        //call update and then draw if the window isn't iconified
         int iconified = glfwGetWindowAttrib(window, GLFW_ICONIFIED);
+        //call update and then draw if the window isn't iconified
         if(iconified != 1){
             //update then draw
             c->update();
@@ -72,4 +75,16 @@ Runner::Runner(float windowWidth, float windowHeight, const char* title,BaseCore
     glfwDestroyWindow(window);
     glfwTerminate();
     exit(EXIT_SUCCESS);
+}
+
+bool Runner::fps(int framerate)
+{
+    currentTime = glfwGetTime();
+    
+    if(currentTime - lastTime >= 1.0 / framerate)
+    {
+        lastTime = currentTime;
+        return true;
+    }
+    return false;
 }

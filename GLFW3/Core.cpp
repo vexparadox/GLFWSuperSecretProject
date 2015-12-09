@@ -17,5 +17,5 @@ void Core::update(){
 }
 
 void Core::draw(){
-    Graphics::drawRect(30, 30, 50, 50);
+    Graphics::drawRect(x++, 30, 50, 50);
 }

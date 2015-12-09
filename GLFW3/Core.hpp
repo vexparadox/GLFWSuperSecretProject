@@ -17,6 +17,8 @@ public:
     void draw();
     void update();
     void setup();
+    
+    int x = 5;
 };
 
 #endif /* Core_hpp */
