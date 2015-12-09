@@ -11,12 +11,4 @@
 
 #include "Vector2D.h"
 #include "Vector3D.h"
-
-namespace Screen{
-    const int WINDOW_HEIGHT = 480;
-    const int WINDOW_WIDTH = 720;
-    Math::Vector2D GlPosition(Math::Vector2D pixelPosition);
-    Math::Vector2D GLPosition(float x, float y);
-}
-
 #endif /* Math_h */

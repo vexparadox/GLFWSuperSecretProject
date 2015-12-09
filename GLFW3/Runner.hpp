@@ -12,6 +12,7 @@
 #include "BaseCore.hpp"
 class Runner{
     BaseCore c;
+    static float windowWidth, windowHeight;
 public:
     Runner(float windowWidth, float windowHeight, BaseCore* c);
 };

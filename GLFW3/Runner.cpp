@@ -9,6 +9,8 @@
 #include "Runner.hpp"
 
 Runner::Runner(float windowWidth, float windowHeight, BaseCore* c){
+    this->windowWidth = windowWidth;
+    this->windowHeight = windowHeight;
     this->c = *c;
     
     GLFWwindow* window = c->getWindow();
@@ -18,7 +20,7 @@ Runner::Runner(float windowWidth, float windowHeight, BaseCore* c){
     }
     
     glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);
-    window = glfwCreateWindow(Screen::WINDOW_WIDTH, Screen::WINDOW_HEIGHT, "Simple example", NULL, NULL);
+    window = glfwCreateWindow(windowWidth, windowHeight, "Simple example", NULL, NULL);
     
     if (!window)
     {
