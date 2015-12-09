@@ -8,8 +8,8 @@
 
 #ifndef Core_hpp
 #define Core_hpp
+#include "Runner.hpp"
 
-#include "BaseCore.hpp"
 class Core : public BaseCore{
 public:
     Core(){};

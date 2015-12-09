@@ -45,7 +45,6 @@ namespace Graphics{
     void drawPoly(Polygon& p){
         glBegin(GL_POLYGON);
         for(auto points : p.getVerticies()){
-            points = Screen::GlPosition(points);
             glVertex3f(points.x, points.y, 0.0f);
         }
         glEnd();
@@ -54,7 +53,6 @@ namespace Graphics{
     void drawPoly(std::vector<Math::Vector2D>& v){
         glBegin(GL_POLYGON);
         for(auto points : v){
-            points = Screen::GlPosition(points);
             glVertex3f(points.x, points.y, 0.0f);
         }
         glEnd();

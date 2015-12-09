@@ -12,9 +12,9 @@
 #include "BaseCore.hpp"
 class Runner{
     BaseCore c;
-    static float windowWidth, windowHeight;
 public:
-    Runner(float windowWidth, float windowHeight, BaseCore* c);
+    static float windowWidth, windowHeight;
+    Runner(float windowWidth, float windowHeight, const char* title, BaseCore* c);
 };
 
 #endif /* Runner_hpp */

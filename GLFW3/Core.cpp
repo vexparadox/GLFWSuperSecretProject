@@ -17,5 +17,5 @@ void Core::update(){
 }
 
 void Core::setup(){
-    std::cout << "Poop";
+    std::cout << Runner::windowHeight;
 }
