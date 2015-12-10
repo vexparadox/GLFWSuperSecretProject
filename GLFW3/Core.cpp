@@ -18,6 +18,7 @@ void Core::update(){
 
 void Core::draw(){
     using namespace Graphics;
+    img.draw(0, 0);
 }
 
 void Core::keyPressed(int key){

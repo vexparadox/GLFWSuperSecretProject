@@ -13,12 +13,12 @@
 		C2071E811C15CBBE00648169 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2071E801C15CBBE00648169 /* main.cpp */; };
 		C2071E881C15CBD700648169 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2071E871C15CBD700648169 /* OpenGL.framework */; };
 		C2071E941C15D67A00648169 /* Graphics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2071E921C15D67A00648169 /* Graphics.cpp */; settings = {ASSET_TAGS = (); }; };
+		C27AE86B1C1A27C4003CB71A /* libglfw.3.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C27AE86A1C1A27C4003CB71A /* libglfw.3.1.dylib */; };
 		C29A570C1C1A16E200A626CE /* libSOIL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C29A570B1C1A16E200A626CE /* libSOIL.a */; };
 		C29A57111C1A171A00A626CE /* image_DXT.c in Sources */ = {isa = PBXBuildFile; fileRef = C29A570D1C1A171A00A626CE /* image_DXT.c */; };
 		C29A57121C1A171A00A626CE /* image_helper.c in Sources */ = {isa = PBXBuildFile; fileRef = C29A570E1C1A171A00A626CE /* image_helper.c */; };
 		C29A57131C1A171A00A626CE /* SOIL.c in Sources */ = {isa = PBXBuildFile; fileRef = C29A570F1C1A171A00A626CE /* SOIL.c */; };
 		C29A57141C1A171A00A626CE /* stb_image_aug.c in Sources */ = {isa = PBXBuildFile; fileRef = C29A57101C1A171A00A626CE /* stb_image_aug.c */; };
-		C29A57171C1A176A00A626CE /* libglfw.3.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C29A57161C1A176A00A626CE /* libglfw.3.1.dylib */; };
 		C2FF28211C19CFB20094E154 /* Image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2FF281F1C19CFB20094E154 /* Image.cpp */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
@@ -53,13 +53,13 @@
 		C2071E921C15D67A00648169 /* Graphics.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Graphics.cpp; sourceTree = "<group>"; };
 		C2071E931C15D67A00648169 /* Graphics.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Graphics.hpp; sourceTree = "<group>"; };
 		C2071E961C15E18600648169 /* Rect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rect.h; sourceTree = "<group>"; };
+		C27AE86A1C1A27C4003CB71A /* libglfw.3.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.1.dylib; path = lib/libglfw.3.1.dylib; sourceTree = "<group>"; };
 		C29A570A1C19EC9600A626CE /* Colour.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Colour.h; sourceTree = "<group>"; };
 		C29A570B1C1A16E200A626CE /* libSOIL.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSOIL.a; path = lib/libSOIL.a; sourceTree = "<group>"; };
 		C29A570D1C1A171A00A626CE /* image_DXT.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = image_DXT.c; path = GLFW3/SOIL/image_DXT.c; sourceTree = "<group>"; };
 		C29A570E1C1A171A00A626CE /* image_helper.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = image_helper.c; path = GLFW3/SOIL/image_helper.c; sourceTree = "<group>"; };
 		C29A570F1C1A171A00A626CE /* SOIL.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = SOIL.c; path = GLFW3/SOIL/SOIL.c; sourceTree = "<group>"; };
 		C29A57101C1A171A00A626CE /* stb_image_aug.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = stb_image_aug.c; path = GLFW3/SOIL/stb_image_aug.c; sourceTree = "<group>"; };
-		C29A57161C1A176A00A626CE /* libglfw.3.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.1.dylib; path = lib/libglfw.3.1.dylib; sourceTree = "<group>"; };
 		C2FF281F1C19CFB20094E154 /* Image.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Image.cpp; sourceTree = "<group>"; };
 		C2FF28201C19CFB20094E154 /* Image.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Image.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -69,8 +69,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C29A57171C1A176A00A626CE /* libglfw.3.1.dylib in Frameworks */,
 				C29A570C1C1A16E200A626CE /* libSOIL.a in Frameworks */,
+				C27AE86B1C1A27C4003CB71A /* libglfw.3.1.dylib in Frameworks */,
 				C2071E881C15CBD700648169 /* OpenGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -118,7 +118,7 @@
 		C2071E741C15CBBE00648169 = {
 			isa = PBXGroup;
 			children = (
-				C29A57161C1A176A00A626CE /* libglfw.3.1.dylib */,
+				C27AE86A1C1A27C4003CB71A /* libglfw.3.1.dylib */,
 				C29A57151C1A172300A626CE /* SOIL */,
 				C2071E871C15CBD700648169 /* OpenGL.framework */,
 				C2071E7F1C15CBBE00648169 /* GLFW3 */,
