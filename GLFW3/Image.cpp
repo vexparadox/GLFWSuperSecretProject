@@ -35,8 +35,12 @@ void Image::draw(float x, float y){
     glEnable(GL_TEXTURE_2D);
     glBegin(GL_QUADS);
     glTexCoord2d(0,0); glVertex2f(x, y+h);
+    //bottom left
     glTexCoord2d(0,1); glVertex2f(x, y);
+    //top left
     glTexCoord2d(1,1); glVertex2f(x+w, y);
+    //top right
     glTexCoord2d(1,0); glVertex2f(x+w, y+h);
+    //bottom right
     glEnd();
 }
