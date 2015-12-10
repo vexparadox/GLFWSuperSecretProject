@@ -9,8 +9,8 @@
 #ifndef Image_hpp
 #define Image_hpp
 
-#include <SOIL/SOIL.h>
-#include <GLFW/glfw3.h>
+#include "SOIL/SOIL.h"
+#include "GLFW/glfw3.h"
 #include <iostream>
 
 class Image{

@@ -319,9 +319,8 @@
 		C2071E851C15CBBE00648169 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				HEADER_SEARCH_PATHS = /usr/local/include;
+				HEADER_SEARCH_PATHS = "";
 				LIBRARY_SEARCH_PATHS = (
-					/usr/local/lib,
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/lib",
 				);
@@ -333,9 +332,8 @@
 		C2071E861C15CBBE00648169 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				HEADER_SEARCH_PATHS = /usr/local/include;
+				HEADER_SEARCH_PATHS = "";
 				LIBRARY_SEARCH_PATHS = (
-					/usr/local/lib,
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/lib",
 				);
