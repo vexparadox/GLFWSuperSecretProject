@@ -19,8 +19,8 @@ public:
     void setup();
     void keyPressed(int key);
     void keyReleased(int key);
-    GLuint tex_2d;
     Image img;
+    int x = 0;
 };
 
 #endif /* Core_hpp */

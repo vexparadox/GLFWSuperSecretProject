@@ -13,15 +13,7 @@
 
 int main(void)
 {
-    
-//    unsigned char* image = SOIL_load_image("image.png", &width, &height, 0, SOIL_LOAD_AUTO);
-//    
-//    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, image);
-//    SOIL_free_image_data(image);
-//    glBindTexture(GL_TEXTURE_2D, 0);
-
-    
-    
-    //start a new runner
+    //start a new runner with the constructor
+    //Runner(int width, int height, int frameRate, const char* title, new Core);
     Runner(720, 480, 30, "Title of Window", new Core);
 }

@@ -17,11 +17,18 @@ void Core::update(){
 }
 
 void Core::draw(){
-    img.draw(0, 0);
+    img.draw(x, 0);
 }
 
 void Core::keyPressed(int key){
-    std::cout << key;
+    switch(key){
+        case 263:
+            x--;
+            break;
+        case 262:
+            x++;
+            break;
+    }
 }
 
 void Core::keyReleased(int key){

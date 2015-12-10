@@ -20,6 +20,8 @@ class BaseCore{
 private:
     GLFWwindow* window;
 public:
+    bool keyIsPressed = false;
+    int keyCode = 0;
     virtual ~BaseCore(){};
     virtual void draw(){};
     virtual void setup(){};
