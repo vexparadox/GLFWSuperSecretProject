@@ -49,6 +49,7 @@ Runner::Runner(float windowWidth, float windowHeight, int frameRate,const char* 
     glClearColor(1, 1, 1, 1);
     while (!glfwWindowShouldClose(window))
     {
+        int iconified = glfwGetWindowAttrib(window, GLFW_ICONIFIED);
         if(fps(frameRate)){
             continue;
         }
@@ -65,14 +66,15 @@ Runner::Runner(float windowWidth, float windowHeight, int frameRate,const char* 
         glMatrixMode(GL_MODELVIEW);
         glLoadIdentity();
         //call update and then draw if the window isn't iconified
-        int iconified = glfwGetWindowAttrib(window, GLFW_ICONIFIED);
         if(iconified != 1){
-            //update then draw
-            c->update();
+            //draw
             c->draw();
         }
         //swap the buffers
         glfwSwapBuffers(window);
+        if(iconified != 1){
+            c->update();
+        }
         glfwPollEvents();
     }
     glfwDestroyWindow(window);
