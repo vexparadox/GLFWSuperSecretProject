@@ -16,8 +16,9 @@
 class Image{
     GLuint textureID;
     int w, h;
+    bool isLoaded;
 public:
-    Image();
+    Image(){};
     bool loadImage(const char* name, int w, int h);
     void draw(float x, float y);
 };

@@ -8,26 +8,33 @@
 
 #include "Image.hpp"
 
-
-Image::Image(){
-}
-
 bool Image::loadImage(const char *name, int w, int h){
+    //check if it's already loaded, if so load into the same texture point
+    if(!isLoaded){
     textureID = SOIL_load_OGL_texture (name,
                                     SOIL_LOAD_AUTO,
                                     SOIL_CREATE_NEW_ID,
                                     SOIL_FLAG_MIPMAPS | SOIL_FLAG_INVERT_Y | SOIL_FLAG_NTSC_SAFE_RGB | SOIL_FLAG_COMPRESS_TO_DXT
                                        );
+
+    }else{
+        textureID = SOIL_load_OGL_texture (name,
+                                           SOIL_LOAD_AUTO,
+                                           textureID,
+                                           SOIL_FLAG_MIPMAPS | SOIL_FLAG_INVERT_Y | SOIL_FLAG_NTSC_SAFE_RGB | SOIL_FLAG_COMPRESS_TO_DXT
+                                           );
+    }
     if(textureID != 0){
         this->w = w;
         this->h = h;
         return true;
     }
+    
     return false;
 }
 
 void Image::draw(float x, float y){
-    if(textureID == 0){
+    if(textureID == 0 || !isLoaded){
         std::cout << "No image has been loaded" << std::endl;
         return;
     }
