@@ -17,8 +17,7 @@ public:
     void draw();
     void update();
     void setup();
-    
-    int x = 5;
+    GLuint tex_2d;
 };
 
 #endif /* Core_hpp */
