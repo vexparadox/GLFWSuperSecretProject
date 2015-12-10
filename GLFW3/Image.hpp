@@ -16,12 +16,13 @@
 class Image{
     GLuint textureID;
     int w, h;
-    bool isLoaded;
+    bool loaded = false;
 public:
     Image(){};
     bool loadImage(const char* name, int w, int h);
     void draw(float x, float y);
     bool grabScreen(float x, float y, float w, float h);
+    bool isLoaded();
 };
 
 #endif /* Image_hpp */

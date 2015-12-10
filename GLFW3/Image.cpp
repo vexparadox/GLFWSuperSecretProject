@@ -7,10 +7,9 @@
 //
 
 #include "Image.hpp"
-
 bool Image::loadImage(const char *name, int w, int h){
     //check if it's already loaded, if so load into the same texture point
-    if(!isLoaded){
+    if(!loaded){
     textureID = SOIL_load_OGL_texture (name,
                                     SOIL_LOAD_AUTO,
                                     SOIL_CREATE_NEW_ID,
@@ -31,13 +30,14 @@ bool Image::loadImage(const char *name, int w, int h){
     if(textureID != 0){
         this->w = w;
         this->h = h;
+        loaded = true;
         return true;
     }
     return false;
 }
 
 void Image::draw(float x, float y){
-    if(textureID == 0 || !isLoaded){
+    if(textureID == 0 || !loaded){
         std::cout << "No image has been loaded" << std::endl;
         return;
     }
@@ -62,4 +62,8 @@ bool Image::grabScreen(float x, float y, float w, float h){
      SOIL_SAVE_TYPE_BMP,
      0, 0, 1024, 768
      );
+}
+
+bool Image::isLoaded(){
+    return loaded;
 }
