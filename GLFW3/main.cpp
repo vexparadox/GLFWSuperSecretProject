@@ -5,9 +5,6 @@
 //  Created by William Meaton on 07/12/2015.
 //  Copyright © 2015 WillMeaton.uk. All rights reserved.
 //
-
-#include <iostream>
-#include <SOIL/SOIL.h>
 #include "Runner.hpp"
 #include "Core.hpp"
 
