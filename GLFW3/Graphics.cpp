@@ -57,4 +57,16 @@ namespace Graphics{
         }
         glEnd();
     }
+    
+    void setBackground(float r, float g, float b, float a){
+        glClearColor(r/255, g/255, b/255, a/255);
+    }
+    
+    void setBackground(float r, float g, float b){
+        setBackground(r, g, b, 0);
+    }
+    
+    void setBackground(Colour c){
+        setBackground(c.r, c.g, c.b, c.a);
+    }
 }

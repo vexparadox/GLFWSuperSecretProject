@@ -17,19 +17,20 @@ void Core::update(){
 }
 
 void Core::draw(){
+    Graphics::setBackground(0, 0, 0, 0);
     img.draw(x, 0);
+    if(keyIsPressed){
+        if(keyCode == 262){
+            x++;
+        }else if(keyCode == 263){
+            x--;
+        }
+    }
     
 }
 
 void Core::keyPressed(int key){
-    switch(key){
-        case 263:
-            x--;
-            break;
-        case 262:
-            x++;
-            break;
-    }
+
 }
 
 void Core::keyReleased(int key){

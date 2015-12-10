@@ -13,5 +13,6 @@
 #include "Rect.h"
 #include "Poly.h"
 #include "Image.hpp"
+#include "Colour.h"
 
 #endif /* Types_h */

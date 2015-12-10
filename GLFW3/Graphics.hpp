@@ -12,6 +12,7 @@
 #include "Types.h"
 #include "Math.h"
 #include <GLFW/glfw3.h>
+
 namespace Graphics{
     //Triangles
     void drawTriangle(Triangle& t);
@@ -24,7 +25,10 @@ namespace Graphics{
     //Polygons
     void drawPoly(Polygon& p);
     void drawPoly(std::vector<Math::Vector2D>& v);
-
+    
+    void setBackground(float r, float g, float b, float a);
+    void setBackground(float r, float g, float b);
+    void setBackground(Colour c);
 }
 
 

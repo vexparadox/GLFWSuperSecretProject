@@ -46,6 +46,7 @@ Runner::Runner(float windowWidth, float windowHeight, int frameRate,const char* 
     //call setup for first time run
     c->setup();
     //the game loop
+    glClearColor(1, 1, 1, 1);
     while (!glfwWindowShouldClose(window))
     {
         if(fps(frameRate)){

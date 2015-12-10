@@ -54,6 +54,7 @@
 		C2071E921C15D67A00648169 /* Graphics.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Graphics.cpp; sourceTree = "<group>"; };
 		C2071E931C15D67A00648169 /* Graphics.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Graphics.hpp; sourceTree = "<group>"; };
 		C2071E961C15E18600648169 /* Rect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rect.h; sourceTree = "<group>"; };
+		C29A570A1C19EC9600A626CE /* Colour.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Colour.h; sourceTree = "<group>"; };
 		C2FF28131C19B9530094E154 /* libSOIL.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSOIL.a; path = /usr/local/lib/libSOIL.a; sourceTree = "<absolute>"; };
 		C2FF28161C19BA2F0094E154 /* image_DXT.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = image_DXT.c; path = /usr/local/include/SOIL/image_DXT.c; sourceTree = "<absolute>"; };
 		C2FF28171C19BA2F0094E154 /* image_helper.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = image_helper.c; path = /usr/local/include/SOIL/image_helper.c; sourceTree = "<absolute>"; };
@@ -81,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				C2071E911C15D2F300648169 /* Types.h */,
+				C29A570A1C19EC9600A626CE /* Colour.h */,
 				C20671AA1C176EF50006C6B1 /* Poly.h */,
 				C2071E8B1C15CE9300648169 /* Triangle.h */,
 				C2071E961C15E18600648169 /* Rect.h */,
