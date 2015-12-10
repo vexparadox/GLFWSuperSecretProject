@@ -103,10 +103,12 @@ void Runner::key_callback(GLFWwindow* window, int key, int scancode, int action,
     Runner* r = static_cast<Runner*>(data);
     if(action == GLFW_PRESS){
         r->c->keyIsPressed = true;
+        r->c->keyCode = key;
         r->c->keyPressed(key);
     }
     if(action == GLFW_RELEASE){
         r->c->keyIsPressed = false;
+        r->c->keyCode = 0;
         r->c->keyReleased(key);
     }
 }
