@@ -19,6 +19,7 @@
 		C2FF281B1C19BA2F0094E154 /* image_helper.c in Sources */ = {isa = PBXBuildFile; fileRef = C2FF28171C19BA2F0094E154 /* image_helper.c */; };
 		C2FF281C1C19BA2F0094E154 /* SOIL.c in Sources */ = {isa = PBXBuildFile; fileRef = C2FF28181C19BA2F0094E154 /* SOIL.c */; };
 		C2FF281D1C19BA2F0094E154 /* stb_image_aug.c in Sources */ = {isa = PBXBuildFile; fileRef = C2FF28191C19BA2F0094E154 /* stb_image_aug.c */; };
+		C2FF28211C19CFB20094E154 /* Image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2FF281F1C19CFB20094E154 /* Image.cpp */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -58,6 +59,8 @@
 		C2FF28171C19BA2F0094E154 /* image_helper.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = image_helper.c; path = /usr/local/include/SOIL/image_helper.c; sourceTree = "<absolute>"; };
 		C2FF28181C19BA2F0094E154 /* SOIL.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = SOIL.c; path = /usr/local/include/SOIL/SOIL.c; sourceTree = "<absolute>"; };
 		C2FF28191C19BA2F0094E154 /* stb_image_aug.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = stb_image_aug.c; path = /usr/local/include/SOIL/stb_image_aug.c; sourceTree = "<absolute>"; };
+		C2FF281F1C19CFB20094E154 /* Image.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Image.cpp; sourceTree = "<group>"; };
+		C2FF28201C19CFB20094E154 /* Image.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Image.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,8 @@
 				C20671AA1C176EF50006C6B1 /* Poly.h */,
 				C2071E8B1C15CE9300648169 /* Triangle.h */,
 				C2071E961C15E18600648169 /* Rect.h */,
+				C2FF281F1C19CFB20094E154 /* Image.cpp */,
+				C2FF28201C19CFB20094E154 /* Image.hpp */,
 			);
 			name = Types;
 			sourceTree = "<group>";
@@ -225,6 +230,7 @@
 				C2071E941C15D67A00648169 /* Graphics.cpp in Sources */,
 				C20671AD1C1792770006C6B1 /* Core.cpp in Sources */,
 				C2071E811C15CBBE00648169 /* main.cpp in Sources */,
+				C2FF28211C19CFB20094E154 /* Image.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

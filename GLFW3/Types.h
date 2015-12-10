@@ -12,5 +12,6 @@
 #include "Triangle.h"
 #include "Rect.h"
 #include "Poly.h"
+#include "Image.hpp"
 
 #endif /* Types_h */

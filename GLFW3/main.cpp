@@ -13,6 +13,7 @@
 
 int main(void)
 {
+    
 //    unsigned char* image = SOIL_load_image("image.png", &width, &height, 0, SOIL_LOAD_AUTO);
 //    
 //    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, image);
