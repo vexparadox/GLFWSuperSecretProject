@@ -26,18 +26,17 @@ void Core::update(){
 void Core::draw(){
     float x, y;
     int w, h;
-    x = 0;
-    y = 0;
-    w = 200;
-    h = 200;
-
-    glColor3f(0.0f,0.f,0.f);
+    x = 50;
+    y = 50;
+    w = 433;
+    h = 512;
+    
     glBindTexture(GL_TEXTURE_2D, tex_2d);
     glEnable(GL_TEXTURE_2D);
     glBegin(GL_QUADS);
-    glTexCoord2d(0,0);        glVertex3f(x+w, y+h, 0);
-    glTexCoord2d(0,1);        glVertex3f(x+w, y, 0);
-    glTexCoord2d(1,1);        glVertex3f(x+w, y+h, 0);
-    glTexCoord2d(1,0);        glVertex3f(x, y, 0);
+    glTexCoord2d(0,0); glVertex2f(x, y+h);
+    glTexCoord2d(0,1); glVertex2f(x, y);
+    glTexCoord2d(1,1); glVertex2f(x+w, y);
+    glTexCoord2d(1,0); glVertex2f(x+w, y+h);
     glEnd();
 }
