@@ -9,7 +9,7 @@
 #include "Core.hpp"
 
 void Core::setup(){
-    img.loadImage("/Users/williammeaton/Desktop/GLFW3/img.jpg", 433, 512);
+    img.loadImage("/Users/williammeaton/Desktop/GLFW3/data/img.jpg", 433, 512);
 }
 
 void Core::update(){
@@ -18,7 +18,6 @@ void Core::update(){
 
 void Core::draw(){
     using namespace Graphics;
-    img.draw(0, 0);
 }
 
 void Core::keyPressed(int key){

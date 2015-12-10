@@ -18,18 +18,21 @@ bool Image::loadImage(const char *name, int w, int h){
                                        );
 
     }else{
-        textureID = SOIL_load_OGL_texture (name,
+        GLuint temp = SOIL_load_OGL_texture (name,
                                            SOIL_LOAD_AUTO,
                                            textureID,
                                            SOIL_FLAG_MIPMAPS | SOIL_FLAG_INVERT_Y | SOIL_FLAG_NTSC_SAFE_RGB | SOIL_FLAG_COMPRESS_TO_DXT
                                            );
+        //if the load failed then return a fail
+        if(temp == 0){
+            return false;
+        }
     }
     if(textureID != 0){
         this->w = w;
         this->h = h;
         return true;
     }
-    
     return false;
 }
 
@@ -50,4 +53,13 @@ void Image::draw(float x, float y){
     glTexCoord2d(1,0); glVertex2f(x+w, y+h);
     //bottom right
     glEnd();
+}
+
+bool Image::grabScreen(float x, float y, float w, float h){
+    return SOIL_save_screenshot
+    (
+     "save.bmp",
+     SOIL_SAVE_TYPE_BMP,
+     0, 0, 1024, 768
+     );
 }
