@@ -1,4 +1,10 @@
 # GLFWSuperSecretProject
+For this you will need GLFW3, this can be aquired by using brew.
+
+brew install glfw3
+
+SOIL will be included in the download - eventually
+
 Please note the very limited functionality.
 
 Core.cpp and Core.hpp is where user code should be put. The Methods contained are self-explanatory.
