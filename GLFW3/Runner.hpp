@@ -12,7 +12,7 @@
 #include "BaseCore.hpp"
 class Runner{
     BaseCore* c;
-    float currentTime, lastTime;
+    double currentTime, lastTime;
     bool fps(int framerate);
 public:
     static float windowWidth, windowHeight;

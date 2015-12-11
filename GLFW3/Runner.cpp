@@ -50,6 +50,9 @@ Runner::Runner(float windowWidth, float windowHeight, int frameRate,const char* 
     while (!glfwWindowShouldClose(window))
     {
         int iconified = glfwGetWindowAttrib(window, GLFW_ICONIFIED);
+        if(iconified == 1){
+            glfwWaitEvents();
+        }
         if(fps(frameRate)){
             continue;
         }
@@ -93,6 +96,7 @@ bool Runner::fps(int framerate)
     }
     return false;
 }
+
 
 void Runner::error_callback(int error, const char* description){
     fputs(description, stderr);
