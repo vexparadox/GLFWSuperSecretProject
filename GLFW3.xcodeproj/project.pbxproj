@@ -43,7 +43,7 @@
 		C20671B11C184FA70006C6B1 /* Runner.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Runner.hpp; sourceTree = "<group>"; };
 		C20671B31C184FCC0006C6B1 /* BaseCore.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BaseCore.cpp; sourceTree = "<group>"; };
 		C20671B41C184FCC0006C6B1 /* BaseCore.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BaseCore.hpp; sourceTree = "<group>"; };
-		C2071E7D1C15CBBE00648169 /* GLFW3 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = GLFW3; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2071E7D1C15CBBE00648169 /* GLFW3 */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "compiled.mach-o.executable"; path = GLFW3; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2071E801C15CBBE00648169 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		C2071E871C15CBD700648169 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		C2071E8B1C15CE9300648169 /* Triangle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Triangle.h; sourceTree = "<group>"; };

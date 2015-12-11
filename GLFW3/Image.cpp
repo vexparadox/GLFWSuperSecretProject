@@ -69,3 +69,7 @@ bool Image::grabScreen(float x, float y, float w, float h){
 bool Image::isLoaded(){
     return loaded;
 }
+
+GLuint Image::getTextureID(){
+    return textureID;
+}

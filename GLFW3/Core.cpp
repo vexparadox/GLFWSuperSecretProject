@@ -17,7 +17,7 @@ void Core::update(){
 }
 
 void Core::draw(){
-    using namespace Graphics;
+    Graphics::drawRect(0, 0, 50, 50);
 }
 
 void Core::keyPressed(int key){

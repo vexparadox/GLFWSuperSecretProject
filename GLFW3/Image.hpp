@@ -23,6 +23,7 @@ public:
     void draw(float x, float y);
     bool grabScreen(float x, float y, float w, float h);
     bool isLoaded();
+    GLuint getTextureID();
 };
 
 #endif /* Image_hpp */
