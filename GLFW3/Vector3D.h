@@ -44,11 +44,11 @@ namespace Math {
             return temp;
         }
         
-        inline void operator= (const Vector3D& v){
+        inline Vector3D& operator= (const Vector3D& v){
             this->x = v.x;
             this->y = v.y;
             this->z = v.z;
-            return;
+            return *this;
         }
         
         inline Vector3D operator*(const Vector3D& v){
