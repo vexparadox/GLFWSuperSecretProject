@@ -18,6 +18,12 @@ public:
         colourAssign(this->b, b);
         colourAssign(this->a, a);
     }
+    Colour(){
+        r = 0;
+        g = 0;
+        b = 0;
+        a = 0;
+    }
 private:
     inline void colourAssign(float c, float input){
         if(input > 255){
@@ -28,6 +34,20 @@ private:
             c = 0;
             return;
         }
+    }
+    
+    inline Colour operator+ (const Colour& c){
+        Colour temp;
+        colourAssign(temp.r, (this->r + c.r));
+        colourAssign(temp.g, (this->g + c.g));
+        colourAssign(temp.b, (this->b + c.b));
+        colourAssign(temp.a, (this->a + c.a));
+        return temp;
+    }
+    
+    friend inline void operator+= (Colour& c1, const Colour& c2){
+        c1 = c1+c2;
+        return;
     }
 };
 
