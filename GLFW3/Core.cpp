@@ -21,7 +21,7 @@ void Core::draw(){
     if(keyIsPressed){
         x++;
     }
-    img.draw(x, 0);
+    img.draw(0, 0);
 }
 
 void Core::keyPressed(int key){

@@ -38,8 +38,7 @@ namespace Graphics{
         //bottom right
         glVertex3f(v.x+w, v.y, 0.0f );
         //top right
-        glEnd( );
-    
+        glEnd();
     }
     
     void drawPoly(Polygon& p){

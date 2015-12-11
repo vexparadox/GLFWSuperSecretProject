@@ -168,22 +168,6 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GLFW3/Runner.cpp"
-            timestampString = "471524802.363996"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "137"
-            endingLineNumber = "137"
-            landmarkName = "Runner::key_callback(GLFWwindow* window, int key, int scancode, int action, int mods)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GLFW3/Runner.cpp"
             timestampString = "471457402.422291"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
