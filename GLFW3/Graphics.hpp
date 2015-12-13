@@ -10,7 +10,7 @@
 #define Graphics_hpp
 
 #include "Types.h"
-#include "GLFW/glfw3.h"
+#include <GLFW/glfw3.h>
 
 namespace Graphics{
     //Triangles

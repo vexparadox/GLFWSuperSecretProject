@@ -10,7 +10,6 @@
 #define Poly_h
 #include <vector>
 #include "Math.h"
-#include "Graphics.hpp"
 class Polygon{
 private:
     std::vector<Math::Vector2D> v;

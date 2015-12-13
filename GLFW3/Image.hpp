@@ -10,7 +10,7 @@
 #define Image_hpp
 
 #include "SOIL/SOIL.h"
-#include "GLFW/glfw3.h"
+#include <GLFW/glfw3.h>
 #include <iostream>
 
 class Image{
