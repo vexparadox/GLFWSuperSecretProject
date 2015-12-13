@@ -19,13 +19,13 @@ namespace Math {
         }
         Vector2D(){}
         ~Vector2D(){}
-        float distance(const Vector2D& v1, const Vector2D v2){
-            float temp = sqrt((v1.x-v2.x)*(v1.x-v2.x)+(v1.y-v2.y)*(v1.y-v2.y));
+        float distance(const Vector2D v2){
+            float temp = sqrt((this->x-v2.x)*(this->x-v2.x)+(this->y-v2.y)*(this->y-v2.y));
             return temp;
         }
         
-        float distance(float x1, float y1, float x2, float y2){
-            return(this->distance(Vector2D(x1, y1), Vector2D(x2, y2)));
+        float distance(float x2, float y2){
+            return(this->distance(Vector2D(x2, y2)));
         }
         
         inline friend bool operator== (const Vector2D& v1, const Vector2D& v2){
