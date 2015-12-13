@@ -10,11 +10,11 @@
 		C20671AD1C1792770006C6B1 /* Core.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C20671AB1C1792770006C6B1 /* Core.cpp */; settings = {ASSET_TAGS = (); }; };
 		C20671B21C184FA70006C6B1 /* Runner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C20671B01C184FA70006C6B1 /* Runner.cpp */; settings = {ASSET_TAGS = (); }; };
 		C20671B51C184FCC0006C6B1 /* BaseCore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C20671B31C184FCC0006C6B1 /* BaseCore.cpp */; settings = {ASSET_TAGS = (); }; };
+		C206A6711C1DA8CC000CB230 /* libglfw3.3.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C206A6701C1DA8CC000CB230 /* libglfw3.3.1.dylib */; };
 		C2071E811C15CBBE00648169 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2071E801C15CBBE00648169 /* main.cpp */; };
 		C2071E881C15CBD700648169 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2071E871C15CBD700648169 /* OpenGL.framework */; };
 		C2071E941C15D67A00648169 /* Graphics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2071E921C15D67A00648169 /* Graphics.cpp */; settings = {ASSET_TAGS = (); }; };
 		C21729601C1AEC1B00E2869A /* Font.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C217295E1C1AEC1B00E2869A /* Font.cpp */; settings = {ASSET_TAGS = (); }; };
-		C21729651C1B052100E2869A /* libglfw.3.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C21729641C1B052100E2869A /* libglfw.3.1.dylib */; };
 		C29A570C1C1A16E200A626CE /* libSOIL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C29A570B1C1A16E200A626CE /* libSOIL.a */; };
 		C29A57111C1A171A00A626CE /* image_DXT.c in Sources */ = {isa = PBXBuildFile; fileRef = C29A570D1C1A171A00A626CE /* image_DXT.c */; };
 		C29A57121C1A171A00A626CE /* image_helper.c in Sources */ = {isa = PBXBuildFile; fileRef = C29A570E1C1A171A00A626CE /* image_helper.c */; };
@@ -43,7 +43,8 @@
 		C20671B11C184FA70006C6B1 /* Runner.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Runner.hpp; sourceTree = "<group>"; };
 		C20671B31C184FCC0006C6B1 /* BaseCore.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BaseCore.cpp; sourceTree = "<group>"; };
 		C20671B41C184FCC0006C6B1 /* BaseCore.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BaseCore.hpp; sourceTree = "<group>"; };
-		C2071E7D1C15CBBE00648169 /* GLFW3 */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "compiled.mach-o.executable"; path = GLFW3; sourceTree = BUILT_PRODUCTS_DIR; };
+		C206A6701C1DA8CC000CB230 /* libglfw3.3.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw3.3.1.dylib; path = ../../../../usr/local/Cellar/glfw3/3.1.2/lib/libglfw3.3.1.dylib; sourceTree = "<group>"; };
+		C2071E7D1C15CBBE00648169 /* GLFW3 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = GLFW3; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2071E801C15CBBE00648169 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		C2071E871C15CBD700648169 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		C2071E8B1C15CE9300648169 /* Triangle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Triangle.h; sourceTree = "<group>"; };
@@ -56,7 +57,6 @@
 		C2071E961C15E18600648169 /* Rect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rect.h; sourceTree = "<group>"; };
 		C217295E1C1AEC1B00E2869A /* Font.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Font.cpp; sourceTree = "<group>"; };
 		C217295F1C1AEC1B00E2869A /* Font.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Font.hpp; sourceTree = "<group>"; };
-		C21729641C1B052100E2869A /* libglfw.3.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.1.dylib; path = lib/libglfw.3.1.dylib; sourceTree = "<group>"; };
 		C29A570A1C19EC9600A626CE /* Colour.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Colour.h; sourceTree = "<group>"; };
 		C29A570B1C1A16E200A626CE /* libSOIL.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSOIL.a; path = lib/libSOIL.a; sourceTree = "<group>"; };
 		C29A570D1C1A171A00A626CE /* image_DXT.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = image_DXT.c; path = GLFW3/SOIL/image_DXT.c; sourceTree = "<group>"; };
@@ -72,9 +72,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C206A6711C1DA8CC000CB230 /* libglfw3.3.1.dylib in Frameworks */,
 				C29A570C1C1A16E200A626CE /* libSOIL.a in Frameworks */,
 				C2071E881C15CBD700648169 /* OpenGL.framework in Frameworks */,
-				C21729651C1B052100E2869A /* libglfw.3.1.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,7 +123,7 @@
 		C2071E741C15CBBE00648169 = {
 			isa = PBXGroup;
 			children = (
-				C21729641C1B052100E2869A /* libglfw.3.1.dylib */,
+				C206A6701C1DA8CC000CB230 /* libglfw3.3.1.dylib */,
 				C29A57151C1A172300A626CE /* SOIL */,
 				C2071E871C15CBD700648169 /* OpenGL.framework */,
 				C2071E7F1C15CBBE00648169 /* GLFW3 */,
@@ -326,10 +326,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				HEADER_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = /usr/local/include;
 				LIBRARY_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/lib/**",
 					"$(PROJECT_DIR)/lib",
+					/usr/local/Cellar/glfw3/3.1.2/lib,
+					/usr/local/lib,
 				);
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -340,10 +342,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				HEADER_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = /usr/local/include;
 				LIBRARY_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/lib/**",
 					"$(PROJECT_DIR)/lib",
+					/usr/local/Cellar/glfw3/3.1.2/lib,
+					/usr/local/lib,
 				);
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
