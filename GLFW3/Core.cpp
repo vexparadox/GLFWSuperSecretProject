@@ -17,7 +17,7 @@ void Core::update(){
 }
 
 void Core::draw(){
-    Graphics::drawRect(0, 0, 50, 50);
+    img.draw(0, 0);
 }
 
 void Core::keyPressed(int key){

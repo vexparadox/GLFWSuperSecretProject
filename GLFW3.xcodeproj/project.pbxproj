@@ -15,7 +15,6 @@
 		C2071E881C15CBD700648169 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2071E871C15CBD700648169 /* OpenGL.framework */; };
 		C2071E941C15D67A00648169 /* Graphics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2071E921C15D67A00648169 /* Graphics.cpp */; settings = {ASSET_TAGS = (); }; };
 		C21729601C1AEC1B00E2869A /* Font.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C217295E1C1AEC1B00E2869A /* Font.cpp */; settings = {ASSET_TAGS = (); }; };
-		C29A570C1C1A16E200A626CE /* libSOIL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C29A570B1C1A16E200A626CE /* libSOIL.a */; };
 		C29A57111C1A171A00A626CE /* image_DXT.c in Sources */ = {isa = PBXBuildFile; fileRef = C29A570D1C1A171A00A626CE /* image_DXT.c */; };
 		C29A57121C1A171A00A626CE /* image_helper.c in Sources */ = {isa = PBXBuildFile; fileRef = C29A570E1C1A171A00A626CE /* image_helper.c */; };
 		C29A57131C1A171A00A626CE /* SOIL.c in Sources */ = {isa = PBXBuildFile; fileRef = C29A570F1C1A171A00A626CE /* SOIL.c */; };
@@ -58,7 +57,6 @@
 		C217295E1C1AEC1B00E2869A /* Font.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Font.cpp; sourceTree = "<group>"; };
 		C217295F1C1AEC1B00E2869A /* Font.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Font.hpp; sourceTree = "<group>"; };
 		C29A570A1C19EC9600A626CE /* Colour.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Colour.h; sourceTree = "<group>"; };
-		C29A570B1C1A16E200A626CE /* libSOIL.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSOIL.a; path = lib/libSOIL.a; sourceTree = "<group>"; };
 		C29A570D1C1A171A00A626CE /* image_DXT.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = image_DXT.c; path = GLFW3/SOIL/image_DXT.c; sourceTree = "<group>"; };
 		C29A570E1C1A171A00A626CE /* image_helper.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = image_helper.c; path = GLFW3/SOIL/image_helper.c; sourceTree = "<group>"; };
 		C29A570F1C1A171A00A626CE /* SOIL.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = SOIL.c; path = GLFW3/SOIL/SOIL.c; sourceTree = "<group>"; };
@@ -73,7 +71,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C206A6711C1DA8CC000CB230 /* libglfw3.3.1.dylib in Frameworks */,
-				C29A570C1C1A16E200A626CE /* libSOIL.a in Frameworks */,
 				C2071E881C15CBD700648169 /* OpenGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -167,7 +164,6 @@
 				C29A570E1C1A171A00A626CE /* image_helper.c */,
 				C29A570F1C1A171A00A626CE /* SOIL.c */,
 				C29A57101C1A171A00A626CE /* stb_image_aug.c */,
-				C29A570B1C1A16E200A626CE /* libSOIL.a */,
 			);
 			name = SOIL;
 			sourceTree = "<group>";
@@ -280,7 +276,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -316,7 +312,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 			};

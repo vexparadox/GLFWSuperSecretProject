@@ -115,5 +115,4 @@ namespace Math {
 
     };
 }
-
 #endif /* Vector2D_h */
