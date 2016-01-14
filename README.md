@@ -3,7 +3,7 @@ For this you will need GLFW3, this can be aquired by using brew.
 
 brew install glfw3
 
-SOIL will be included in the download - eventually
+SOIL is included in the download
 
 Please note the very limited functionality.
 
