@@ -25,7 +25,7 @@ public:
         a = 0;
     }
 private:
-    inline void colourAssign(float c, float input){
+    inline void colourAssign(float &c, float input){
         if(input > 255){
             c = 255;
             return;
@@ -34,6 +34,7 @@ private:
             c = 0;
             return;
         }
+        c = input;
     }
     
     inline Colour operator- (const Colour& c){
