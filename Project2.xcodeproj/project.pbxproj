@@ -165,7 +165,7 @@
 				C2071E801C15CBBE00648169 /* main.cpp */,
 				C20671AB1C1792770006C6B1 /* Core.cpp */,
 				C20671AC1C1792770006C6B1 /* Core.hpp */,
-				C22E640E1C51083800386E87 /* MyApp */,
+				C22E640E1C51083800386E87 /* GameCode */,
 				C20671AE1C1794130006C6B1 /* CoreFramework */,
 			);
 			name = src;
@@ -182,13 +182,13 @@
 			name = Math;
 			sourceTree = "<group>";
 		};
-		C22E640E1C51083800386E87 /* MyApp */ = {
+		C22E640E1C51083800386E87 /* GameCode */ = {
 			isa = PBXGroup;
 			children = (
 				C22E640F1C51086200386E87 /* GameObjects */,
 				C22E64101C51086900386E87 /* Handlers */,
 			);
-			name = MyApp;
+			name = GameCode;
 			sourceTree = "<group>";
 		};
 		C22E640F1C51086200386E87 /* GameObjects */ = {
