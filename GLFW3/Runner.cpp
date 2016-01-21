@@ -68,7 +68,7 @@ Runner::Runner(float windowWidth, float windowHeight, int frameRate,const char* 
         glMatrixMode(GL_PROJECTION);
         glLoadIdentity();
         //set the ortho to pixels so it can be used like processing
-        glOrtho(0.f, windowWidth, windowWidth, 0.f, -1.f, 1.f);
+        glOrtho(0.f, windowWidth, windowHeight, 0.f, -1.f, 1.f);
         glMatrixMode(GL_MODELVIEW);
         glLoadIdentity();
         //call update and then draw if the window isn't iconified

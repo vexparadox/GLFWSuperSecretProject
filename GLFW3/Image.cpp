@@ -24,12 +24,13 @@ bool Image::loadImage(std::string nameInput){
         glActiveTexture(GL_TEXTURE0);
         glBindTexture(GL_TEXTURE_2D, texture_id);
         
-        unsigned char* imageDataPtr =SOIL_load_image( name, &this->w, &this->h, 0, SOIL_LOAD_RGBA);
+        unsigned char* imageDataPtr =SOIL_load_image(name, &this->w, &this->h, 0, SOIL_LOAD_RGBA);
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
-        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP);
         glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, this->w, this->h, 0, GL_RGBA, GL_UNSIGNED_BYTE, imageDataPtr);
+        glEnd();
         SOIL_free_image_data(imageDataPtr);
         this->textureID = texture_id;
     }
@@ -58,13 +59,13 @@ void Image::draw(float x, float y){
     glBindTexture(GL_TEXTURE_2D, textureID);
     glEnable(GL_TEXTURE_2D);
     glBegin(GL_QUADS);
-    glTexCoord2d(0,0); glVertex2f(x, y+h);
+    glTexCoord2d(0, 1); glVertex2f(0, y+h);
     //bottom left
-    glTexCoord2d(0,1); glVertex2f(x, y);
+    glTexCoord2d(0, 0); glVertex2f(0,0);
     //top left
-    glTexCoord2d(1,1); glVertex2f(x+w, y);
+    glTexCoord2d(1, 0); glVertex2f(x+w, 0);
     //top right
-    glTexCoord2d(1,0); glVertex2f(x+w, y+h);
+    glTexCoord2d(1, 1); glVertex2f(x+w, y+h);
     //bottom right
     glEnd();
 }

@@ -12,5 +12,5 @@ int main(void)
 {
     //start a new runner with the constructor
     //Runner(int width, int height, int frameRate, const char* title, new Core);
-    Runner(500, 200, 30, "Title of Window", new Core);
+    Runner(800, 600, 30, "Title of Window", new Core);
 }
