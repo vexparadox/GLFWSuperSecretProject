@@ -8,6 +8,6 @@
 
 #include "Player.hpp"
 
-Player::Player(ofPoint position, bool visible, float health): Creature(position, visible, health){
+Player::Player(Math::Vector2D position, bool visible, float health): Creature(position, visible, health){
     
 }

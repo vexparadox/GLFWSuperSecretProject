@@ -10,17 +10,20 @@
 //for graphics
 using namespace Graphics;
 void Core::setup(){
-    img.loadImage("img.png");
+    SpriteHandler::getInstance()->loadImages();
+    WorldHandler::getInstance()->loadWorld(0);
 }
 
 void Core::update(){
+    
 }
 
 void Core::draw(){
-    img.draw(0, 0);
+    WorldHandler::getInstance()->renderWorld();
 }
 
 void Core::keyPressed(int key){
+    
 }
 
 void Core::keyReleased(int key){

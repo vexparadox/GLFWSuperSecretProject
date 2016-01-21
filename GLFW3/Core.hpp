@@ -9,6 +9,8 @@
 #ifndef Core_hpp
 #define Core_hpp
 #include "Runner.hpp" //THIS IS NEEDED
+#include "SpriteHandler.hpp"
+#include "WorldHandler.hpp"
 
 class Core : public BaseCore{
 public:

@@ -14,7 +14,7 @@
 
 class NPC : public Creature{
 protected:
-    NPC(ofPoint position, bool visible, float health);
+    NPC(Math::Vector2D position, bool visible, float health);
 };
 
 #endif /* NPC_hpp */

@@ -14,7 +14,7 @@
 
 class Object : public GameObject{
 protected:
-    Object(ofPoint position, bool visible);
+    Object(Math::Vector2D position, bool visible);
 };
 
 #endif /* Object_hpp */

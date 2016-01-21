@@ -18,22 +18,15 @@ WorldHandler* WorldHandler::getInstance(){
 }
 
 void WorldHandler::loadWorld(int worldNum){
-    std::ifstream worldFile(ofToDataPath("world"+to_string(worldNum)+".txt"), std::ios::in); //declare a file stream
+    std::ifstream worldFile("data/world"+std::to_string(worldNum)+".txt", std::ios::in); //declare a file stream
     if (worldFile.is_open()) //checks if the file is open??
     {
-        string str; //declare a string for storage
+        std::string str; //declare a string for storage
         while (getline(worldFile, str)){ //get a line from the file, put in the string
             //loop through and push all the ints to a vector
             for(int i = 0; i <= str.length(); i+=2){
                 //convert the string into an int
-                int tempInt;
-                try{
-                    tempInt = boost::lexical_cast<int>(str[i]);
-                }
-                catch(boost::bad_lexical_cast const& e)
-                {
-                    std::cout << "Error on " << str[i] << e.what() << "\n";
-                }
+                int tempInt = (int)str[i] - 48;
                 map.push_back(Tile(tempInt));
                 xSize++;
             }

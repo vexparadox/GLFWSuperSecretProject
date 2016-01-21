@@ -21,7 +21,7 @@ SpriteHandler* SpriteHandler::getInstance(){
 void SpriteHandler::loadImages(){
     //load the images and confirm if they are or not
     for(int i = 0; i < SPRITE_CODE::END_SPRITE; i++){
-        if(images[i].load(ofToDataPath("S_"+to_string(i)+".png"))){
+        if(images[i].loadImage("S_"+std::to_string(i)+".png")){
             std::cout << "Image Loaded " << i << std::endl;
         }else{
             std::cout << "Image failed to load " << i << std::endl;
@@ -29,8 +29,9 @@ void SpriteHandler::loadImages(){
     }
 }
 
-ofImage SpriteHandler::get(int i){
+Graphics::Image SpriteHandler::get(int i){
     if(i < SPRITE_CODE::END_SPRITE && i >= 0){
         return images[i];
     }
+    return images[0];
 }

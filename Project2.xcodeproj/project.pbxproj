@@ -16,19 +16,12 @@
 		C21729601C1AEC1B00E2869A /* Font.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C217295E1C1AEC1B00E2869A /* Font.cpp */; settings = {ASSET_TAGS = (); }; };
 		C228EE161C50DC3C00573F88 /* libglfw.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C228EE151C50DC3C00573F88 /* libglfw.dylib */; };
 		C22E64001C51082B00386E87 /* Creature.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C22E63F21C51082B00386E87 /* Creature.cpp */; };
-		C22E64011C51082B00386E87 /* Creature.hpp in Sources */ = {isa = PBXBuildFile; fileRef = C22E63F31C51082B00386E87 /* Creature.hpp */; };
 		C22E64021C51082B00386E87 /* GameObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C22E63F41C51082B00386E87 /* GameObject.cpp */; };
-		C22E64031C51082B00386E87 /* GameObject.hpp in Sources */ = {isa = PBXBuildFile; fileRef = C22E63F51C51082B00386E87 /* GameObject.hpp */; };
 		C22E64041C51082B00386E87 /* NPC.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C22E63F61C51082B00386E87 /* NPC.cpp */; };
-		C22E64051C51082B00386E87 /* NPC.hpp in Sources */ = {isa = PBXBuildFile; fileRef = C22E63F71C51082B00386E87 /* NPC.hpp */; };
 		C22E64061C51082B00386E87 /* Object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C22E63F81C51082B00386E87 /* Object.cpp */; };
-		C22E64071C51082B00386E87 /* Object.hpp in Sources */ = {isa = PBXBuildFile; fileRef = C22E63F91C51082B00386E87 /* Object.hpp */; };
 		C22E64081C51082B00386E87 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C22E63FA1C51082B00386E87 /* Player.cpp */; };
-		C22E64091C51082B00386E87 /* Player.hpp in Sources */ = {isa = PBXBuildFile; fileRef = C22E63FB1C51082B00386E87 /* Player.hpp */; };
 		C22E640A1C51082B00386E87 /* SpriteHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C22E63FC1C51082B00386E87 /* SpriteHandler.cpp */; };
-		C22E640B1C51082B00386E87 /* SpriteHandler.hpp in Sources */ = {isa = PBXBuildFile; fileRef = C22E63FD1C51082B00386E87 /* SpriteHandler.hpp */; };
 		C22E640C1C51082B00386E87 /* WorldHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C22E63FE1C51082B00386E87 /* WorldHandler.cpp */; };
-		C22E640D1C51082B00386E87 /* WorldHandler.hpp in Sources */ = {isa = PBXBuildFile; fileRef = C22E63FF1C51082B00386E87 /* WorldHandler.hpp */; };
 		C2A04FE41C4FE1BD0082FE27 /* image_DXT.c in Sources */ = {isa = PBXBuildFile; fileRef = C2A04FE01C4FE1BD0082FE27 /* image_DXT.c */; };
 		C2A04FE51C4FE1BD0082FE27 /* image_helper.c in Sources */ = {isa = PBXBuildFile; fileRef = C2A04FE11C4FE1BD0082FE27 /* image_helper.c */; };
 		C2A04FE61C4FE1BD0082FE27 /* SOIL.c in Sources */ = {isa = PBXBuildFile; fileRef = C2A04FE21C4FE1BD0082FE27 /* SOIL.c */; };
@@ -192,22 +185,70 @@
 		C22E640E1C51083800386E87 /* MyApp */ = {
 			isa = PBXGroup;
 			children = (
-				C22E63F21C51082B00386E87 /* Creature.cpp */,
-				C22E63F31C51082B00386E87 /* Creature.hpp */,
+				C22E640F1C51086200386E87 /* GameObjects */,
+				C22E64101C51086900386E87 /* Handlers */,
+			);
+			name = MyApp;
+			sourceTree = "<group>";
+		};
+		C22E640F1C51086200386E87 /* GameObjects */ = {
+			isa = PBXGroup;
+			children = (
 				C22E63F41C51082B00386E87 /* GameObject.cpp */,
 				C22E63F51C51082B00386E87 /* GameObject.hpp */,
-				C22E63F61C51082B00386E87 /* NPC.cpp */,
-				C22E63F71C51082B00386E87 /* NPC.hpp */,
-				C22E63F81C51082B00386E87 /* Object.cpp */,
-				C22E63F91C51082B00386E87 /* Object.hpp */,
-				C22E63FA1C51082B00386E87 /* Player.cpp */,
-				C22E63FB1C51082B00386E87 /* Player.hpp */,
+				C22E64111C51087600386E87 /* Creatures */,
+				C22E64141C51089300386E87 /* Objects */,
+			);
+			name = GameObjects;
+			sourceTree = "<group>";
+		};
+		C22E64101C51086900386E87 /* Handlers */ = {
+			isa = PBXGroup;
+			children = (
 				C22E63FC1C51082B00386E87 /* SpriteHandler.cpp */,
 				C22E63FD1C51082B00386E87 /* SpriteHandler.hpp */,
 				C22E63FE1C51082B00386E87 /* WorldHandler.cpp */,
 				C22E63FF1C51082B00386E87 /* WorldHandler.hpp */,
 			);
-			name = MyApp;
+			name = Handlers;
+			sourceTree = "<group>";
+		};
+		C22E64111C51087600386E87 /* Creatures */ = {
+			isa = PBXGroup;
+			children = (
+				C22E63F21C51082B00386E87 /* Creature.cpp */,
+				C22E63F31C51082B00386E87 /* Creature.hpp */,
+				C22E64121C51088400386E87 /* NPCs */,
+				C22E64131C51088900386E87 /* Player */,
+			);
+			name = Creatures;
+			sourceTree = "<group>";
+		};
+		C22E64121C51088400386E87 /* NPCs */ = {
+			isa = PBXGroup;
+			children = (
+				C22E63F61C51082B00386E87 /* NPC.cpp */,
+				C22E63F71C51082B00386E87 /* NPC.hpp */,
+			);
+			name = NPCs;
+			sourceTree = "<group>";
+		};
+		C22E64131C51088900386E87 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				C22E63FA1C51082B00386E87 /* Player.cpp */,
+				C22E63FB1C51082B00386E87 /* Player.hpp */,
+			);
+			name = Player;
+			sourceTree = "<group>";
+		};
+		C22E64141C51089300386E87 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				C22E63F81C51082B00386E87 /* Object.cpp */,
+				C22E63F91C51082B00386E87 /* Object.hpp */,
+			);
+			name = Objects;
 			sourceTree = "<group>";
 		};
 		C2A04FE81C4FE1C20082FE27 /* SOIL */ = {
@@ -279,19 +320,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C22E64001C51082B00386E87 /* Creature.cpp in Sources */,
-				C22E64011C51082B00386E87 /* Creature.hpp in Sources */,
 				C22E64021C51082B00386E87 /* GameObject.cpp in Sources */,
-				C22E64031C51082B00386E87 /* GameObject.hpp in Sources */,
 				C22E64041C51082B00386E87 /* NPC.cpp in Sources */,
-				C22E64051C51082B00386E87 /* NPC.hpp in Sources */,
 				C22E64061C51082B00386E87 /* Object.cpp in Sources */,
-				C22E64071C51082B00386E87 /* Object.hpp in Sources */,
 				C22E64081C51082B00386E87 /* Player.cpp in Sources */,
-				C22E64091C51082B00386E87 /* Player.hpp in Sources */,
 				C22E640A1C51082B00386E87 /* SpriteHandler.cpp in Sources */,
-				C22E640B1C51082B00386E87 /* SpriteHandler.hpp in Sources */,
 				C22E640C1C51082B00386E87 /* WorldHandler.cpp in Sources */,
-				C22E640D1C51082B00386E87 /* WorldHandler.hpp in Sources */,
 				C2A04FE41C4FE1BD0082FE27 /* image_DXT.c in Sources */,
 				C2A04FE51C4FE1BD0082FE27 /* image_helper.c in Sources */,
 				C2A04FE61C4FE1BD0082FE27 /* SOIL.c in Sources */,
@@ -392,8 +426,9 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/bin/";
 				HEADER_SEARCH_PATHS = (
-					/usr/local/include,
+					/usr/local/include/,
 					"$(PROJECT_DIR)/include",
+					/usr/local/libs,
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/lib/**",
@@ -410,8 +445,9 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/bin/";
 				HEADER_SEARCH_PATHS = (
-					/usr/local/include,
+					/usr/local/include/,
 					"$(PROJECT_DIR)/include",
+					/usr/local/libs,
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/lib/**",

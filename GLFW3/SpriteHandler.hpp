@@ -10,7 +10,7 @@
 #define SpriteHandler_hpp
 
 #include <stdio.h>
-#include "ofMain.h"
+#include "CoreMain.h"
 enum SPRITE_CODE{
     tile0 = 0,
     tile1 = 1,
@@ -26,16 +26,16 @@ public:
     static SpriteHandler* getInstance();
     
     void loadImages();
-    ofImage get(int i);
+    Graphics::Image get(int i);
 private:
     //creation and singleton method blocks
     SpriteHandler(){}; //no creation needed
     SpriteHandler(SpriteHandler const &s){}; // no copy constructor
-    SpriteHandler& operator=(SpriteHandler const &s){}; //no assignment
+    //SpriteHandler& operator=(SpriteHandler const &s){}; //no assignment
     //the only instance allowed
     static SpriteHandler* instance;
     
     //actual sprite things
-    ofImage images[SPRITE_CODE::END_SPRITE];
+    Graphics::Image images[SPRITE_CODE::END_SPRITE];
 };
 #endif /* SpriteHandler_hpp */

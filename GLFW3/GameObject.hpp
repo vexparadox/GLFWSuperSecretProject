@@ -10,13 +10,13 @@
 #define GameObject_hpp
 
 #include <stdio.h>
-#include "ofMain.h"
+#include "CoreMain.h"
 
 class GameObject{
 protected:
-    ofPoint position;
+    Math::Vector2D position;
     bool visible;
-    GameObject(ofPoint position, bool visible);
+    GameObject(Math::Vector2D position, bool visible);
     GameObject(float x, float y, bool visible);
     virtual void render();
     

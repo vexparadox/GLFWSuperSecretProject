@@ -9,5 +9,5 @@
 #include "Object.hpp"
 
 
-Object::Object(ofPoint position, bool visible) : GameObject(position, visible){
+Object::Object(Math::Vector2D position, bool visible) : GameObject(position, visible){
 }

@@ -64,7 +64,7 @@ Runner::Runner(float windowWidth, float windowHeight, int frameRate,const char* 
         glfwGetFramebufferSize(window, &width, &height);
         glViewport(0, 0, width, height);
         //clear the buffer
-        glClear(GL_COLOR_BUFFER_BIT);
+        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
         glMatrixMode(GL_PROJECTION);
         glLoadIdentity();
         //set the ortho to pixels so it can be used like processing

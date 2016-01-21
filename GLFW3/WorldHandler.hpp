@@ -11,9 +11,8 @@
 
 #include <stdio.h>
 #include <vector>
-#include "ofMain.h"
+#include "coreMain.h"
 #include <fstream>
-#include <boost/lexical_cast.hpp>
 #include "SpriteHandler.hpp"
 
 class WorldHandler{
@@ -26,7 +25,7 @@ private:
     //creation and singleton method blocks
     WorldHandler(){}; //no creation needed
     WorldHandler(WorldHandler const &s){}; // no copy constructor
-    WorldHandler& operator=(WorldHandler const &s){}; //no assignment
+    //WorldHandler& operator=(WorldHandler const &s){}; //no assignment
     //the only instance allowed
     static WorldHandler* instance;
     

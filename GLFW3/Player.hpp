@@ -14,7 +14,7 @@
 
 class Player : public Creature{
 public:
-    Player(ofPoint position, bool visible, float health);
+    Player(Math::Vector2D position, bool visible, float health);
 };
 
 #endif /* Player_hpp */

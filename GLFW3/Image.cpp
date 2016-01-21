@@ -59,13 +59,13 @@ void Image::draw(float x, float y){
     glBindTexture(GL_TEXTURE_2D, textureID);
     glEnable(GL_TEXTURE_2D);
     glBegin(GL_QUADS);
-    glTexCoord2d(0, 1); glVertex2f(0, y+h);
+    glTexCoord2d(0, 1); glVertex2f(x, y+50);
     //bottom left
-    glTexCoord2d(0, 0); glVertex2f(0,0);
+    glTexCoord2d(0, 0); glVertex2f(x,y);
     //top left
-    glTexCoord2d(1, 0); glVertex2f(x+w, 0);
+    glTexCoord2d(1, 0); glVertex2f(x+50, y);
     //top right
-    glTexCoord2d(1, 1); glVertex2f(x+w, y+h);
+    glTexCoord2d(1, 1); glVertex2f(x+50, y+50);
     //bottom right
     glEnd();
 }
