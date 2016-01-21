@@ -9,6 +9,7 @@
 #include "Core.hpp"
 //for graphics
 using namespace Graphics;
+
 void Core::setup(){
     SpriteHandler::getInstance()->loadImages();
     WorldHandler::getInstance()->loadWorld(0);

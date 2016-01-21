@@ -14,7 +14,6 @@
 		C2071E881C15CBD700648169 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2071E871C15CBD700648169 /* OpenGL.framework */; };
 		C2071E941C15D67A00648169 /* Graphics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2071E921C15D67A00648169 /* Graphics.cpp */; settings = {ASSET_TAGS = (); }; };
 		C21729601C1AEC1B00E2869A /* Font.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C217295E1C1AEC1B00E2869A /* Font.cpp */; settings = {ASSET_TAGS = (); }; };
-		C228EE161C50DC3C00573F88 /* libglfw.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C228EE151C50DC3C00573F88 /* libglfw.dylib */; };
 		C22E64001C51082B00386E87 /* Creature.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C22E63F21C51082B00386E87 /* Creature.cpp */; };
 		C22E64021C51082B00386E87 /* GameObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C22E63F41C51082B00386E87 /* GameObject.cpp */; };
 		C22E64041C51082B00386E87 /* NPC.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C22E63F61C51082B00386E87 /* NPC.cpp */; };
@@ -22,6 +21,9 @@
 		C22E64081C51082B00386E87 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C22E63FA1C51082B00386E87 /* Player.cpp */; };
 		C22E640A1C51082B00386E87 /* SpriteHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C22E63FC1C51082B00386E87 /* SpriteHandler.cpp */; };
 		C22E640C1C51082B00386E87 /* WorldHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C22E63FE1C51082B00386E87 /* WorldHandler.cpp */; };
+		C22E64241C51206700386E87 /* libglfw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C22E64231C51206700386E87 /* libglfw3.a */; };
+		C22E64261C51224A00386E87 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C22E64251C51224A00386E87 /* Cocoa.framework */; };
+		C22E64281C5122C600386E87 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C22E64271C5122C600386E87 /* CoreVideo.framework */; };
 		C2A04FE41C4FE1BD0082FE27 /* image_DXT.c in Sources */ = {isa = PBXBuildFile; fileRef = C2A04FE01C4FE1BD0082FE27 /* image_DXT.c */; };
 		C2A04FE51C4FE1BD0082FE27 /* image_helper.c in Sources */ = {isa = PBXBuildFile; fileRef = C2A04FE11C4FE1BD0082FE27 /* image_helper.c */; };
 		C2A04FE61C4FE1BD0082FE27 /* SOIL.c in Sources */ = {isa = PBXBuildFile; fileRef = C2A04FE21C4FE1BD0082FE27 /* SOIL.c */; };
@@ -62,7 +64,6 @@
 		C2071E961C15E18600648169 /* Rect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rect.h; sourceTree = "<group>"; };
 		C217295E1C1AEC1B00E2869A /* Font.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Font.cpp; sourceTree = "<group>"; };
 		C217295F1C1AEC1B00E2869A /* Font.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Font.hpp; sourceTree = "<group>"; };
-		C228EE151C50DC3C00573F88 /* libglfw.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.dylib; path = ../lib/libglfw.dylib; sourceTree = "<group>"; };
 		C22E63F01C50E07D00386E87 /* CoreMain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreMain.h; sourceTree = "<group>"; };
 		C22E63F21C51082B00386E87 /* Creature.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Creature.cpp; sourceTree = "<group>"; };
 		C22E63F31C51082B00386E87 /* Creature.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Creature.hpp; sourceTree = "<group>"; };
@@ -78,6 +79,9 @@
 		C22E63FD1C51082B00386E87 /* SpriteHandler.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SpriteHandler.hpp; sourceTree = "<group>"; };
 		C22E63FE1C51082B00386E87 /* WorldHandler.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = WorldHandler.cpp; sourceTree = "<group>"; };
 		C22E63FF1C51082B00386E87 /* WorldHandler.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = WorldHandler.hpp; sourceTree = "<group>"; };
+		C22E64231C51206700386E87 /* libglfw3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libglfw3.a; path = lib/libglfw3.a; sourceTree = "<group>"; };
+		C22E64251C51224A00386E87 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		C22E64271C5122C600386E87 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		C29A570A1C19EC9600A626CE /* Colour.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Colour.h; sourceTree = "<group>"; };
 		C2A04FE01C4FE1BD0082FE27 /* image_DXT.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = image_DXT.c; path = include/SOIL/image_DXT.c; sourceTree = "<group>"; };
 		C2A04FE11C4FE1BD0082FE27 /* image_helper.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = image_helper.c; path = include/SOIL/image_helper.c; sourceTree = "<group>"; };
@@ -92,7 +96,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C228EE161C50DC3C00573F88 /* libglfw.dylib in Frameworks */,
+				C22E64281C5122C600386E87 /* CoreVideo.framework in Frameworks */,
+				C22E64261C51224A00386E87 /* Cocoa.framework in Frameworks */,
+				C22E64241C51206700386E87 /* libglfw3.a in Frameworks */,
 				C2071E881C15CBD700648169 /* OpenGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -119,7 +125,6 @@
 		C20671AE1C1794130006C6B1 /* CoreFramework */ = {
 			isa = PBXGroup;
 			children = (
-				C228EE151C50DC3C00573F88 /* libglfw.dylib */,
 				C22E63F01C50E07D00386E87 /* CoreMain.h */,
 				C20671B01C184FA70006C6B1 /* Runner.cpp */,
 				C20671B11C184FA70006C6B1 /* Runner.hpp */,
@@ -145,6 +150,9 @@
 		C2071E741C15CBBE00648169 = {
 			isa = PBXGroup;
 			children = (
+				C22E64271C5122C600386E87 /* CoreVideo.framework */,
+				C22E64251C51224A00386E87 /* Cocoa.framework */,
+				C22E64231C51206700386E87 /* libglfw3.a */,
 				C2071E871C15CBD700648169 /* OpenGL.framework */,
 				C2071E7F1C15CBBE00648169 /* src */,
 				C2071E7E1C15CBBE00648169 /* Products */,
@@ -378,7 +386,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/lib";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/lib";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -414,7 +424,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/lib";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/lib";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 			};
@@ -430,10 +442,7 @@
 					"$(PROJECT_DIR)/include",
 					/usr/local/libs,
 				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/lib/**",
-					"$(PROJECT_DIR)/lib",
-				);
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/lib";
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = Project2;
 			};
@@ -449,10 +458,7 @@
 					"$(PROJECT_DIR)/include",
 					/usr/local/libs,
 				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/lib/**",
-					"$(PROJECT_DIR)/lib",
-				);
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/lib";
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = Project2;
 			};
