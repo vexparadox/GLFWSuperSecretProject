@@ -58,6 +58,8 @@ Runner::Runner(float windowWidth, float windowHeight, int frameRate,const char* 
         }
         int width, height;
         //set view port
+        glEnable (GL_BLEND);
+        glBlendFunc (GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
         glfwGetFramebufferSize(window, &width, &height);
         glViewport(0, 0, width, height);
         //clear the buffer

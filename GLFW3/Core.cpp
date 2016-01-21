@@ -11,7 +11,7 @@
 using namespace Graphics;
 
 void Core::setup(){
-    img.loadImage("img.jpg", 433, 512);
+    img.loadImage("img.png", 800, 600);
 }
 
 void Core::update(){
