@@ -16,14 +16,16 @@ namespace Graphics{
 class Image{
 private:
     GLuint textureID;
-    int w, h;
+    int w, h, mipMapLeveCount;
     bool loaded = false;
     GLuint getTextureID();
 public:
     Image(){};
-    Image(std::string nameInput, int w, int h);
-    bool loadImage(std::string nameInput, int w, int h);
+    Image(std::string nameInput);
+    bool loadImage(std::string nameInput);
     void draw(float x, float y);
+    int getWidth();
+    int getHeight();
     bool grabScreen(float x, float y, float w, float h);
     bool isLoaded();
 };

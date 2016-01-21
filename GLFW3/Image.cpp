@@ -8,35 +8,42 @@
 
 #include "Image.hpp"
 namespace Graphics{
-Image::Image(std::string name, int w, int h){
-    this->loadImage(name, w, h);
+Image::Image(std::string name){
+    this->loadImage(name);
 }
 
-bool Image::loadImage(std::string nameInput, int w, int h){
+bool Image::loadImage(std::string nameInput){
     std::string temp = "data/" + nameInput;
     const char* name = temp.c_str();
     //check if it's already loaded, if so load into the same texture point
     if(!loaded){
-    textureID = SOIL_load_OGL_texture (name,
-                                    SOIL_LOAD_AUTO,
-                                    SOIL_CREATE_NEW_ID,
-                                    SOIL_FLAG_MIPMAPS | SOIL_FLAG_INVERT_Y | SOIL_FLAG_NTSC_SAFE_RGB | SOIL_FLAG_COMPRESS_TO_DXT
-                                       );
-
-    }else{
-        GLuint temp = SOIL_load_OGL_texture (name,
-                                           SOIL_LOAD_AUTO,
-                                           textureID,
-                                           SOIL_FLAG_MIPMAPS | SOIL_FLAG_INVERT_Y | SOIL_FLAG_NTSC_SAFE_RGB | SOIL_FLAG_COMPRESS_TO_DXT
-                                           );
-        //if the load failed then return a fail
-        if(temp == 0){
-            return false;
-        }
+        glEnable(GL_TEXTURE_2D);
+        
+        GLuint texture_id;
+        glGenTextures(1, &texture_id);
+        glActiveTexture(GL_TEXTURE0);
+        glBindTexture(GL_TEXTURE_2D, texture_id);
+        
+        unsigned char* imageDataPtr =SOIL_load_image( name, &this->w, &this->h, 0, SOIL_LOAD_RGBA);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, this->w, this->h, 0, GL_RGBA, GL_UNSIGNED_BYTE, imageDataPtr);
+        SOIL_free_image_data(imageDataPtr);
+        this->textureID = texture_id;
     }
+//    }else{
+//        GLuint temp = SOIL_load_OGL_texture (name,
+//                                           SOIL_LOAD_AUTO,
+//                                           textureID,
+//                                           SOIL_FLAG_MIPMAPS | SOIL_FLAG_INVERT_Y | SOIL_FLAG_NTSC_SAFE_RGB);
+//        //if the load failed then return a fail
+//        if(temp == 0){
+//            return false;
+//        }
+//    }
     if(textureID != 0){
-        this->w = w;
-        this->h = h;
         loaded = true;
         return true;
     }
@@ -78,4 +85,13 @@ bool Image::isLoaded(){
 GLuint Image::getTextureID(){
     return textureID;
 }
+ 
+    int Image::getHeight(){
+        return h;
+    }
+    
+    int Image::getWidth(){
+        return w;
+    }
+    
 }

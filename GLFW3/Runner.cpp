@@ -57,9 +57,10 @@ Runner::Runner(float windowWidth, float windowHeight, int frameRate,const char* 
             continue;
         }
         int width, height;
-        //set view port
+        //this allows GLtransparancy
         glEnable (GL_BLEND);
         glBlendFunc (GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+        //set view port, allows pixeltopixel things
         glfwGetFramebufferSize(window, &width, &height);
         glViewport(0, 0, width, height);
         //clear the buffer

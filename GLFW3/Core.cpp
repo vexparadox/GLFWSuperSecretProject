@@ -11,7 +11,8 @@
 using namespace Graphics;
 
 void Core::setup(){
-    img.loadImage("img.png", 800, 600);
+    img.loadImage("img.png");
+    std::cout << img.getWidth() << std::endl <<img.getHeight();
 }
 
 void Core::update(){

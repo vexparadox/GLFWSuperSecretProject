@@ -120,11 +120,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GLFW3/Image.cpp"
-            timestampString = "474996858.110571"
+            timestampString = "475065207.506584"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
             landmarkName = "Image::draw(float x, float y)"
             landmarkType = "5">
          </BreakpointContent>
@@ -158,6 +158,22 @@
             startingLineNumber = "55"
             endingLineNumber = "55"
             landmarkName = "Runner::Runner(float windowWidth, float windowHeight, int frameRate,const char* title,BaseCore* c)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GLFW3/Image.cpp"
+            timestampString = "475065207.506584"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "Image::loadImage(std::string nameInput)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
