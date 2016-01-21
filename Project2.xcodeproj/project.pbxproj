@@ -56,6 +56,7 @@
 		C217295E1C1AEC1B00E2869A /* Font.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Font.cpp; sourceTree = "<group>"; };
 		C217295F1C1AEC1B00E2869A /* Font.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Font.hpp; sourceTree = "<group>"; };
 		C228EE151C50DC3C00573F88 /* libglfw.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.dylib; path = ../lib/libglfw.dylib; sourceTree = "<group>"; };
+		C22E63F01C50E07D00386E87 /* CoreMain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreMain.h; sourceTree = "<group>"; };
 		C29A570A1C19EC9600A626CE /* Colour.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Colour.h; sourceTree = "<group>"; };
 		C2A04FE01C4FE1BD0082FE27 /* image_DXT.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = image_DXT.c; path = include/SOIL/image_DXT.c; sourceTree = "<group>"; };
 		C2A04FE11C4FE1BD0082FE27 /* image_helper.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = image_helper.c; path = include/SOIL/image_helper.c; sourceTree = "<group>"; };
@@ -98,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				C228EE151C50DC3C00573F88 /* libglfw.dylib */,
+				C22E63F01C50E07D00386E87 /* CoreMain.h */,
 				C20671B01C184FA70006C6B1 /* Runner.cpp */,
 				C20671B11C184FA70006C6B1 /* Runner.hpp */,
 				C20671B31C184FCC0006C6B1 /* BaseCore.cpp */,

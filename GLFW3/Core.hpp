@@ -8,7 +8,7 @@
 
 #ifndef Core_hpp
 #define Core_hpp
-#include "Runner.hpp"
+#include "Runner.hpp" //THIS IS NEEDED
 
 class Core : public BaseCore{
 public:
