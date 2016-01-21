@@ -1,9 +1,6 @@
 # GLFWSuperSecretProject
-For this you will need GLFW3, this can be aquired by using brew.
 
-brew install glfw3
-
-SOIL is included in the download
+GLFW3 and SOIL is included in the download and automatically linked
 
 Please note the very limited functionality.
 
@@ -15,4 +12,4 @@ A Runner object controls the main game loop. There is currently only functionali
 
 You can use images by making an Image type and using loadImage(string, width, height) to load in an image. draw(x, y) will draw the image on screen.
 
-See Graphics.hpp for shap drawing.
+See Graphics.hpp for shape drawing.
