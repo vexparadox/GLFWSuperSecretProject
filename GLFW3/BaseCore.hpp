@@ -19,6 +19,10 @@
 class BaseCore{
 private:
     GLFWwindow* window;
+protected:
+    BaseCore(){};
+    BaseCore(BaseCore const&){};
+    //Needs assignemnet made private
 public:
     bool keyIsPressed = false;
     int keyCode = 0;
