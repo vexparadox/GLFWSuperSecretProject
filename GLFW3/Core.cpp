@@ -9,10 +9,8 @@
 #include "Core.hpp"
 //for graphics
 using namespace Graphics;
-
 void Core::setup(){
     img.loadImage("img.png");
-    std::cout << img.getWidth() << std::endl <<img.getHeight() << std::endl;
 }
 
 void Core::update(){
