@@ -50,8 +50,19 @@ bool Image::loadImage(std::string nameInput){
     }
     return false;
 }
-
-void Image::draw(float x, float y){
+    void Image::draw(float x, float y){
+        this->draw(x, w, this->w, this->h);
+    }
+    
+    void Image::draw(Math::Vector2D v){
+        this->draw(v.x, v.y, this->w, this->h);
+    }
+    
+    void Image::draw(Math::Vector2D v, float w, float h){
+        this->draw(v.x, v.y, w, h);
+    }
+    
+void Image::draw(float x, float y, float width, float height){
     if(textureID == 0 || !loaded){
         std::cout << "No image has been loaded" << std::endl;
         return;
@@ -59,13 +70,13 @@ void Image::draw(float x, float y){
     glBindTexture(GL_TEXTURE_2D, textureID);
     glEnable(GL_TEXTURE_2D);
     glBegin(GL_QUADS);
-    glTexCoord2d(0, 1); glVertex2f(x, y+50);
+    glTexCoord2d(0, 1); glVertex2f(x, y+height);
     //bottom left
     glTexCoord2d(0, 0); glVertex2f(x,y);
     //top left
-    glTexCoord2d(1, 0); glVertex2f(x+50, y);
+    glTexCoord2d(1, 0); glVertex2f(x+width, y);
     //top right
-    glTexCoord2d(1, 1); glVertex2f(x+50, y+50);
+    glTexCoord2d(1, 1); glVertex2f(x+width, y+height);
     //bottom right
     glEnd();
 }

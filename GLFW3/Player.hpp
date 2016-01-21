@@ -11,10 +11,12 @@
 
 #include <stdio.h>
 #include "Creature.hpp"
+#include "Handlers.h"
 
 class Player : public Creature{
 public:
     Player(Math::Vector2D position, bool visible, float health);
+    void render();
 };
 
 #endif /* Player_hpp */

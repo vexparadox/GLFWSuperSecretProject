@@ -11,3 +11,7 @@
 Player::Player(Math::Vector2D position, bool visible, float health): Creature(position, visible, health){
     
 }
+
+void Player::render(){
+    SpriteHandler::getInstance()->get(SPRITE_CODE::player).draw(this->position);
+}
