@@ -10,7 +10,6 @@
 
 void Core::setup(){
     img.loadImage("img.jpg", 433, 512);
-    std::cout<<img.isLoaded();
 }
 
 void Core::update(){
@@ -21,7 +20,6 @@ void Core::draw(){
 }
 
 void Core::keyPressed(int key){
-    
 }
 
 void Core::keyReleased(int key){

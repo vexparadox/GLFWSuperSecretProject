@@ -10,15 +10,15 @@
 		C20671AD1C1792770006C6B1 /* Core.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C20671AB1C1792770006C6B1 /* Core.cpp */; settings = {ASSET_TAGS = (); }; };
 		C20671B21C184FA70006C6B1 /* Runner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C20671B01C184FA70006C6B1 /* Runner.cpp */; settings = {ASSET_TAGS = (); }; };
 		C20671B51C184FCC0006C6B1 /* BaseCore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C20671B31C184FCC0006C6B1 /* BaseCore.cpp */; settings = {ASSET_TAGS = (); }; };
-		C206A6711C1DA8CC000CB230 /* libglfw3.3.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C206A6701C1DA8CC000CB230 /* libglfw3.3.1.dylib */; };
 		C2071E811C15CBBE00648169 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2071E801C15CBBE00648169 /* main.cpp */; };
 		C2071E881C15CBD700648169 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2071E871C15CBD700648169 /* OpenGL.framework */; };
 		C2071E941C15D67A00648169 /* Graphics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2071E921C15D67A00648169 /* Graphics.cpp */; settings = {ASSET_TAGS = (); }; };
 		C21729601C1AEC1B00E2869A /* Font.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C217295E1C1AEC1B00E2869A /* Font.cpp */; settings = {ASSET_TAGS = (); }; };
-		C29A57111C1A171A00A626CE /* image_DXT.c in Sources */ = {isa = PBXBuildFile; fileRef = C29A570D1C1A171A00A626CE /* image_DXT.c */; };
-		C29A57121C1A171A00A626CE /* image_helper.c in Sources */ = {isa = PBXBuildFile; fileRef = C29A570E1C1A171A00A626CE /* image_helper.c */; };
-		C29A57131C1A171A00A626CE /* SOIL.c in Sources */ = {isa = PBXBuildFile; fileRef = C29A570F1C1A171A00A626CE /* SOIL.c */; };
-		C29A57141C1A171A00A626CE /* stb_image_aug.c in Sources */ = {isa = PBXBuildFile; fileRef = C29A57101C1A171A00A626CE /* stb_image_aug.c */; };
+		C228EE161C50DC3C00573F88 /* libglfw.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C228EE151C50DC3C00573F88 /* libglfw.dylib */; };
+		C2A04FE41C4FE1BD0082FE27 /* image_DXT.c in Sources */ = {isa = PBXBuildFile; fileRef = C2A04FE01C4FE1BD0082FE27 /* image_DXT.c */; };
+		C2A04FE51C4FE1BD0082FE27 /* image_helper.c in Sources */ = {isa = PBXBuildFile; fileRef = C2A04FE11C4FE1BD0082FE27 /* image_helper.c */; };
+		C2A04FE61C4FE1BD0082FE27 /* SOIL.c in Sources */ = {isa = PBXBuildFile; fileRef = C2A04FE21C4FE1BD0082FE27 /* SOIL.c */; };
+		C2A04FE71C4FE1BD0082FE27 /* stb_image_aug.c in Sources */ = {isa = PBXBuildFile; fileRef = C2A04FE31C4FE1BD0082FE27 /* stb_image_aug.c */; };
 		C2FF28211C19CFB20094E154 /* Image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2FF281F1C19CFB20094E154 /* Image.cpp */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
@@ -42,7 +42,6 @@
 		C20671B11C184FA70006C6B1 /* Runner.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Runner.hpp; sourceTree = "<group>"; };
 		C20671B31C184FCC0006C6B1 /* BaseCore.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BaseCore.cpp; sourceTree = "<group>"; };
 		C20671B41C184FCC0006C6B1 /* BaseCore.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BaseCore.hpp; sourceTree = "<group>"; };
-		C206A6701C1DA8CC000CB230 /* libglfw3.3.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw3.3.1.dylib; path = ../../../../usr/local/Cellar/glfw3/3.1.2/lib/libglfw3.3.1.dylib; sourceTree = "<group>"; };
 		C2071E7D1C15CBBE00648169 /* GLFW3 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = GLFW3; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2071E801C15CBBE00648169 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		C2071E871C15CBD700648169 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
@@ -56,11 +55,12 @@
 		C2071E961C15E18600648169 /* Rect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rect.h; sourceTree = "<group>"; };
 		C217295E1C1AEC1B00E2869A /* Font.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Font.cpp; sourceTree = "<group>"; };
 		C217295F1C1AEC1B00E2869A /* Font.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Font.hpp; sourceTree = "<group>"; };
+		C228EE151C50DC3C00573F88 /* libglfw.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.dylib; path = lib/libglfw.dylib; sourceTree = "<group>"; };
 		C29A570A1C19EC9600A626CE /* Colour.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Colour.h; sourceTree = "<group>"; };
-		C29A570D1C1A171A00A626CE /* image_DXT.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = image_DXT.c; path = GLFW3/SOIL/image_DXT.c; sourceTree = "<group>"; };
-		C29A570E1C1A171A00A626CE /* image_helper.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = image_helper.c; path = GLFW3/SOIL/image_helper.c; sourceTree = "<group>"; };
-		C29A570F1C1A171A00A626CE /* SOIL.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = SOIL.c; path = GLFW3/SOIL/SOIL.c; sourceTree = "<group>"; };
-		C29A57101C1A171A00A626CE /* stb_image_aug.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = stb_image_aug.c; path = GLFW3/SOIL/stb_image_aug.c; sourceTree = "<group>"; };
+		C2A04FE01C4FE1BD0082FE27 /* image_DXT.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = image_DXT.c; path = include/SOIL/image_DXT.c; sourceTree = "<group>"; };
+		C2A04FE11C4FE1BD0082FE27 /* image_helper.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = image_helper.c; path = include/SOIL/image_helper.c; sourceTree = "<group>"; };
+		C2A04FE21C4FE1BD0082FE27 /* SOIL.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = SOIL.c; path = include/SOIL/SOIL.c; sourceTree = "<group>"; };
+		C2A04FE31C4FE1BD0082FE27 /* stb_image_aug.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = stb_image_aug.c; path = include/SOIL/stb_image_aug.c; sourceTree = "<group>"; };
 		C2FF281F1C19CFB20094E154 /* Image.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Image.cpp; sourceTree = "<group>"; };
 		C2FF28201C19CFB20094E154 /* Image.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Image.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -70,7 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C206A6711C1DA8CC000CB230 /* libglfw3.3.1.dylib in Frameworks */,
+				C228EE161C50DC3C00573F88 /* libglfw.dylib in Frameworks */,
 				C2071E881C15CBD700648169 /* OpenGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -120,8 +120,8 @@
 		C2071E741C15CBBE00648169 = {
 			isa = PBXGroup;
 			children = (
-				C206A6701C1DA8CC000CB230 /* libglfw3.3.1.dylib */,
-				C29A57151C1A172300A626CE /* SOIL */,
+				C228EE151C50DC3C00573F88 /* libglfw.dylib */,
+				C2A04FE81C4FE1C20082FE27 /* SOIL */,
 				C2071E871C15CBD700648169 /* OpenGL.framework */,
 				C2071E7F1C15CBBE00648169 /* GLFW3 */,
 				C2071E7E1C15CBBE00648169 /* Products */,
@@ -157,13 +157,13 @@
 			name = Math;
 			sourceTree = "<group>";
 		};
-		C29A57151C1A172300A626CE /* SOIL */ = {
+		C2A04FE81C4FE1C20082FE27 /* SOIL */ = {
 			isa = PBXGroup;
 			children = (
-				C29A570D1C1A171A00A626CE /* image_DXT.c */,
-				C29A570E1C1A171A00A626CE /* image_helper.c */,
-				C29A570F1C1A171A00A626CE /* SOIL.c */,
-				C29A57101C1A171A00A626CE /* stb_image_aug.c */,
+				C2A04FE01C4FE1BD0082FE27 /* image_DXT.c */,
+				C2A04FE11C4FE1BD0082FE27 /* image_helper.c */,
+				C2A04FE21C4FE1BD0082FE27 /* SOIL.c */,
+				C2A04FE31C4FE1BD0082FE27 /* stb_image_aug.c */,
 			);
 			name = SOIL;
 			sourceTree = "<group>";
@@ -224,10 +224,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C29A57111C1A171A00A626CE /* image_DXT.c in Sources */,
-				C29A57121C1A171A00A626CE /* image_helper.c in Sources */,
-				C29A57131C1A171A00A626CE /* SOIL.c in Sources */,
-				C29A57141C1A171A00A626CE /* stb_image_aug.c in Sources */,
+				C2A04FE41C4FE1BD0082FE27 /* image_DXT.c in Sources */,
+				C2A04FE51C4FE1BD0082FE27 /* image_helper.c in Sources */,
+				C2A04FE61C4FE1BD0082FE27 /* SOIL.c in Sources */,
+				C2A04FE71C4FE1BD0082FE27 /* stb_image_aug.c in Sources */,
 				C20671B51C184FCC0006C6B1 /* BaseCore.cpp in Sources */,
 				C20671B21C184FA70006C6B1 /* Runner.cpp in Sources */,
 				C21729601C1AEC1B00E2869A /* Font.cpp in Sources */,
@@ -322,12 +322,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				HEADER_SEARCH_PATHS = /usr/local/include;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					"$(PROJECT_DIR)/include",
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/lib/**",
 					"$(PROJECT_DIR)/lib",
-					/usr/local/Cellar/glfw3/3.1.2/lib,
-					/usr/local/lib,
 				);
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -338,12 +339,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				HEADER_SEARCH_PATHS = /usr/local/include;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					"$(PROJECT_DIR)/include",
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/lib/**",
 					"$(PROJECT_DIR)/lib",
-					/usr/local/Cellar/glfw3/3.1.2/lib,
-					/usr/local/lib,
 				);
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";

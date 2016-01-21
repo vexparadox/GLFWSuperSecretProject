@@ -7,6 +7,11 @@
 //
 
 #include "Image.hpp"
+
+Image::Image(std::string name, int w, int h){
+    this->loadImage(name, w, h);
+}
+
 bool Image::loadImage(std::string nameInput, int w, int h){
     std::string temp = "../../data/" + nameInput;
     const char* name = temp.c_str();

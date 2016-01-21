@@ -11,7 +11,7 @@
 
 #include <stdio.h>
 #include <GLFW/glfw3.h>
-#include "SOIL/SOIL.h"
+#include <SOIL/SOIL.h>
 #include <iostream>
 #include <stdlib.h>
 #include "Graphics.hpp"
