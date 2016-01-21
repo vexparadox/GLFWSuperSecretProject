@@ -9,8 +9,7 @@
 #ifndef Core_hpp
 #define Core_hpp
 #include "Runner.hpp" //THIS IS NEEDED
-#include "SpriteHandler.hpp"
-#include "WorldHandler.hpp"
+#include "GameState.hpp"
 
 class Core : public BaseCore{
 public:
@@ -23,6 +22,7 @@ public:
     void keyReleased(int key);
     Graphics::Image img;
     int x = 0;
+    GameState* gameState;
 };
 
 #endif /* Core_hpp */

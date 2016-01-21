@@ -11,16 +11,17 @@
 using namespace Graphics;
 
 void Core::setup(){
-    SpriteHandler::getInstance()->loadImages();
-    WorldHandler::getInstance()->loadWorld(0);
+    //this needs to be set here otherwise c
+    gameState = new GameState();
+    State::setState(gameState);
 }
 
 void Core::update(){
-    
+    State::getCurrentState()->update();
 }
 
 void Core::draw(){
-    WorldHandler::getInstance()->renderWorld();
+    State::getCurrentState()->draw();
 }
 
 void Core::keyPressed(int key){

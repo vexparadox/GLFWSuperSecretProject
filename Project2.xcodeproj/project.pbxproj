@@ -28,6 +28,8 @@
 		C2A04FE51C4FE1BD0082FE27 /* image_helper.c in Sources */ = {isa = PBXBuildFile; fileRef = C2A04FE11C4FE1BD0082FE27 /* image_helper.c */; };
 		C2A04FE61C4FE1BD0082FE27 /* SOIL.c in Sources */ = {isa = PBXBuildFile; fileRef = C2A04FE21C4FE1BD0082FE27 /* SOIL.c */; };
 		C2A04FE71C4FE1BD0082FE27 /* stb_image_aug.c in Sources */ = {isa = PBXBuildFile; fileRef = C2A04FE31C4FE1BD0082FE27 /* stb_image_aug.c */; };
+		C2E9BD881C5173870005A77A /* State.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2E9BD861C5173870005A77A /* State.cpp */; settings = {ASSET_TAGS = (); }; };
+		C2E9BD8B1C5174E50005A77A /* GameState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2E9BD891C5174E50005A77A /* GameState.cpp */; settings = {ASSET_TAGS = (); }; };
 		C2FF28211C19CFB20094E154 /* Image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2FF281F1C19CFB20094E154 /* Image.cpp */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
@@ -87,6 +89,11 @@
 		C2A04FE11C4FE1BD0082FE27 /* image_helper.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = image_helper.c; path = include/SOIL/image_helper.c; sourceTree = "<group>"; };
 		C2A04FE21C4FE1BD0082FE27 /* SOIL.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = SOIL.c; path = include/SOIL/SOIL.c; sourceTree = "<group>"; };
 		C2A04FE31C4FE1BD0082FE27 /* stb_image_aug.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = stb_image_aug.c; path = include/SOIL/stb_image_aug.c; sourceTree = "<group>"; };
+		C2E9BD861C5173870005A77A /* State.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = State.cpp; sourceTree = "<group>"; };
+		C2E9BD871C5173870005A77A /* State.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = State.hpp; sourceTree = "<group>"; };
+		C2E9BD891C5174E50005A77A /* GameState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameState.cpp; sourceTree = "<group>"; };
+		C2E9BD8A1C5174E50005A77A /* GameState.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GameState.hpp; sourceTree = "<group>"; };
+		C2E9BD8E1C5176B30005A77A /* Handlers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Handlers.h; sourceTree = "<group>"; };
 		C2FF281F1C19CFB20094E154 /* Image.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Image.cpp; sourceTree = "<group>"; };
 		C2FF28201C19CFB20094E154 /* Image.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Image.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -193,6 +200,7 @@
 		C22E640E1C51083800386E87 /* GameCode */ = {
 			isa = PBXGroup;
 			children = (
+				C2E9BD8C1C5176730005A77A /* States */,
 				C22E640F1C51086200386E87 /* GameObjects */,
 				C22E64101C51086900386E87 /* Handlers */,
 			);
@@ -213,6 +221,7 @@
 		C22E64101C51086900386E87 /* Handlers */ = {
 			isa = PBXGroup;
 			children = (
+				C2E9BD8E1C5176B30005A77A /* Handlers.h */,
 				C22E63FC1C51082B00386E87 /* SpriteHandler.cpp */,
 				C22E63FD1C51082B00386E87 /* SpriteHandler.hpp */,
 				C22E63FE1C51082B00386E87 /* WorldHandler.cpp */,
@@ -269,6 +278,25 @@
 			);
 			name = SOIL;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		C2E9BD8C1C5176730005A77A /* States */ = {
+			isa = PBXGroup;
+			children = (
+				C2E9BD8D1C51767D0005A77A /* GameState */,
+				C2E9BD861C5173870005A77A /* State.cpp */,
+				C2E9BD871C5173870005A77A /* State.hpp */,
+			);
+			name = States;
+			sourceTree = "<group>";
+		};
+		C2E9BD8D1C51767D0005A77A /* GameState */ = {
+			isa = PBXGroup;
+			children = (
+				C2E9BD891C5174E50005A77A /* GameState.cpp */,
+				C2E9BD8A1C5174E50005A77A /* GameState.hpp */,
+			);
+			name = GameState;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -328,6 +356,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C22E64001C51082B00386E87 /* Creature.cpp in Sources */,
+				C2E9BD8B1C5174E50005A77A /* GameState.cpp in Sources */,
 				C22E64021C51082B00386E87 /* GameObject.cpp in Sources */,
 				C22E64041C51082B00386E87 /* NPC.cpp in Sources */,
 				C22E64061C51082B00386E87 /* Object.cpp in Sources */,
@@ -341,6 +370,7 @@
 				C20671B51C184FCC0006C6B1 /* BaseCore.cpp in Sources */,
 				C20671B21C184FA70006C6B1 /* Runner.cpp in Sources */,
 				C21729601C1AEC1B00E2869A /* Font.cpp in Sources */,
+				C2E9BD881C5173870005A77A /* State.cpp in Sources */,
 				C2071E941C15D67A00648169 /* Graphics.cpp in Sources */,
 				C20671AD1C1792770006C6B1 /* Core.cpp in Sources */,
 				C2071E811C15CBBE00648169 /* main.cpp in Sources */,
@@ -388,7 +418,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/lib";
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/lib";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -426,7 +456,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/lib";
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/lib";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 			};
