@@ -11,7 +11,9 @@
 
 #include <stdio.h>
 #include "State.hpp"
+#include <vector>
 #include "Handlers.h"
+#include "Player.hpp"
 
 class GameState : public State{
 public:
@@ -19,5 +21,7 @@ public:
     ~GameState(){};
     void update();
     void draw();
+    std::vector<GameObject*> objects;
+    Player* p = new Player(Math::Vector2D(50, 50), true, 50);
 };
 #endif /* GameState_hpp */

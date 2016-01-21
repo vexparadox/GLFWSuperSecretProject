@@ -11,6 +11,7 @@
 GameState::GameState(){
     SpriteHandler::getInstance()->loadImages();
     WorldHandler::getInstance()->loadWorld(0);
+    objects.push_back(p);
 }
 
 void GameState::update(){
@@ -19,4 +20,7 @@ void GameState::update(){
 
 void GameState::draw(){
     WorldHandler::getInstance()->renderWorld();
+    for(GameObject* g: objects){
+        g->render();
+    }
 }

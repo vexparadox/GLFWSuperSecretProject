@@ -45,7 +45,7 @@ void WorldHandler::renderWorld(){
     SpriteHandler* temp = SpriteHandler::getInstance();
     for(int i = 0; i < ySize; i++){
         for(int j = 0; j < xSize; j++){
-            temp->get(map[j+i*xSize].textureCode).draw(j*SPRITE_CODE::SPRITE_SIZE, i*SPRITE_CODE::SPRITE_SIZE);
+            temp->get(map[j+i*xSize].textureCode).draw(j*SPRITE_CODE::SPRITE_SIZE, i*SPRITE_CODE::SPRITE_SIZE, SPRITE_CODE::SPRITE_SIZE, SPRITE_CODE::SPRITE_SIZE);
         }
     }
 }
