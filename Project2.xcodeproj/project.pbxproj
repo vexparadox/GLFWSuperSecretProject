@@ -55,7 +55,7 @@
 		C2071E961C15E18600648169 /* Rect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rect.h; sourceTree = "<group>"; };
 		C217295E1C1AEC1B00E2869A /* Font.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Font.cpp; sourceTree = "<group>"; };
 		C217295F1C1AEC1B00E2869A /* Font.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Font.hpp; sourceTree = "<group>"; };
-		C228EE151C50DC3C00573F88 /* libglfw.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.dylib; path = lib/libglfw.dylib; sourceTree = "<group>"; };
+		C228EE151C50DC3C00573F88 /* libglfw.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.dylib; path = ../lib/libglfw.dylib; sourceTree = "<group>"; };
 		C29A570A1C19EC9600A626CE /* Colour.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Colour.h; sourceTree = "<group>"; };
 		C2A04FE01C4FE1BD0082FE27 /* image_DXT.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = image_DXT.c; path = include/SOIL/image_DXT.c; sourceTree = "<group>"; };
 		C2A04FE11C4FE1BD0082FE27 /* image_helper.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = image_helper.c; path = include/SOIL/image_helper.c; sourceTree = "<group>"; };
@@ -97,6 +97,7 @@
 		C20671AE1C1794130006C6B1 /* CoreFramework */ = {
 			isa = PBXGroup;
 			children = (
+				C228EE151C50DC3C00573F88 /* libglfw.dylib */,
 				C20671B01C184FA70006C6B1 /* Runner.cpp */,
 				C20671B11C184FA70006C6B1 /* Runner.hpp */,
 				C20671B31C184FCC0006C6B1 /* BaseCore.cpp */,
@@ -111,6 +112,7 @@
 		C20671B61C1855130006C6B1 /* Graphics */ = {
 			isa = PBXGroup;
 			children = (
+				C2A04FE81C4FE1C20082FE27 /* SOIL */,
 				C2071E921C15D67A00648169 /* Graphics.cpp */,
 				C2071E931C15D67A00648169 /* Graphics.hpp */,
 			);
@@ -120,8 +122,6 @@
 		C2071E741C15CBBE00648169 = {
 			isa = PBXGroup;
 			children = (
-				C228EE151C50DC3C00573F88 /* libglfw.dylib */,
-				C2A04FE81C4FE1C20082FE27 /* SOIL */,
 				C2071E871C15CBD700648169 /* OpenGL.framework */,
 				C2071E7F1C15CBBE00648169 /* src */,
 				C2071E7E1C15CBBE00648169 /* Products */,
@@ -167,6 +167,7 @@
 				C2A04FE31C4FE1BD0082FE27 /* stb_image_aug.c */,
 			);
 			name = SOIL;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
