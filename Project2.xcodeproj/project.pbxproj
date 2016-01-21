@@ -94,7 +94,7 @@
 			name = Types;
 			sourceTree = "<group>";
 		};
-		C20671AE1C1794130006C6B1 /* Core */ = {
+		C20671AE1C1794130006C6B1 /* CoreFramework */ = {
 			isa = PBXGroup;
 			children = (
 				C20671B01C184FA70006C6B1 /* Runner.cpp */,
@@ -105,7 +105,7 @@
 				C20671A91C1736630006C6B1 /* Types */,
 				C20671B61C1855130006C6B1 /* Graphics */,
 			);
-			name = Core;
+			name = CoreFramework;
 			sourceTree = "<group>";
 		};
 		C20671B61C1855130006C6B1 /* Graphics */ = {
@@ -142,7 +142,7 @@
 				C2071E801C15CBBE00648169 /* main.cpp */,
 				C20671AB1C1792770006C6B1 /* Core.cpp */,
 				C20671AC1C1792770006C6B1 /* Core.hpp */,
-				C20671AE1C1794130006C6B1 /* Core */,
+				C20671AE1C1794130006C6B1 /* CoreFramework */,
 			);
 			name = src;
 			path = GLFW3;

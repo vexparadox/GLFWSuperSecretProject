@@ -10,6 +10,7 @@
 #define Triangle_h
 
 #include "Math.h"
+namespace Graphics{
 class Triangle{
 public:
     Math::Vector2D v1, v2, v3;
@@ -34,5 +35,6 @@ public:
         this->set(Math::Vector2D(x1, y1), Math::Vector2D(x2, y2), Math::Vector2D(x3, y3));
     }
 };
+}
 
 #endif /* Triangle_h */

@@ -7,7 +7,7 @@
 //
 
 #include "Image.hpp"
-
+namespace Graphics{
 Image::Image(std::string name, int w, int h){
     this->loadImage(name, w, h);
 }
@@ -77,4 +77,5 @@ bool Image::isLoaded(){
 
 GLuint Image::getTextureID(){
     return textureID;
+}
 }

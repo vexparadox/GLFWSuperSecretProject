@@ -8,7 +8,7 @@
 
 #ifndef Colour_h
 #define Colour_h
-
+namespace Graphics{
 class Colour{
 public:
     float r, g, b, a;
@@ -65,5 +65,6 @@ private:
         return;
     }
 };
+}
 
 #endif /* Colour_h */

@@ -10,6 +10,7 @@
 #define Rect_h
 
 #include "Math.h"
+namespace Graphics{
 class Rect{
 public:
     Math::Vector2D v;
@@ -36,6 +37,6 @@ public:
         this->set(Math::Vector2D(x, y), w, h);
     }
 };
-
+}
 
 #endif /* Rect_h */

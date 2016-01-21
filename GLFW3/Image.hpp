@@ -12,7 +12,7 @@
 #include <SOIL/SOIL.h>
 #include <GLFW/glfw3.h>
 #include <iostream>
-
+namespace Graphics{
 class Image{
 private:
     GLuint textureID;
@@ -27,5 +27,6 @@ public:
     bool grabScreen(float x, float y, float w, float h);
     bool isLoaded();
 };
+}
 
 #endif /* Image_hpp */

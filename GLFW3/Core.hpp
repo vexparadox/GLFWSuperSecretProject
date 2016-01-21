@@ -19,7 +19,7 @@ public:
     void setup();
     void keyPressed(int key);
     void keyReleased(int key);
-    Image img;
+    Graphics::Image img;
     int x = 0;
 };
 

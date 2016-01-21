@@ -7,6 +7,8 @@
 //
 
 #include "Core.hpp"
+//for graphics
+using namespace Graphics;
 
 void Core::setup(){
     img.loadImage("img.jpg", 433, 512);
