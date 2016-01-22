@@ -36,38 +36,39 @@ int InputHandler::getMouseY(){
 }
 
 void InputHandler::keyDown(int key){
+    
     isKeyPressed = true;
     switch(key){
             //LEFT ARROW
-        case 356:
+        case 263:
             LEFT = true;
             break;
             //LETTER A
-        case 97:
+        case 65:
             LEFT = true;
             break;
             //UP ARROW
-        case 357:
+        case 265:
             UP = true;
             break;
             //LETTER W
-        case 119:
+        case 87:
             UP = true;
             break;
             //RIGHT ARROW
-        case 358:
+        case 262:
             RIGHT = true;
             break;
             //LETTER D
-        case 100:
+        case 68:
             RIGHT = true;
             break;
             //DOWN ARROR
-        case 359:
+        case 264:
             DOWN = true;
             break;
             //LETTER S
-        case 115:
+        case 83:
             DOWN = true;
             break;
             //SPACE BAR
@@ -80,35 +81,35 @@ void InputHandler::keyDown(int key){
 void InputHandler::keyUp(int key){
     isKeyPressed = false;
     switch(key){
-        case 356:
+        case 263:
             LEFT = false;
             break;
-        case 357:
+        case 265:
             UP = false;
             break;
-        case 358:
+        case 262:
             RIGHT = false;
             break;
-        case 359:
+        case 264:
             DOWN = false;
             break;
         case 32:
             SPACE = false;
             break;
             //LETTER S
-        case 115:
+        case 83:
             DOWN = false;
             break;
             //LETTER D
-        case 100:
+        case 68:
             RIGHT = false;
             break;
             //LETTER W
-        case 119:
+        case 87:
             UP = false;
             break;
             //LETTER A
-        case 97:
+        case 65:
             LEFT = false;
             break;
     }

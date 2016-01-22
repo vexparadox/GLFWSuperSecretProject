@@ -17,6 +17,14 @@ WorldHandler* WorldHandler::getInstance(){
     return instance;
 }
 
+void WorldHandler::offSetXby(int a){
+    offSetX += a;
+}
+
+void WorldHandler::offSetYby(int a){
+    offSetY += a;
+}
+
 void WorldHandler::loadWorld(int worldNum){
     std::ifstream worldFile("data/world"+std::to_string(worldNum)+".txt", std::ios::in); //declare a file stream
     if (worldFile.is_open()) //checks if the file is open??
@@ -45,7 +53,7 @@ void WorldHandler::renderWorld(){
     SpriteHandler* temp = SpriteHandler::getInstance();
     for(int i = 0; i < ySize; i++){
         for(int j = 0; j < xSize; j++){
-            temp->get(map[j+i*xSize].textureCode).draw(j*SPRITE_CODE::SPRITE_SIZE, i*SPRITE_CODE::SPRITE_SIZE, SPRITE_CODE::SPRITE_SIZE, SPRITE_CODE::SPRITE_SIZE);
+            temp->get(map[j+i*xSize].textureCode).draw((j*SPRITE_CODE::SPRITE_SIZE)+offSetX, (i*SPRITE_CODE::SPRITE_SIZE)+offSetY, SPRITE_CODE::SPRITE_SIZE, SPRITE_CODE::SPRITE_SIZE);
         }
     }
 }

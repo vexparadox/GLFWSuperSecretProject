@@ -8,16 +8,28 @@
 
 #include "GameState.hpp"
 
+GameState::~GameState(){
+    inputHandler = nullptr;
+    worldHandler = nullptr;
+}
+
 GameState::GameState(){
     //load world and sprites
     SpriteHandler::getInstance()->loadImages();
-    WorldHandler::getInstance()->loadWorld(0);
+    worldHandler = WorldHandler::getInstance();
+    worldHandler->loadWorld(0);
+    inputHandler = InputHandler::getInstance();
     //add the player to the object loop
     objects.push_back(p);
 }
 
 void GameState::update(){
-
+    if(inputHandler->getLEFT()){
+        worldHandler->offSetXby(-2);
+    }
+    if(inputHandler->getRIGHT()){
+        worldHandler->offSetXby(2);
+    }
 }
 
 void GameState::draw(){

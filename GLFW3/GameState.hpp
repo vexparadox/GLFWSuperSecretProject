@@ -18,9 +18,11 @@
 class GameState : public State{
 public:
     GameState();
-    ~GameState(){};
+    ~GameState();
     void update();
     void draw();
+    InputHandler* inputHandler;
+    WorldHandler* worldHandler;
     std::vector<GameObject*> objects;
     Player* p = new Player(Math::Vector2D(50, 50), true, 50);
 };

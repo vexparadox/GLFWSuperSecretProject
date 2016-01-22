@@ -21,6 +21,8 @@ public:
     static WorldHandler* getInstance();
     void loadWorld(int i);
     void renderWorld();
+    void offSetXby(int a);
+    void offSetYby(int a);
 private:
     //creation and singleton method blocks
     WorldHandler(){}; //no creation needed
@@ -28,6 +30,8 @@ private:
     //WorldHandler& operator=(WorldHandler const &s){}; //no assignment
     //the only instance allowed
     static WorldHandler* instance;
+    
+    int offSetX = 0, offSetY = 0;
     
     //private class to the world handler
     class Tile{
