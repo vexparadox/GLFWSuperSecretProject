@@ -25,7 +25,6 @@ void Core::setup(){
 
 void Core::update(){
     State::getCurrentState()->update();
-    inputHandler->mouseInput(mouseX, mouseY);
 }
 
 void Core::draw(){
@@ -41,9 +40,9 @@ void Core::keyReleased(int key){
 }
 
 void Core::mousePressed(int button){
-    
+    inputHandler->mouseDown(button);
 }
 
 void Core::mouseReleased(int button){
-    
+    inputHandler->mouseUp(button);
 }

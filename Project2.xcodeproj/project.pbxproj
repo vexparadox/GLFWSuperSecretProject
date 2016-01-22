@@ -87,6 +87,7 @@
 		C22E64271C5122C600386E87 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		C283AC6E1C51AA7200527570 /* InputHandler.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = InputHandler.cpp; sourceTree = "<group>"; };
 		C283AC701C51AA8A00527570 /* InputHandler.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = InputHandler.hpp; sourceTree = "<group>"; };
+		C283AC721C52461F00527570 /* States.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = States.h; sourceTree = "<group>"; };
 		C29A570A1C19EC9600A626CE /* Colour.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Colour.h; sourceTree = "<group>"; };
 		C2A04FE01C4FE1BD0082FE27 /* image_DXT.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = image_DXT.c; path = include/SOIL/image_DXT.c; sourceTree = "<group>"; };
 		C2A04FE11C4FE1BD0082FE27 /* image_helper.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = image_helper.c; path = include/SOIL/image_helper.c; sourceTree = "<group>"; };
@@ -288,9 +289,10 @@
 		C2E9BD8C1C5176730005A77A /* States */ = {
 			isa = PBXGroup;
 			children = (
-				C2E9BD8D1C51767D0005A77A /* GameState */,
 				C2E9BD861C5173870005A77A /* State.cpp */,
 				C2E9BD871C5173870005A77A /* State.hpp */,
+				C283AC721C52461F00527570 /* States.h */,
+				C2E9BD8D1C51767D0005A77A /* GameState */,
 			);
 			name = States;
 			sourceTree = "<group>";
