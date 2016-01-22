@@ -17,7 +17,7 @@ GameState::GameState(){
 }
 
 void GameState::update(){
-    
+    std::cout << InputHandler::getInstance()->getMouseX();
 }
 
 void GameState::draw(){

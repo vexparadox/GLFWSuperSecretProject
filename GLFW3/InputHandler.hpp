@@ -1,8 +1,8 @@
 //
-//  Keyboard.hpp
-//  LabOF1
+//  InputHandler.hpp
+//  Project2
 //
-//  Created by William Meaton on 09/11/2015.
+//  Created by William Meaton on 31/12/2015.
 //
 //
 
@@ -14,18 +14,31 @@
 //this class handles keyboard input with predefined buttons and static methods
 
 class InputHandler{
+    static InputHandler* instance;
+    ~InputHandler();
+    InputHandler(){};
+    InputHandler(InputHandler const &s){}; // no copy constructor
+    bool UP, LEFT, RIGHT, DOWN, isKeyPressed, SPACE, MOUSE0, MOUSE1, isMousePressed;
+    int mouseX = 0, mouseY = 0;
 public:
-    InputHandler();
-    static bool UP, LEFT, RIGHT, DOWN, AnyPRESSED, SPACE;
-    static void keyUp(int key);
-    static void keyDown(int key);
-    static bool getUP();
-    static bool getLEFT();
-    static bool getRIGHT();
-    static bool getDOWN();
-    static bool getAnyPRESSED();
-    static bool getSPACE();
-    static bool getMOUSE1();
+    static InputHandler* getInstance();
+    void mouseInput(int x, int y);
+    int getMouseX();
+    int getMouseY();
+    void mouseDown(int button);
+    void mouseUp(int button);
+    void keyUp(int key);
+    void keyDown(int key);
+    bool getUP();
+    bool getLEFT();
+    bool getRIGHT();
+    bool getDOWN();
+    bool getisKeyPressed();
+    bool getisMousePressed();
+    bool getSPACE();
+    bool getMOUSE0();
+    bool getMOUSE1();
+    
 };
 
 

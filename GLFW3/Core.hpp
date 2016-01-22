@@ -10,6 +10,7 @@
 #define Core_hpp
 #include "Runner.hpp" //THIS IS NEEDED
 #include "GameState.hpp"
+#include "InputHandler.hpp"
 
 class Core : public BaseCore{
 public:
@@ -25,6 +26,7 @@ public:
     Graphics::Image img;
     int x = 0;
     GameState* gameState;
+    InputHandler* inputHandler;
 };
 
 #endif /* Core_hpp */

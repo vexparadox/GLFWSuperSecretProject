@@ -13,16 +13,19 @@ using namespace Graphics;
 Core::~Core(){
     delete gameState;
     gameState = nullptr;
+    inputHandler = nullptr;
 }
 
 void Core::setup(){
     //this needs to be set here otherwise c
+    inputHandler = InputHandler::getInstance();
     gameState = new GameState();
     State::setState(gameState);
 }
 
 void Core::update(){
     State::getCurrentState()->update();
+    inputHandler->mouseInput(mouseX, mouseY);
 }
 
 void Core::draw(){
@@ -30,11 +33,11 @@ void Core::draw(){
 }
 
 void Core::keyPressed(int key){
-    
+    inputHandler->keyDown(key);
 }
 
 void Core::keyReleased(int key){
-    
+    inputHandler->keyUp(key);
 }
 
 void Core::mousePressed(int button){

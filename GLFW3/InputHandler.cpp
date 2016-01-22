@@ -1,22 +1,42 @@
 //
-//  Keyboard.cpp
-//  LabOF1
+//  InputHandler.cpp
+//  Project2
 //
-//  Created by William Meaton on 09/11/2015.
+//  Created by William Meaton on 31/12/2015.
 //
 //
 
 #include "InputHandler.hpp"
 
-bool InputHandler::UP;
-bool InputHandler::LEFT;
-bool InputHandler::DOWN;
-bool InputHandler::RIGHT;
-bool InputHandler::AnyPRESSED;
-bool InputHandler::SPACE;
+InputHandler* InputHandler::instance;
+
+InputHandler::~InputHandler(){
+    delete instance;
+    instance = nullptr;
+}
+
+InputHandler* InputHandler::getInstance(){
+    if(!instance){
+        instance = new InputHandler;
+    }
+    return instance;
+}
+
+void InputHandler::mouseInput(int x, int y){
+    this->mouseX = x;
+    this->mouseY = y;
+}
+
+int InputHandler::getMouseX(){
+    return mouseX;
+}
+
+int InputHandler::getMouseY(){
+    return mouseY;
+}
 
 void InputHandler::keyDown(int key){
-    AnyPRESSED = true;
+    isKeyPressed = true;
     switch(key){
             //LEFT ARROW
         case 356:
@@ -58,7 +78,7 @@ void InputHandler::keyDown(int key){
 }
 
 void InputHandler::keyUp(int key){
-    AnyPRESSED = true;
+    isKeyPressed = false;
     switch(key){
         case 356:
             LEFT = false;
@@ -93,6 +113,43 @@ void InputHandler::keyUp(int key){
             break;
     }
 }
+
+void InputHandler::mouseDown(int button){
+    isMousePressed = true;
+    switch(button){
+        case 0:
+            MOUSE0 = true;
+            break;
+        case 1:
+            MOUSE1 = true;
+            break;
+    }
+}
+
+void InputHandler::mouseUp(int button){
+    isMousePressed = false;
+    switch(button){
+        case 0:
+            MOUSE0 = false;
+            break;
+        case 1:
+            MOUSE1 = false;
+            break;
+    }
+}
+
+bool InputHandler::getMOUSE1(){
+    return MOUSE1;
+}
+
+bool InputHandler::getMOUSE0(){
+    return MOUSE0;
+}
+
+bool InputHandler::getisMousePressed(){
+    return isMousePressed;
+}
+
 bool InputHandler::getSPACE(){
     return SPACE;
 }
@@ -101,9 +158,6 @@ bool InputHandler::getUP(){
     return UP;
 }
 
-bool InputHandler::getMOUSE1(){
-    return false;
-}
 
 bool InputHandler::getDOWN(){
     return DOWN;
@@ -116,6 +170,6 @@ bool InputHandler::getLEFT(){
 bool InputHandler::getRIGHT(){
     return RIGHT;
 }
-bool InputHandler::getAnyPRESSED(){
-    return AnyPRESSED;
+bool InputHandler::getisKeyPressed(){
+    return isKeyPressed;
 }
