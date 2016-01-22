@@ -6,16 +6,16 @@
 //
 //
 
-#ifndef Keyboard_hpp
-#define Keyboard_hpp
+#ifndef InputHandler_hpp
+#define InputHandler_hpp
 
 #include <stdio.h>
 
 //this class handles keyboard input with predefined buttons and static methods
 
-class Keyboard{
+class InputHandler{
 public:
-    Keyboard();
+    InputHandler();
     static bool UP, LEFT, RIGHT, DOWN, AnyPRESSED, SPACE;
     static void keyUp(int key);
     static void keyDown(int key);

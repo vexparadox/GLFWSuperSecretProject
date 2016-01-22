@@ -24,7 +24,7 @@
 		C22E64241C51206700386E87 /* libglfw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C22E64231C51206700386E87 /* libglfw3.a */; };
 		C22E64261C51224A00386E87 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C22E64251C51224A00386E87 /* Cocoa.framework */; };
 		C22E64281C5122C600386E87 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C22E64271C5122C600386E87 /* CoreVideo.framework */; };
-		C283AC6F1C51AA7200527570 /* Keyboard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C283AC6E1C51AA7200527570 /* Keyboard.cpp */; };
+		C283AC6F1C51AA7200527570 /* InputHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C283AC6E1C51AA7200527570 /* InputHandler.cpp */; };
 		C2A04FE41C4FE1BD0082FE27 /* image_DXT.c in Sources */ = {isa = PBXBuildFile; fileRef = C2A04FE01C4FE1BD0082FE27 /* image_DXT.c */; };
 		C2A04FE51C4FE1BD0082FE27 /* image_helper.c in Sources */ = {isa = PBXBuildFile; fileRef = C2A04FE11C4FE1BD0082FE27 /* image_helper.c */; };
 		C2A04FE61C4FE1BD0082FE27 /* SOIL.c in Sources */ = {isa = PBXBuildFile; fileRef = C2A04FE21C4FE1BD0082FE27 /* SOIL.c */; };
@@ -85,8 +85,8 @@
 		C22E64231C51206700386E87 /* libglfw3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libglfw3.a; path = lib/libglfw3.a; sourceTree = "<group>"; };
 		C22E64251C51224A00386E87 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		C22E64271C5122C600386E87 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
-		C283AC6E1C51AA7200527570 /* Keyboard.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Keyboard.cpp; sourceTree = "<group>"; };
-		C283AC701C51AA8A00527570 /* Keyboard.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Keyboard.hpp; sourceTree = "<group>"; };
+		C283AC6E1C51AA7200527570 /* InputHandler.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = InputHandler.cpp; sourceTree = "<group>"; };
+		C283AC701C51AA8A00527570 /* InputHandler.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = InputHandler.hpp; sourceTree = "<group>"; };
 		C29A570A1C19EC9600A626CE /* Colour.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Colour.h; sourceTree = "<group>"; };
 		C2A04FE01C4FE1BD0082FE27 /* image_DXT.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = image_DXT.c; path = include/SOIL/image_DXT.c; sourceTree = "<group>"; };
 		C2A04FE11C4FE1BD0082FE27 /* image_helper.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = image_helper.c; path = include/SOIL/image_helper.c; sourceTree = "<group>"; };
@@ -229,8 +229,8 @@
 				C22E63FD1C51082B00386E87 /* SpriteHandler.hpp */,
 				C22E63FE1C51082B00386E87 /* WorldHandler.cpp */,
 				C22E63FF1C51082B00386E87 /* WorldHandler.hpp */,
-				C283AC701C51AA8A00527570 /* Keyboard.hpp */,
-				C283AC6E1C51AA7200527570 /* Keyboard.cpp */,
+				C283AC701C51AA8A00527570 /* InputHandler.hpp */,
+				C283AC6E1C51AA7200527570 /* InputHandler.cpp */,
 			);
 			name = Handlers;
 			sourceTree = "<group>";
@@ -360,7 +360,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C283AC6F1C51AA7200527570 /* Keyboard.cpp in Sources */,
+				C283AC6F1C51AA7200527570 /* InputHandler.cpp in Sources */,
 				C22E64001C51082B00386E87 /* Creature.cpp in Sources */,
 				C2E9BD8B1C5174E50005A77A /* GameState.cpp in Sources */,
 				C22E64021C51082B00386E87 /* GameObject.cpp in Sources */,

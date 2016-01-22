@@ -6,16 +6,16 @@
 //
 //
 
-#include "Keyboard.hpp"
+#include "InputHandler.hpp"
 
-bool Keyboard::UP;
-bool Keyboard::LEFT;
-bool Keyboard::DOWN;
-bool Keyboard::RIGHT;
-bool Keyboard::AnyPRESSED;
-bool Keyboard::SPACE;
+bool InputHandler::UP;
+bool InputHandler::LEFT;
+bool InputHandler::DOWN;
+bool InputHandler::RIGHT;
+bool InputHandler::AnyPRESSED;
+bool InputHandler::SPACE;
 
-void Keyboard::keyDown(int key){
+void InputHandler::keyDown(int key){
     AnyPRESSED = true;
     switch(key){
             //LEFT ARROW
@@ -57,7 +57,7 @@ void Keyboard::keyDown(int key){
     }
 }
 
-void Keyboard::keyUp(int key){
+void InputHandler::keyUp(int key){
     AnyPRESSED = true;
     switch(key){
         case 356:
@@ -93,29 +93,29 @@ void Keyboard::keyUp(int key){
             break;
     }
 }
-bool Keyboard::getSPACE(){
+bool InputHandler::getSPACE(){
     return SPACE;
 }
 
-bool Keyboard::getUP(){
+bool InputHandler::getUP(){
     return UP;
 }
 
-bool Keyboard::getMOUSE1(){
+bool InputHandler::getMOUSE1(){
     return false;
 }
 
-bool Keyboard::getDOWN(){
+bool InputHandler::getDOWN(){
     return DOWN;
 }
 
-bool Keyboard::getLEFT(){
+bool InputHandler::getLEFT(){
     return LEFT;
 }
 
-bool Keyboard::getRIGHT(){
+bool InputHandler::getRIGHT(){
     return RIGHT;
 }
-bool Keyboard::getAnyPRESSED(){
+bool InputHandler::getAnyPRESSED(){
     return AnyPRESSED;
 }
