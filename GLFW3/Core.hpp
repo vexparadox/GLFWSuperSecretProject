@@ -14,7 +14,7 @@
 class Core : public BaseCore{
 public:
     Core(){};
-    ~Core(){};
+    ~Core();
     void draw();
     void update();
     void setup();

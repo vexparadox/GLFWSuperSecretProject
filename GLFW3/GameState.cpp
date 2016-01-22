@@ -9,8 +9,10 @@
 #include "GameState.hpp"
 
 GameState::GameState(){
+    //load world and sprites
     SpriteHandler::getInstance()->loadImages();
     WorldHandler::getInstance()->loadWorld(0);
+    //add the player to the object loop
     objects.push_back(p);
 }
 
@@ -20,6 +22,7 @@ void GameState::update(){
 
 void GameState::draw(){
     WorldHandler::getInstance()->renderWorld();
+    //render loop
     for(GameObject* g: objects){
         g->render();
     }

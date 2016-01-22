@@ -10,6 +10,11 @@
 //for graphics
 using namespace Graphics;
 
+Core::~Core(){
+    delete gameState;
+    gameState = nullptr;
+}
+
 void Core::setup(){
     //this needs to be set here otherwise c
     gameState = new GameState();

@@ -11,6 +11,7 @@
 
 #include "SpriteHandler.hpp"
 #include "WorldHandler.hpp"
+#include "Keyboard.hpp"
 
 
 #endif /* Handlers_h */
