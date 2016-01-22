@@ -20,6 +20,8 @@ public:
     void setup();
     void keyPressed(int key);
     void keyReleased(int key);
+    void mousePressed(int button);
+    void mouseReleased(int button);
     Graphics::Image img;
     int x = 0;
     GameState* gameState;

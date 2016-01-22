@@ -25,6 +25,8 @@ protected:
     //Needs assignemnet made private
 public:
     bool keyIsPressed = false;
+    bool mouseIsPressed = false;
+    int mouseButton = -1;
     int keyCode = 0;
     virtual ~BaseCore(){};
     virtual void draw(){};
@@ -32,6 +34,8 @@ public:
     virtual void update(){};
     virtual void keyPressed(int key){};
     virtual void keyReleased(int key){};
+    virtual void mousePressed(int button){};
+    virtual void mouseReleased(int button){};
     GLFWwindow* getWindow();
 };
 

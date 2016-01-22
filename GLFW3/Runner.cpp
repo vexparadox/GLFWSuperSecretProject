@@ -33,6 +33,8 @@ Runner::Runner(float windowWidth, float windowHeight, int frameRate,const char* 
     glfwSetWindowUserPointer(window, this);
     //set the key_callback method
     glfwSetKeyCallback(window, key_callback);
+    //set mousepressed callback
+    glfwSetMouseButtonCallback(window, mouse_callback);
     //if the window is dead, stop the program
     if (!window)
     {
@@ -104,6 +106,24 @@ bool Runner::fps(int framerate)
 void Runner::error_callback(int error, const char* description){
     fputs(description, stderr);
 }
+
+void Runner::mouse_callback(GLFWwindow *window, int button, int action, int mods){
+    void* data = glfwGetWindowUserPointer(window);
+    Runner* r = static_cast<Runner*>(data);
+    if(action == GLFW_PRESS){
+        r->c->mousePressed(button);
+        r->c->mouseIsPressed = true;
+        r->c->mouseButton = button;
+        return;
+    }
+    if(action == GLFW_RELEASE){
+        r->c->mouseReleased(button);
+        r->c->mouseIsPressed = false;
+        r->c->mouseButton = -1;
+        return;
+    }
+}
+
 void Runner::key_callback(GLFWwindow* window, int key, int scancode, int action, int mods){
     if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS){
         glfwSetWindowShouldClose(window, GL_TRUE);
@@ -115,10 +135,12 @@ void Runner::key_callback(GLFWwindow* window, int key, int scancode, int action,
         r->c->keyIsPressed = true;
         r->c->keyCode = key;
         r->c->keyPressed(key);
+        return;
     }
     if(action == GLFW_RELEASE){
         r->c->keyIsPressed = false;
         r->c->keyCode = 0;
         r->c->keyReleased(key);
+        return;
     }
 }
