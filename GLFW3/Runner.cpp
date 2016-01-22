@@ -35,6 +35,8 @@ Runner::Runner(float windowWidth, float windowHeight, int frameRate,const char* 
     glfwSetKeyCallback(window, key_callback);
     //set mousepressed callback
     glfwSetMouseButtonCallback(window, mouse_callback);
+    //set cursor call back
+    glfwSetCursorPosCallback(window, cursor_callback);
     //if the window is dead, stop the program
     if (!window)
     {
@@ -105,6 +107,13 @@ bool Runner::fps(int framerate)
 
 void Runner::error_callback(int error, const char* description){
     fputs(description, stderr);
+}
+
+void Runner::cursor_callback(GLFWwindow* window, double xpos, double ypos){
+    void* data = glfwGetWindowUserPointer(window);
+    Runner* r = static_cast<Runner*>(data);
+    r->c->mouseX = xpos;
+    r->c->mouseY = ypos;
 }
 
 void Runner::mouse_callback(GLFWwindow *window, int button, int action, int mods){

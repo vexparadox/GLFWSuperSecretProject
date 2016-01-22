@@ -38,7 +38,7 @@ void Core::keyReleased(int key){
 }
 
 void Core::mousePressed(int button){
-    std::cout << button;
+    
 }
 
 void Core::mouseReleased(int button){

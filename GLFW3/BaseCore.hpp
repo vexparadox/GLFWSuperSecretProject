@@ -17,13 +17,13 @@
 #include "Graphics.hpp"
 
 class BaseCore{
-private:
-    GLFWwindow* window;
 protected:
+    GLFWwindow* window;
     BaseCore(){};
     BaseCore(BaseCore const&){};
     //Needs assignemnet made private
 public:
+    int mouseX = 0, mouseY = 0;
     bool keyIsPressed = false;
     bool mouseIsPressed = false;
     int mouseButton = -1;
