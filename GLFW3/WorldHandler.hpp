@@ -23,6 +23,7 @@ public:
     void renderWorld();
     void offSetXby(int a);
     void offSetYby(int a);
+    void offSetby(Math::Vector2D &v);
 private:
     //creation and singleton method blocks
     WorldHandler(){}; //no creation needed

@@ -25,6 +25,11 @@ void WorldHandler::offSetYby(int a){
     offSetY += a;
 }
 
+void WorldHandler::offSetby(Math::Vector2D &v){
+    this->offSetXby(v.x);
+    this->offSetYby(v.y);
+}
+
 void WorldHandler::loadWorld(int worldNum){
     std::ifstream worldFile("data/world"+std::to_string(worldNum)+".txt", std::ios::in); //declare a file stream
     if (worldFile.is_open()) //checks if the file is open??
