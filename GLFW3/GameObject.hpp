@@ -14,12 +14,15 @@
 
 class GameObject{
 protected:
-    Math::Vector2D position;
+    Math::Vector2D position, nextPosition;
     bool visible;
     GameObject(Math::Vector2D position, bool visible);
     GameObject(float x, float y, bool visible);
 public:
     virtual void render(){};
+    virtual void update(){};
+    void move(){};
+    
 };
 
 #endif /* GameObject_hpp */

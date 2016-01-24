@@ -237,7 +237,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "53"
             endingLineNumber = "53"
-            landmarkName = "WorldHandler::renderWorld()"
+            landmarkName = "WorldHandler::loadWorld(int worldNum)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -268,9 +268,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "56"
-            endingLineNumber = "56"
-            landmarkName = "WorldHandler::renderWorld()"
-            landmarkType = "5">
+            endingLineNumber = "56">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
