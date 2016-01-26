@@ -24,6 +24,6 @@ public:
     InputHandler* inputHandler;
     WorldHandler* worldHandler;
     std::vector<GameObject*> objects;
-    Player* p = new Player(Math::Vector2D(50, 50), true, 50);
+    Player a = Player(Math::Vector2D(20, 20), true, 50);
 };
 #endif /* GameState_hpp */

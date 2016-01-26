@@ -15,7 +15,6 @@
 class Creature: public GameObject{
 protected:
     float health;
-protected:
     Creature(Math::Vector2D position, bool visible, float health);
 };
 #endif /* Creature_hpp */

@@ -18,6 +18,7 @@ protected:
     bool visible;
     GameObject(Math::Vector2D position, bool visible);
     GameObject(float x, float y, bool visible);
+    virtual ~GameObject(){};
 public:
     virtual void render(){};
     virtual void update(){};

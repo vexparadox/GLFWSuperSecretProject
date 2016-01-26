@@ -195,8 +195,8 @@
 			isa = PBXGroup;
 			children = (
 				C2071E8E1C15D2A500648169 /* Math.h */,
-				C2071E8D1C15D29100648169 /* Vector2D.h */,
 				C2071E8F1C15D2BB00648169 /* Vector3D.h */,
+				C2071E8D1C15D29100648169 /* Vector2D.h */,
 			);
 			name = Math;
 			sourceTree = "<group>";

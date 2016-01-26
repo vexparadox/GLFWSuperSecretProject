@@ -20,22 +20,28 @@ GameState::GameState(){
     worldHandler->loadWorld(0);
     inputHandler = InputHandler::getInstance();
     //add the player to the object loop
-    objects.push_back(p);
+    objects.push_back(&a);
 }
 
 void GameState::update(){
-    if(inputHandler->getLEFT()){
-        worldHandler->offSetXby(-2);
-    }
-    if(inputHandler->getRIGHT()){
-        worldHandler->offSetXby(2);
-    }
+//    if(inputHandler->getLEFT()){
+//        worldHandler->offSetXby(2);
+//    }
+//    if(inputHandler->getRIGHT()){
+//        worldHandler->offSetXby(-2);
+//    }
+//    if(inputHandler->getUP()){
+//        worldHandler->offSetYby(2);
+//    }
+//    if(inputHandler->getDOWN()){
+//        worldHandler->offSetYby(-2);
+//    }
 }
 
 void GameState::draw(){
     WorldHandler::getInstance()->renderWorld();
     //render loop
-    for(GameObject* g: objects){
-        g->render();
-    }
+//    for(GameObject* g: objects){
+//        g->render();
+//    }
 }
