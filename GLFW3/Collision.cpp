@@ -25,4 +25,26 @@ namespace Math {
         return isInsideQuad(Vector2D(x1, x2), Vector2D(x2, y2), Vector2D(x3, y3));
     }
     
+    float triangleArea(const Vector2D &v1, const Vector2D &v2, const Vector2D &v3){
+        float det = 0.0f;
+        det = ((v1.x - v3.x) * (v2.y - v3.y)) - ((v2.x - v3.x) * (v1.y - v3.y));
+        return (det / 2.0f);
+    }
+    
+    bool isInsideTriangle(const Vector2D &point, const Vector2D &v1, const Vector2D &v2, const Vector2D &v3){
+        float total = triangleArea(point, v2, v3);
+        float area1 = triangleArea(point, v2, v3);
+        float area2 = triangleArea(point, v1, v3);
+        float area3 = triangleArea(point, v1, v2);
+        if((area1 + area2 + area3) > total){
+            return false;
+        }else{
+            return true;
+        }
+    }
+    
+    bool isInsideTriangle(const Vector2D &point, const Graphics::Triangle &t){
+        return isInsideTriangle(point, t.v1, t.v2, t.v3);
+    }
+    
 }

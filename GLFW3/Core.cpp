@@ -21,6 +21,7 @@ void Core::setup(){
     inputHandler = InputHandler::getInstance();
     gameState = new GameState();
     State::setState(gameState);
+    
 }
 
 void Core::update(){
