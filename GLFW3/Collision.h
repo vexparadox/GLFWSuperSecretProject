@@ -20,6 +20,8 @@ namespace Math {
     
     float triangleArea(const Vector2D &v1, const Vector2D &v2, const Vector2D &v3);
     
+    float triangleArea(const Graphics::Triangle &t);
+    
     bool isInsideTriangle(const Vector2D &point, const Vector2D &v1, const Vector2D &v2, const Vector2D &v3);
     
     bool isInsideTriangle(const Vector2D &point, const Graphics::Triangle &t);

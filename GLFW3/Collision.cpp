@@ -31,6 +31,10 @@ namespace Math {
         return (det / 2.0f);
     }
     
+    float triangleArea(const Graphics::Triangle &t){
+        return triangleArea(t.v1, t.v2, t.v3);
+    }
+    
     bool isInsideTriangle(const Vector2D &point, const Vector2D &v1, const Vector2D &v2, const Vector2D &v3){
         float total = triangleArea(point, v2, v3);
         float area1 = triangleArea(point, v2, v3);
