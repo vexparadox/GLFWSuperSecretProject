@@ -41,7 +41,7 @@ void GameState::update(){
 void GameState::draw(){
     WorldHandler::getInstance()->renderWorld();
     //render loop
-//    for(GameObject* g: objects){
-//        g->render();
-//    }
+    for(GameObject* g: objects){
+        g->render();
+    }
 }

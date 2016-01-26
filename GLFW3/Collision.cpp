@@ -10,15 +10,19 @@
 
 namespace Math {
     //returns if v3 is inside of v1-v2
-    bool isInsideQuad(const Vector2D &v1, const Vector2D &v2, const Vector2D &v3){
-        if(v3.x > v1.x && v3.x < v2.x && v3.y > v1.y && v3.y < v2.y){
+    bool isInsideQuad(const Vector2D &point, const Vector2D &v1, const Vector2D &v2){
+        if(point.x > v1.x && point.x < v2.x && point.y > v1.y && point.y < v2.y){
             return true;
         }
         return false;
     }
     
-    bool isInsideQuad(const Graphics::Rect &r, const Vector2D &v3){
-        return isInsideQuad(r.v, Vector2D(r.w, r.h), v3);
+    bool isInsideQuad(const Vector2D &point, const Vector2D &v, float w, float h){
+        return isInsideQuad(point, v, Vector2D(w, h));
+    }
+    
+    bool isInsideQuad(const Vector2D &point, const Graphics::Rect &r){
+        return isInsideQuad(point, r.v, Vector2D(r.w, r.h));
     }
     
     bool isInsideQuad(float x1, float y1, float x2, float y2, float x3, float y3){
