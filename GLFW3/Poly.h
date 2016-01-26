@@ -9,7 +9,7 @@
 #ifndef Poly_h
 #define Poly_h
 #include <vector>
-#include "Math.h"
+#include "Vector2D.h"
 namespace Graphics{
 class Polygon{
 private:

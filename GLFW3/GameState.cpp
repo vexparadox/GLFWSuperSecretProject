@@ -24,18 +24,18 @@ GameState::GameState(){
 }
 
 void GameState::update(){
-//    if(inputHandler->getLEFT()){
-//        worldHandler->offSetXby(2);
-//    }
-//    if(inputHandler->getRIGHT()){
-//        worldHandler->offSetXby(-2);
-//    }
-//    if(inputHandler->getUP()){
-//        worldHandler->offSetYby(2);
-//    }
-//    if(inputHandler->getDOWN()){
-//        worldHandler->offSetYby(-2);
-//    }
+    if(inputHandler->getLEFT()){
+        worldHandler->offSetXby(2);
+    }
+    if(inputHandler->getRIGHT()){
+        worldHandler->offSetXby(-2);
+    }
+    if(inputHandler->getUP()){
+        worldHandler->offSetYby(2);
+    }
+    if(inputHandler->getDOWN()){
+        worldHandler->offSetYby(-2);
+    }
 }
 
 void GameState::draw(){

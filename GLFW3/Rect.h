@@ -9,7 +9,7 @@
 #ifndef Rect_h
 #define Rect_h
 
-#include "Math.h"
+#include "Vector2D.h"
 namespace Graphics{
 class Rect{
 public:

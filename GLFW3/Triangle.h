@@ -9,7 +9,7 @@
 #ifndef Triangle_h
 #define Triangle_h
 
-#include "Math.h"
+#include "Vector2D.h"
 namespace Graphics{
 class Triangle{
 public:

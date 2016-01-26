@@ -11,7 +11,7 @@
 
 #include <SOIL/SOIL.h>
 #include <GLFW/glfw3.h>
-#include "Math.h"
+#include "Vector2D.h"
 #include <iostream>
 namespace Graphics{
 class Image{

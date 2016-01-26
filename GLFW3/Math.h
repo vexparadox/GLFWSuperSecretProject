@@ -10,5 +10,6 @@
 #define Math_h
 
 #include "Vector2D.h"
+#include "Collision.h"
 #include "Vector3D.h"
 #endif /* Math_h */
