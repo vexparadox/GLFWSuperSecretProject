@@ -29,7 +29,7 @@ void SpriteHandler::loadImages(){
     }
 }
 
-Graphics::Image SpriteHandler::get(int i){
+Graphics::Image& SpriteHandler::get(int i){
     if(i < SPRITE_CODE::END_SPRITE && i >= 0){
         return images[i];
     }

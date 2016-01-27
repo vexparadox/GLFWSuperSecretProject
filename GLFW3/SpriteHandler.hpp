@@ -28,7 +28,7 @@ public:
     static SpriteHandler* getInstance();
     
     void loadImages();
-    Graphics::Image get(int i);
+    Graphics::Image& get(int i);
 private:
     //creation and singleton method blocks
     SpriteHandler(){}; //no creation needed
