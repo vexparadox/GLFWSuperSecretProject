@@ -55,4 +55,12 @@ namespace Math {
         return isInsideTriangle(point, t.v1, t.v2, t.v3);
     }
     
+    float vectorDistance(const Vector2D& v1, const Vector2D& v2){
+        return sqrt((v1.x-v2.x)*(v1.x-v2.x)+(v1.y-v2.y)*(v1.y-v2.y));
+    }
+    
+    float vectorDistance(float x1, float y1, float x2, float y2){
+        return vectorDistance(Vector2D(x1, y1), Vector2D(x2, y2));
+    }
+    
 }
