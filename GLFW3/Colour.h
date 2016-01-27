@@ -37,13 +37,12 @@ private:
         c = input;
     }
     
-    inline Colour operator- (const Colour& c){
-        Colour temp;
-        colourAssign(temp.r, (this->r - c.r));
-        colourAssign(temp.g, (this->g - c.g));
-        colourAssign(temp.b, (this->b - c.b));
-        colourAssign(temp.a, (this->a - c.a));
-        return temp;
+    inline Colour& operator- (const Colour& c){
+        colourAssign(this->r, (this->r - c.r));
+        colourAssign(this->g, (this->g - c.g));
+        colourAssign(this->b, (this->b - c.b));
+        colourAssign(this->a, (this->a - c.a));
+        return *this;
     }
     
     friend inline void operator-= (Colour& c1, const Colour& c2){
@@ -51,13 +50,12 @@ private:
         return;
     }
     
-    inline Colour operator+ (const Colour& c){
-        Colour temp;
-        colourAssign(temp.r, (this->r + c.r));
-        colourAssign(temp.g, (this->g + c.g));
-        colourAssign(temp.b, (this->b + c.b));
-        colourAssign(temp.a, (this->a + c.a));
-        return temp;
+    inline Colour& operator+ (const Colour& c){
+        colourAssign(this->r, (this->r + c.r));
+        colourAssign(this->g, (this->g + c.g));
+        colourAssign(this->b, (this->b + c.b));
+        colourAssign(this->a, (this->a + c.a));
+        return *this;
     }
     
     friend inline void operator+= (Colour& c1, const Colour& c2){

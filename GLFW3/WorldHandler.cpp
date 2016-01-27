@@ -25,7 +25,7 @@ void WorldHandler::offSetYby(int a){
     offSetY += a;
 }
 
-void WorldHandler::offSetby(Math::Vector2D &v){
+void WorldHandler::offSetby(const Math::Vector2D &v){
     this->offSetXby(v.x);
     this->offSetYby(v.y);
 }
