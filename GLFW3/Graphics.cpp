@@ -12,7 +12,7 @@ namespace Graphics{
         drawTriangle(t.v1, t.v2, t.v3);
     }
 
-    void drawTriangle(Math::Vector2D v1, Math::Vector2D v2, Math::Vector2D v3){
+    void drawTriangle(const Math::Vector2D &v1, const Math::Vector2D &v2, const Math::Vector2D &v3){
         glBegin(GL_TRIANGLES);
         glVertex3f(v1.x, v1.y, 0.f);
         glVertex3f(v2.x, v2.y, 0.f);
@@ -28,7 +28,7 @@ namespace Graphics{
         drawRect(Math::Vector2D(x, y), w, h);
     }
 
-    void drawRect(Math::Vector2D v, float w, float h){
+    void drawRect(const Math::Vector2D &v, float w, float h){
         glBegin(GL_QUADS);
         glVertex3f(v.x, v.y, 0.0f);
         //top left
@@ -41,7 +41,7 @@ namespace Graphics{
         glEnd();
     }
     
-    void drawPoly(Polygon& p){
+    void drawPoly(Polygon &p){
         glBegin(GL_POLYGON);
         for(auto points : p.getVerticies()){
             glVertex3f(points.x, points.y, 0.0f);
@@ -65,7 +65,7 @@ namespace Graphics{
         setBackground(r, g, b, 0);
     }
     
-    void setBackground(Colour c){
+    void setBackground(const Colour &c){
         setBackground(c.r, c.g, c.b, c.a);
     }
 }
