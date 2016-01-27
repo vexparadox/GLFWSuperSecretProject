@@ -17,7 +17,7 @@ protected:
     State(){};
     State(State const&){};
     //State& operator=(State const&){};
-    ~State(){};
+    virtual ~State(){};
 public:
     static State* currentState;
     static State* getCurrentState();

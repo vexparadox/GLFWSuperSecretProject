@@ -29,26 +29,26 @@ namespace Math {
         return isInsideQuad(Vector2D(x1, x2), Vector2D(x2, y2), Vector2D(x3, y3));
     }
     
-    float triangleArea(const Vector2D &v1, const Vector2D &v2, const Vector2D &v3){
+    float signVector(float x1, float y1, float x2, float y2, float x3, float y3){
+        return signVector(Vector2D(x1, y1), Vector2D(x2, y2), Vector2D(x3, y3));
+    }
+    
+    float signVector(const Vector2D &v1, const Vector2D &v2, const Vector2D &v3){
         float det = 0.0f;
         det = ((v1.x - v3.x) * (v2.y - v3.y)) - ((v2.x - v3.x) * (v1.y - v3.y));
         return (det / 2.0f);
     }
     
-    float triangleArea(const Graphics::Triangle &t){
-        return triangleArea(t.v1, t.v2, t.v3);
+    float signVector(const Graphics::Triangle &t){
+        return signVector(t.v1, t.v2, t.v3);
     }
     
     bool isInsideTriangle(const Vector2D &point, const Vector2D &v1, const Vector2D &v2, const Vector2D &v3){
-        float total = triangleArea(point, v2, v3);
-        float area1 = triangleArea(point, v2, v3);
-        float area2 = triangleArea(point, v1, v3);
-        float area3 = triangleArea(point, v1, v2);
-        if((area1 + area2 + area3) > total){
-            return false;
-        }else{
-            return true;
-        }
+        bool b1, b2, b3;
+        b1 = signVector(point, v1, v2) < 0.0f;
+        b2 = signVector(point, v2, v3) < 0.0f;
+        b3 = signVector(point, v3, v1) < 0.0f;
+        return ((b1 == b2) && (b2 == b3));
     }
     
     bool isInsideTriangle(const Vector2D &point, const Graphics::Triangle &t){

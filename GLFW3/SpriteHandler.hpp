@@ -17,7 +17,8 @@ enum SPRITE_CODE{
     tile2 = 2,
     tile3 = 3,
     player = 4,
-    END_SPRITE = 5,
+    enemy = 5,
+    END_SPRITE = 6,
     SPRITE_SIZE = 50
 };
 

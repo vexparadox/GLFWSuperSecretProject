@@ -21,9 +21,11 @@ namespace Math {
     
     bool isInsideQuad(float x1, float y1, float x2, float y2, float x3, float y3);
     
-    float triangleArea(const Vector2D &v1, const Vector2D &v2, const Vector2D &v3);
+    float signVector(float x1, float y1, float x2, float y2, float x3, float y3);
     
-    float triangleArea(const Graphics::Triangle &t);
+    float signVector(const Vector2D &v1, const Vector2D &v2, const Vector2D &v3);
+    
+    float signVector(const Graphics::Triangle &t);
     
     bool isInsideTriangle(const Vector2D &point, const Vector2D &v1, const Vector2D &v2, const Vector2D &v3);
     
