@@ -54,11 +54,11 @@ bool Image::loadImage(std::string nameInput){
         this->draw(x, w, this->w, this->h);
     }
     
-    void Image::draw(Math::Vector2D v){
+    void Image::draw(const Math::Vector2D &v){
         this->draw(v.x, v.y, this->w, this->h);
     }
     
-    void Image::draw(Math::Vector2D v, float w, float h){
+    void Image::draw(const Math::Vector2D &v, float w, float h){
         this->draw(v.x, v.y, w, h);
     }
     

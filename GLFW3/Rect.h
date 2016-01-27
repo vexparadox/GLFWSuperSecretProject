@@ -15,7 +15,7 @@ class Rect{
 public:
     Math::Vector2D v;
     float w, h;
-    Rect(Math::Vector2D v1, float w, float h){
+    Rect(const Math::Vector2D &v1, float w, float h){
         this->v = v1;
         this->w = w;
         this->h = h;
@@ -27,7 +27,7 @@ public:
         this->h = h;
     }
     
-    void set(Math::Vector2D v, float w, float h){
+    void set(const Math::Vector2D &v, float w, float h){
         this->v = v;
         this->w = w;
         this->h = h;

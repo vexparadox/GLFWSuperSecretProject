@@ -29,7 +29,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "17"
             endingLineNumber = "17"
-            landmarkName = "Triangle(Math::Vector2D v1, Math::Vector2D v2, Math::Vector2D v3)"
+            landmarkName = "Triangle(const Math::Vector2D &amp;v1, const Math::Vector2D &amp;v2, const Math::Vector2D &amp;v3)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

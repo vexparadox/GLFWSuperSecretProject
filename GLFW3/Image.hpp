@@ -24,9 +24,9 @@ public:
     Image(){};
     Image(std::string nameInput);
     bool loadImage(std::string nameInput);
-    void draw(Math::Vector2D v, float w, float h);
+    void draw(const Math::Vector2D &v, float w, float h);
     void draw(float x, float y, float w, float h);
-    void draw(Math::Vector2D v);
+    void draw(const Math::Vector2D &v);
     void draw(float x, float y);
     int getWidth();
     int getHeight();

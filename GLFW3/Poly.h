@@ -17,7 +17,7 @@ private:
 public:
     Polygon();
     ~Polygon();
-    void addVertex(Math::Vector2D v){
+    void addVertex(const Math::Vector2D &v){
         this->v.push_back(v);
     }
     
