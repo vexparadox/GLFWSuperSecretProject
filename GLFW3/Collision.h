@@ -33,8 +33,6 @@ namespace Math {
     float vectorDistance(const Vector2D& v1, const Vector2D& v2);
     
     float vectorDistance(float x1, float y1, float x2, float y2);
-
-
 }
 
 #endif /* Collision_h */

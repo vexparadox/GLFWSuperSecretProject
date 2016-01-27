@@ -36,12 +36,11 @@ namespace Math {
             return;
         }
         
-        inline Vector3D operator+ (const Vector3D& v){
-            Vector3D temp;
-            temp.x = this->x + v.x;
-            temp.y = this->y + v.y;
-            temp.z = this->z + v.z;
-            return temp;
+        inline Vector3D& operator+ (const Vector3D& v){
+            this->x += v.x;
+            this->y += v.y;
+            this->z += v.z;
+            return *this;
         }
         
         inline Vector3D& operator= (const Vector3D& v){
@@ -51,28 +50,25 @@ namespace Math {
             return *this;
         }
         
-        inline Vector3D operator*(const Vector3D& v){
-            Vector3D temp;
-            temp.x = this->x*v.x;
-            temp.y = this->y*v.y;
-            temp.z = this->z*v.z;
-            return temp;
+        inline Vector3D& operator*(const Vector3D& v){
+            this->x *= v.x;
+            this->y *= v.y;
+            this->z *= v.z;
+            return *this;
         }
         
-        inline Vector3D operator- (const Vector3D& v) {
-            Vector3D temp;
-            temp.x = this->x-v.x;
-            temp.y = this->y-v.y;
-            temp.z = this->z-v.z;
-            return temp;
+        inline Vector3D& operator- (const Vector3D& v) {
+            this->x -= v.x;
+            this->y -= v.y;
+            this->z -= v.z;
+            return *this;
         }
         
-        inline Vector3D operator/ (const Vector3D& v) {
-            Vector3D temp;
-            temp.x = this->x/v.x;
-            temp.y = this->y/v.y;
-            temp.z = this->z/v.z;
-            return temp;
+        inline Vector3D& operator/ (const Vector3D& v) {
+            this->x /= v.x;
+            this->y /= v.y;
+            this->z /= v.z;
+            return *this;
         }
         
     };
