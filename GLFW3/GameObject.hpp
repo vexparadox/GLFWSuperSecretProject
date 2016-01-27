@@ -16,7 +16,7 @@ class GameObject{
 protected:
     Math::Vector2D position, nextPosition;
     bool visible;
-    GameObject(Math::Vector2D position, bool visible);
+    GameObject(const Math::Vector2D &position, bool visible);
     GameObject(float x, float y, bool visible);
     virtual ~GameObject(){};
 public:

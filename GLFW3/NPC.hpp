@@ -14,7 +14,7 @@
 
 class NPC : public Creature{
 protected:
-    NPC(Math::Vector2D position, bool visible, float health);
+    NPC(const Math::Vector2D &position, bool visible, float health);
 };
 
 #endif /* NPC_hpp */
