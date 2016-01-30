@@ -17,6 +17,7 @@ class Player : public Creature{
 public:
     Player(const Math::Vector2D &position, bool visible, float health);
     virtual void render();
+    virtual void update();
 };
 
 #endif /* Player_hpp */

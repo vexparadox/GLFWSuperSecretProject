@@ -10,5 +10,6 @@
 #define States_h
 
 #include "GameState.hpp"
+#include "MapCreationState.hpp"
 
 #endif /* States_h */

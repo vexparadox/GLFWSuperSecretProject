@@ -13,6 +13,8 @@ using namespace Graphics;
 Core::~Core(){
     delete gameState;
     gameState = nullptr;
+    delete mapState;
+    mapState = nullptr;
     inputHandler = nullptr;
 }
 
@@ -20,11 +22,13 @@ void Core::setup(){
     //this needs to be set here otherwise c
     inputHandler = InputHandler::getInstance();
     gameState = new GameState();
-    State::setState(gameState);
+    mapState = new MapCreationState();
+    State::setState(mapState);
 }
 
 void Core::update(){
     State::getCurrentState()->update();
+    inputHandler->mouseInput(mouseX, mouseY);
 }
 
 void Core::draw(){
@@ -32,6 +36,8 @@ void Core::draw(){
 }
 
 void Core::keyPressed(int key){
+    //0 - 48
+    //9 - 57
     inputHandler->keyDown(key);
 }
 

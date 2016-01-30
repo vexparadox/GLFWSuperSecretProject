@@ -36,7 +36,6 @@ int InputHandler::getMouseY(){
 }
 
 void InputHandler::keyDown(int key){
-    
     isKeyPressed = true;
     switch(key){
             //LEFT ARROW

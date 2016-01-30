@@ -26,6 +26,7 @@
 		C22E64281C5122C600386E87 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C22E64271C5122C600386E87 /* CoreVideo.framework */; };
 		C283AC6F1C51AA7200527570 /* InputHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C283AC6E1C51AA7200527570 /* InputHandler.cpp */; };
 		C28CF85D1C57E99C00607332 /* Collision.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C28CF85B1C57E99C00607332 /* Collision.cpp */; settings = {ASSET_TAGS = (); }; };
+		C28CF8601C5A1B9500607332 /* MapCreationState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C28CF85E1C5A1B9500607332 /* MapCreationState.cpp */; settings = {ASSET_TAGS = (); }; };
 		C2A04FE41C4FE1BD0082FE27 /* image_DXT.c in Sources */ = {isa = PBXBuildFile; fileRef = C2A04FE01C4FE1BD0082FE27 /* image_DXT.c */; };
 		C2A04FE51C4FE1BD0082FE27 /* image_helper.c in Sources */ = {isa = PBXBuildFile; fileRef = C2A04FE11C4FE1BD0082FE27 /* image_helper.c */; };
 		C2A04FE61C4FE1BD0082FE27 /* SOIL.c in Sources */ = {isa = PBXBuildFile; fileRef = C2A04FE21C4FE1BD0082FE27 /* SOIL.c */; };
@@ -91,6 +92,8 @@
 		C283AC721C52461F00527570 /* States.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = States.h; sourceTree = "<group>"; };
 		C28CF85A1C57E46900607332 /* Collision.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Collision.h; sourceTree = "<group>"; };
 		C28CF85B1C57E99C00607332 /* Collision.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Collision.cpp; sourceTree = "<group>"; };
+		C28CF85E1C5A1B9500607332 /* MapCreationState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MapCreationState.cpp; sourceTree = "<group>"; };
+		C28CF85F1C5A1B9500607332 /* MapCreationState.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MapCreationState.hpp; sourceTree = "<group>"; };
 		C29A570A1C19EC9600A626CE /* Colour.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Colour.h; sourceTree = "<group>"; };
 		C2A04FE01C4FE1BD0082FE27 /* image_DXT.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = image_DXT.c; path = include/SOIL/image_DXT.c; sourceTree = "<group>"; };
 		C2A04FE11C4FE1BD0082FE27 /* image_helper.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = image_helper.c; path = include/SOIL/image_helper.c; sourceTree = "<group>"; };
@@ -279,6 +282,15 @@
 			name = Objects;
 			sourceTree = "<group>";
 		};
+		C28CF8611C5A1C7600607332 /* MapCreation */ = {
+			isa = PBXGroup;
+			children = (
+				C28CF85E1C5A1B9500607332 /* MapCreationState.cpp */,
+				C28CF85F1C5A1B9500607332 /* MapCreationState.hpp */,
+			);
+			name = MapCreation;
+			sourceTree = "<group>";
+		};
 		C2A04FE81C4FE1C20082FE27 /* SOIL */ = {
 			isa = PBXGroup;
 			children = (
@@ -297,6 +309,7 @@
 				C2E9BD861C5173870005A77A /* State.cpp */,
 				C2E9BD871C5173870005A77A /* State.hpp */,
 				C283AC721C52461F00527570 /* States.h */,
+				C28CF8611C5A1C7600607332 /* MapCreation */,
 				C2E9BD8D1C51767D0005A77A /* GameState */,
 			);
 			name = States;
@@ -370,6 +383,7 @@
 				C28CF85D1C57E99C00607332 /* Collision.cpp in Sources */,
 				C283AC6F1C51AA7200527570 /* InputHandler.cpp in Sources */,
 				C22E64001C51082B00386E87 /* Creature.cpp in Sources */,
+				C28CF8601C5A1B9500607332 /* MapCreationState.cpp in Sources */,
 				C2E9BD8B1C5174E50005A77A /* GameState.cpp in Sources */,
 				C22E64021C51082B00386E87 /* GameObject.cpp in Sources */,
 				C22E64041C51082B00386E87 /* NPC.cpp in Sources */,

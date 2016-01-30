@@ -8,8 +8,9 @@
 
 #ifndef Core_hpp
 #define Core_hpp
+
 #include "Runner.hpp" //THIS IS NEEDED
-#include "GameState.hpp"
+#include "States.h"
 #include "InputHandler.hpp"
 
 class Core : public BaseCore{
@@ -23,9 +24,8 @@ public:
     void keyReleased(int key);
     void mousePressed(int button);
     void mouseReleased(int button);
-    Graphics::Image img;
-    int x = 0;
     GameState* gameState;
+    MapCreationState* mapState;
     InputHandler* inputHandler;
 };
 
