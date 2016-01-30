@@ -11,6 +11,18 @@
 #include "Rect.h"
 #include "Triangle.h"
 namespace Math {
+    
+    class lineCollide{
+    public:
+        Math::Vector2D v1, v2;
+        lineCollide(const Math::Vector2D &v1, const Math::Vector2D &v2);
+    };
+    
+    //this method checks a proposed position and returns a corrected position
+    Math::Vector2D lineCollisionCheckX(const Math::Vector2D &originalPosition, const Math::Vector2D &proposedMovement, const lineCollide &lc);
+    
+    Math::Vector2D lineCollisionCheckY(const Math::Vector2D &originalPosition, const Math::Vector2D &proposedMovement, const lineCollide &lc);
+    
     //returns if v3 is inside of v1-v2
     bool isInsideQuad(const Vector2D &v1, const Vector2D &v2, const Vector2D &v3);
     

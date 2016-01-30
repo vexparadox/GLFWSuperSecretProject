@@ -9,6 +9,26 @@
 #include "Collision.h"
 
 namespace Math {
+    
+    lineCollide::lineCollide(const Math::Vector2D &v1, const Math::Vector2D &v2){
+        this->v1 = v1;
+        this->v2 = v2;
+    }
+    
+    Math::Vector2D lineCollisionCheckX(const Math::Vector2D &originalPosition, const Math::Vector2D &proposedMovement, const lineCollide &lc){
+        if(originalPosition.x < lc.v1.x && proposedMovement.x > lc.v1.x){
+            return Math::Vector2D(lc.v1.x, proposedMovement.y);
+        }
+        return proposedMovement;
+    }
+    
+    Math::Vector2D lineCollisionCheckY(const Math::Vector2D &originalPosition, const Math::Vector2D &proposedMovement, const lineCollide &lc){
+        if(originalPosition.y < lc.v1.y && proposedMovement.y > lc.v1.y){
+            return Math::Vector2D(proposedMovement.x, lc.v1.y);
+        }
+        return proposedMovement;
+    }
+    
     //returns if v3 is inside of v1-v2
     bool isInsideQuad(const Vector2D &point, const Vector2D &v1, const Vector2D &v2){
         if(point.x > v1.x && point.x < v2.x && point.y > v1.y && point.y < v2.y){
