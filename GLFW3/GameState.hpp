@@ -18,7 +18,7 @@
 class GameState : public State{
 public:
     GameState();
-    ~GameState();
+    virtual ~GameState();
     void update();
     void draw();
     InputHandler* inputHandler;
