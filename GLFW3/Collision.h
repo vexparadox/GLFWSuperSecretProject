@@ -11,7 +11,6 @@
 #include "Rect.h"
 #include "Triangle.h"
 namespace Math {
-    
     struct lineCollide{
         Math::Vector2D v1, v2;
         lineCollide(const Math::Vector2D &v1, const Math::Vector2D &v2);

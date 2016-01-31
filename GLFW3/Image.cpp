@@ -13,6 +13,10 @@ Image::Image(std::string name){
 }
 
 bool Image::loadImage(std::string nameInput){
+    if(loaded){
+        std::cout << "Image: already loaded" << std::endl;
+        return false;
+    }
     std::string temp = "data/" + nameInput;
     const char* name = temp.c_str();
     //check if it's already loaded, if so load into the same texture point

@@ -9,7 +9,6 @@
 #include "Collision.h"
 
 namespace Math {
-    
     lineCollide::lineCollide(const Math::Vector2D &v1, const Math::Vector2D &v2){
         this->v1 = v1;
         this->v2 = v2;
