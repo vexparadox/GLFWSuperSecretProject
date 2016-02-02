@@ -20,33 +20,20 @@ GameState::GameState(){
     worldHandler->loadWorld(0);
     inputHandler = InputHandler::getInstance();
     //add the player to the object loop
-    objects.push_back(&a);
+    renderObjects.push_back(&player);
+    updateObjects.push_back(&player);
 }
 
 void GameState::update(){
-    if(inputHandler->getDOWN()){
-        a.setPosition(a.getPosition().x, a.getPosition().y+4);
+    for(GameObject* u: updateObjects){
+        u->update();
     }
-    if(inputHandler->getUP()){
-        a.setPosition(a.getPosition().x, a.getPosition().y-4);
-    }
-
-    if(a.getPosition().y > inputHandler->windowHeight){
-        worldHandler->offSetYby(-inputHandler->windowHeight);
-        a.setPosition(a.getPosition().x, 0);
-    }
-    
-    if(a.getPosition().y < 0){
-        worldHandler->offSetYby(inputHandler->windowHeight);
-        a.setPosition(a.getPosition().x, inputHandler->windowHeight-SPRITE_SIZE);
-    }
-
 }
 
 void GameState::draw(){
     WorldHandler::getInstance()->renderWorld();
     //render loop
-    for(GameObject* g: objects){
+    for(GameObject* g: renderObjects){
         g->render();
     }
 }

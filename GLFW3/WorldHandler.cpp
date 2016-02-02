@@ -17,17 +17,23 @@ WorldHandler* WorldHandler::getInstance(){
     return instance;
 }
 
-void WorldHandler::offSetXby(int a){
-    offSetX += a;
+
+int WorldHandler::getOffSetX(){
+    return offSetX;
 }
 
-void WorldHandler::offSetYby(int a){
-    offSetY += a;
+int WorldHandler::getOffSetY(){
+    return offSetY;
+}
+
+void WorldHandler::offSetby(int x, int y){
+    offSetX += x;
+    offSetY += y;
 }
 
 void WorldHandler::offSetby(const Math::Vector2D &v){
-    this->offSetXby(v.x);
-    this->offSetYby(v.y);
+    this->offSetX += v.x;
+    this->offSetY += v.y;
 }
 
 void WorldHandler::loadWorld(int worldNum){
@@ -56,9 +62,11 @@ void WorldHandler::loadWorld(int worldNum){
 
 void WorldHandler::renderWorld(){
     SpriteHandler* temp = SpriteHandler::getInstance();
+    int tempOffsetX = offSetX*windowWidth;
+    int tempOffsetY = offSetY*windowHeight;
     for(int i = 0; i < yMapSize; i++){
         for(int j = 0; j < xMapSize; j++){
-            temp->get(map[j+i*xMapSize].textureCode).draw((j*SPRITE_CODE::SPRITE_SIZE)+offSetX, (i*SPRITE_CODE::SPRITE_SIZE)+offSetY, SPRITE_CODE::SPRITE_SIZE, SPRITE_CODE::SPRITE_SIZE);
+            temp->get(map[j+i*xMapSize].textureCode).draw((j*SPRITE_CODE::SPRITE_SIZE)+tempOffsetX, (i*SPRITE_CODE::SPRITE_SIZE)+tempOffsetY, SPRITE_CODE::SPRITE_SIZE, SPRITE_CODE::SPRITE_SIZE);
         }
     }
 }

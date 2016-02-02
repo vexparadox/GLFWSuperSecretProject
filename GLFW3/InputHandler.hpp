@@ -21,7 +21,6 @@ class InputHandler{
     bool UP, LEFT, RIGHT, DOWN, isKeyPressed, SPACE, MOUSE0, MOUSE1, isMousePressed;
     int mouseX = 0, mouseY = 0;
 public:
-    int windowWidth, windowHeight;
     static InputHandler* getInstance();
     void mouseInput(int x, int y);
     int getMouseX();

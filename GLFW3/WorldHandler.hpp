@@ -22,9 +22,11 @@ public:
     static WorldHandler* getInstance();
     void loadWorld(int i);
     void renderWorld();
-    void offSetXby(int a);
-    void offSetYby(int a);
+    void offSetby(int x, int y);
     void offSetby(const Math::Vector2D &v);
+    int getOffSetX();
+    int getOffSetY();
+    int windowWidth, windowHeight;
 private:
     //creation and singleton method blocks
     WorldHandler(){}; //no creation needed

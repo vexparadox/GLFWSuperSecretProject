@@ -23,7 +23,10 @@ public:
     void draw();
     InputHandler* inputHandler;
     WorldHandler* worldHandler;
-    std::vector<GameObject*> objects;
-    Player a = Player(Math::Vector2D(500, 400), true, 50);
+    //holds GOs that needs to be rendered
+    std::vector<GameObject*> renderObjects;
+    //holds GOs that need to be updated
+    std::vector<GameObject*> updateObjects;
+    Player player = Player(Math::Vector2D(500, 400), true, 50);
 };
 #endif /* GameState_hpp */

@@ -24,8 +24,8 @@ void Core::setup(){
     gameState = new GameState();
     mapState = new MapCreationState();
     State::setState(gameState);
-    inputHandler->windowHeight = Runner::windowHeight;
-    inputHandler->windowWidth = Runner::windowHeight;
+    WorldHandler::getInstance()->windowHeight = Runner::windowHeight;
+    WorldHandler::getInstance()->windowWidth = Runner::windowWidth;
 }
 
 void Core::update(){
