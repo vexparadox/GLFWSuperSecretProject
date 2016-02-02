@@ -31,6 +31,7 @@
 		C2A04FE51C4FE1BD0082FE27 /* image_helper.c in Sources */ = {isa = PBXBuildFile; fileRef = C2A04FE11C4FE1BD0082FE27 /* image_helper.c */; };
 		C2A04FE61C4FE1BD0082FE27 /* SOIL.c in Sources */ = {isa = PBXBuildFile; fileRef = C2A04FE21C4FE1BD0082FE27 /* SOIL.c */; };
 		C2A04FE71C4FE1BD0082FE27 /* stb_image_aug.c in Sources */ = {isa = PBXBuildFile; fileRef = C2A04FE31C4FE1BD0082FE27 /* stb_image_aug.c */; };
+		C2DE69721C61531E00875E74 /* Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2DE69701C61531E00875E74 /* Utils.cpp */; settings = {ASSET_TAGS = (); }; };
 		C2E9BD881C5173870005A77A /* State.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2E9BD861C5173870005A77A /* State.cpp */; settings = {ASSET_TAGS = (); }; };
 		C2E9BD8B1C5174E50005A77A /* GameState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2E9BD891C5174E50005A77A /* GameState.cpp */; settings = {ASSET_TAGS = (); }; };
 		C2FF28211C19CFB20094E154 /* Image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2FF281F1C19CFB20094E154 /* Image.cpp */; settings = {ASSET_TAGS = (); }; };
@@ -99,6 +100,8 @@
 		C2A04FE11C4FE1BD0082FE27 /* image_helper.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = image_helper.c; path = include/SOIL/image_helper.c; sourceTree = "<group>"; };
 		C2A04FE21C4FE1BD0082FE27 /* SOIL.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = SOIL.c; path = include/SOIL/SOIL.c; sourceTree = "<group>"; };
 		C2A04FE31C4FE1BD0082FE27 /* stb_image_aug.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = stb_image_aug.c; path = include/SOIL/stb_image_aug.c; sourceTree = "<group>"; };
+		C2DE69701C61531E00875E74 /* Utils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Utils.cpp; sourceTree = "<group>"; };
+		C2DE69711C61531E00875E74 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		C2E9BD861C5173870005A77A /* State.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = State.cpp; sourceTree = "<group>"; };
 		C2E9BD871C5173870005A77A /* State.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = State.hpp; sourceTree = "<group>"; };
 		C2E9BD891C5174E50005A77A /* GameState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameState.cpp; sourceTree = "<group>"; };
@@ -201,6 +204,8 @@
 			isa = PBXGroup;
 			children = (
 				C2071E8E1C15D2A500648169 /* Math.h */,
+				C2DE69701C61531E00875E74 /* Utils.cpp */,
+				C2DE69711C61531E00875E74 /* Utils.h */,
 				C28CF85A1C57E46900607332 /* Collision.h */,
 				C28CF85B1C57E99C00607332 /* Collision.cpp */,
 				C2071E8F1C15D2BB00648169 /* Vector3D.h */,
@@ -399,6 +404,7 @@
 				C20671B21C184FA70006C6B1 /* Runner.cpp in Sources */,
 				C21729601C1AEC1B00E2869A /* Font.cpp in Sources */,
 				C2E9BD881C5173870005A77A /* State.cpp in Sources */,
+				C2DE69721C61531E00875E74 /* Utils.cpp in Sources */,
 				C2071E941C15D67A00648169 /* Graphics.cpp in Sources */,
 				C20671AD1C1792770006C6B1 /* Core.cpp in Sources */,
 				C2071E811C15CBBE00648169 /* main.cpp in Sources */,

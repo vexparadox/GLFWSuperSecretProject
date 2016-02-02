@@ -62,11 +62,19 @@ void WorldHandler::loadWorld(int worldNum){
 
 void WorldHandler::renderWorld(){
     SpriteHandler* temp = SpriteHandler::getInstance();
-    int tempOffsetX = offSetX*windowWidth;
-    int tempOffsetY = offSetY*windowHeight;
-    for(int i = 0; i < yMapSize; i++){
-        for(int j = 0; j < xMapSize; j++){
-            temp->get(map[j+i*xMapSize].textureCode).draw((j*SPRITE_CODE::SPRITE_SIZE)+tempOffsetX, (i*SPRITE_CODE::SPRITE_SIZE)+tempOffsetY, SPRITE_CODE::SPRITE_SIZE, SPRITE_CODE::SPRITE_SIZE);
+    //this is so it only loops on the ones that are to be displayed
+    
+    int minOffSetX = offSetX*(windowWidth/SPRITE_CODE::SPRITE_SIZE);
+    int minOffSetY = offSetY*(windowHeight/SPRITE_CODE::SPRITE_SIZE);
+    
+    int maxOffSetX = (offSetX+1)*(windowWidth/SPRITE_CODE::SPRITE_SIZE);
+    int maxOffSetY = (offSetY+1)*(windowHeight/SPRITE_CODE::SPRITE_SIZE);
+    
+    
+    for(int i = minOffSetY; i < maxOffSetY; i++){
+        for(int j = minOffSetX; j < maxOffSetX; j++){
+            //draw the sprites
+            temp->get(map[j+i*xMapSize].textureCode).draw((j*SPRITE_CODE::SPRITE_SIZE), (i*SPRITE_CODE::SPRITE_SIZE), SPRITE_CODE::SPRITE_SIZE, SPRITE_CODE::SPRITE_SIZE);
         }
     }
 }

@@ -12,4 +12,5 @@
 #include "Vector2D.h"
 #include "Collision.h"
 #include "Vector3D.h"
+#include "Utils.h"
 #endif /* Math_h */

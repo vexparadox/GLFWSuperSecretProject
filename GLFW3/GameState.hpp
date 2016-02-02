@@ -19,8 +19,8 @@ class GameState : public State{
 public:
     GameState();
     virtual ~GameState();
-    void update();
-    void draw();
+    virtual void update();
+    virtual void draw();
     InputHandler* inputHandler;
     WorldHandler* worldHandler;
     //holds GOs that needs to be rendered

@@ -21,16 +21,16 @@ Player::~Player(){
 void Player::update(){
     //on player movement
     if(inputHandler->getDOWN()){
-        this->setPosition(this->getPosition().x, this->getPosition().y+4);
+        this->setPosition(this->getPosition().x, this->getPosition().y+speed);
     }
     if(inputHandler->getUP()){
-        this->setPosition(this->getPosition().x, this->getPosition().y-4);
+        this->setPosition(this->getPosition().x, this->getPosition().y-speed);
     }
     if(inputHandler->getRIGHT()){
-        this->setPosition(this->getPosition().x+4, this->getPosition().y);
+        this->setPosition(this->getPosition().x+speed, this->getPosition().y);
     }
     if(inputHandler->getLEFT()){
-        this->setPosition(this->getPosition().x-4, this->getPosition().y);
+        this->setPosition(this->getPosition().x-speed, this->getPosition().y);
     }
     
     //check the positioning, move the world accordingly
@@ -53,11 +53,7 @@ void Player::update(){
     if(this->getPosition().x > worldHandler->windowWidth){
         worldHandler->offSetby(1, 0);
         this->setPosition(0, this->getPosition().y);
-        std::cout << "wsd";
-
     }
-    
-    
 }
 
 void Player::render(){

@@ -19,6 +19,7 @@ public:
     ~Player();
     virtual void render();
     virtual void update();
+    int speed = 6;
     WorldHandler* worldHandler;
     InputHandler* inputHandler;
 };

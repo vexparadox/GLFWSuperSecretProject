@@ -17,8 +17,8 @@ class MapCreationState : public State{
 public:
     MapCreationState();
     virtual ~MapCreationState();
-    void update();
-    void draw();
+    virtual void update();
+    virtual void draw();
     int y = 0;
     int x = 0;
 };
