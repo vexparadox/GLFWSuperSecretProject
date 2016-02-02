@@ -24,17 +24,9 @@ GameState::GameState(){
 }
 
 void GameState::update(){
-    if(inputHandler->getLEFT()){
-        worldHandler->offSetXby(5);
-    }
-    if(inputHandler->getRIGHT()){
-        worldHandler->offSetXby(-5);
-    }
-    if(inputHandler->getUP()){
-        worldHandler->offSetYby(5);
-    }
-    if(inputHandler->getDOWN()){
-        worldHandler->offSetYby(-5);
+    if(a.getPosition().y > inputHandler->windowHeight){
+        worldHandler->offSetYby(inputHandler->windowHeight);
+        
     }
 }
 

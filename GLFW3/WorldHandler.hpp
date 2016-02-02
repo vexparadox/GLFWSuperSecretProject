@@ -14,6 +14,7 @@
 #include "coreMain.h"
 #include <fstream>
 #include "SpriteHandler.hpp"
+#include "InputHandler.hpp"
 
 class WorldHandler{
 public:
