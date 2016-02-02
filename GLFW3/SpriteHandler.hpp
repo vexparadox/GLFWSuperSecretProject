@@ -19,7 +19,7 @@ enum SPRITE_CODE{
     player = 4,
     enemy = 5,
     END_SPRITE = 6,
-    SPRITE_SIZE = 50
+    SPRITE_SIZE = 64
 };
 
 class SpriteHandler{
