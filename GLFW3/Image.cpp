@@ -11,6 +11,7 @@ namespace Graphics{
     Image::Image(std::string name){
         this->loadImage(name);
     }
+    
     bool Image::loadImage(std::string nameInput){
         if(loaded){
             std::cout << "Image: already loaded" << std::endl;
@@ -33,19 +34,6 @@ namespace Graphics{
         }
         return false;
     }
-    
-    void Image::draw(float x, float y){
-        this->draw(x, w, this->w, this->h);
-    }
-    
-    void Image::draw(const Math::Vector2D &v){
-        this->draw(v.x, v.y, this->w, this->h);
-    }
-    
-    void Image::draw(const Math::Vector2D &v, float w, float h){
-        this->draw(v.x, v.y, w, h);
-    }
-    
     void Image::openGlLoad(const char* name){
         glEnable(GL_TEXTURE_2D);
         GLuint texture_id;
@@ -63,7 +51,20 @@ namespace Graphics{
         SOIL_free_image_data(imageDataPtr);
         this->textureID = texture_id;
     }
-        
+    
+    
+    void Image::draw(float x, float y){
+        this->draw(x, w, this->w, this->h);
+    }
+    
+    void Image::draw(const Math::Vector2D &v){
+        this->draw(v.x, v.y, this->w, this->h);
+    }
+    
+    void Image::draw(const Math::Vector2D &v, float w, float h){
+        this->draw(v.x, v.y, w, h);
+    }
+    
     void Image::draw(float x, float y, float width, float height){
         if(textureID == 0 || !loaded){
             std::cout << "No image has been loaded" << std::endl;
