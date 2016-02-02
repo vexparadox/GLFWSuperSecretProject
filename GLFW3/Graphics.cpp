@@ -57,6 +57,14 @@ namespace Graphics{
         glEnd();
     }
     
+    
+    std::vector<unsigned char> getScreenData(int x, int y, int w, int h){
+        std::vector<unsigned char> data(4*w*h);
+        glReadPixels(x, y, w, h, GL_RGBA, GL_UNSIGNED_BYTE, &data[0]);
+        return data;
+    }
+    
+    
     void setBackground(float r, float g, float b, float a){
         glClearColor(r/255, g/255, b/255, a/255);
     }

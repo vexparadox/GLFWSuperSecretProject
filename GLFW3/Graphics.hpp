@@ -11,6 +11,7 @@
 
 #include "Types.h"
 #include "GLFW/glfw3.h"
+#include <vector>
 
 namespace Graphics{
     //Triangles
@@ -24,6 +25,8 @@ namespace Graphics{
     //Polygons
     void drawPoly(Polygon &p);
     void drawPoly(std::vector<Math::Vector2D>& v);
+    
+    std::vector<unsigned char> getScreenData(int x, int y, int w, int h);
     
     void setBackground(float r, float g, float b, float a);
     void setBackground(float r, float g, float b);
