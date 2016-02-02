@@ -41,14 +41,14 @@ void WorldHandler::loadWorld(int worldNum){
                 //convert the string into an int
                 int tempInt = (int)str[i] - 48;
                 map.push_back(Tile(tempInt));
-                xSize++;
+                xMapSize++;
             }
             //count how many lines there are
-            ySize++;
+            yMapSize++;
         }
-        //xSize will end up being xSize*number of lines
+        //xMapSize will end up being xSize*number of lines
         //so fix that
-        xSize = xSize/ySize;
+        xMapSize = xMapSize/yMapSize;
     }else{
         std::cout << "World file failed to load";
     }
@@ -56,9 +56,9 @@ void WorldHandler::loadWorld(int worldNum){
 
 void WorldHandler::renderWorld(){
     SpriteHandler* temp = SpriteHandler::getInstance();
-    for(int i = 0; i < ySize; i++){
-        for(int j = 0; j < xSize; j++){
-            temp->get(map[j+i*xSize].textureCode).draw((j*SPRITE_CODE::SPRITE_SIZE)+offSetX, (i*SPRITE_CODE::SPRITE_SIZE)+offSetY, SPRITE_CODE::SPRITE_SIZE, SPRITE_CODE::SPRITE_SIZE);
+    for(int i = 0; i < yMapSize; i++){
+        for(int j = 0; j < xMapSize; j++){
+            temp->get(map[j+i*xMapSize].textureCode).draw((j*SPRITE_CODE::SPRITE_SIZE)+offSetX, (i*SPRITE_CODE::SPRITE_SIZE)+offSetY, SPRITE_CODE::SPRITE_SIZE, SPRITE_CODE::SPRITE_SIZE);
         }
     }
 }

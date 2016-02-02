@@ -25,16 +25,16 @@ GameState::GameState(){
 
 void GameState::update(){
     if(inputHandler->getLEFT()){
-        worldHandler->offSetXby(2);
+        worldHandler->offSetXby(5);
     }
     if(inputHandler->getRIGHT()){
-        worldHandler->offSetXby(-2);
+        worldHandler->offSetXby(-5);
     }
     if(inputHandler->getUP()){
-        worldHandler->offSetYby(2);
+        worldHandler->offSetYby(5);
     }
     if(inputHandler->getDOWN()){
-        worldHandler->offSetYby(-2);
+        worldHandler->offSetYby(-5);
     }
 }
 

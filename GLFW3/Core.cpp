@@ -23,7 +23,7 @@ void Core::setup(){
     inputHandler = InputHandler::getInstance();
     gameState = new GameState();
     mapState = new MapCreationState();
-    State::setState(mapState);
+    State::setState(gameState);
 }
 
 void Core::update(){
@@ -33,9 +33,6 @@ void Core::update(){
 
 void Core::draw(){
     State::getCurrentState()->draw();
-    std::vector<unsigned char> screen = Graphics::getScreenData(1, 1, 2, 2);
-        std::cout << screen[0];
-    std::cout << std::endl << screen[1];
 }
 
 void Core::keyPressed(int key){

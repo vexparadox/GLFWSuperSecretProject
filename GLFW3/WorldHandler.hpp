@@ -46,7 +46,7 @@ private:
     
     //the map
     std::vector<Tile> map;
-    int xSize = 0, ySize = 0;
+    int xMapSize = 0, yMapSize = 0;
 };
 
 #endif /* WorldHandler_hpp */
