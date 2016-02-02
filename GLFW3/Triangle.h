@@ -10,6 +10,7 @@
 #define Triangle_h
 
 #include "Vector2D.h"
+
 namespace Graphics{
 class Triangle{
 public:

@@ -20,6 +20,7 @@ private:
     int w, h, mipMapLeveCount;
     bool loaded = false;
     GLuint getTextureID();
+    void openGlLoad(const char* name);
 public:
     Image(){};
     Image(std::string nameInput);
