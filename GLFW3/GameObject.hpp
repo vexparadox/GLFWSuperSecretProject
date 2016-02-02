@@ -25,6 +25,7 @@ public:
     void move(){};
     const Math::Vector2D& getPosition();
     void setPosition(const Math::Vector2D &v);
+    void setPosition(const float &x, const float &y);
     
 };
 

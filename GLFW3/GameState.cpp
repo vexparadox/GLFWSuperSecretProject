@@ -24,10 +24,23 @@ GameState::GameState(){
 }
 
 void GameState::update(){
-    if(a.getPosition().y > inputHandler->windowHeight){
-        worldHandler->offSetYby(inputHandler->windowHeight);
-        
+    if(inputHandler->getDOWN()){
+        a.setPosition(a.getPosition().x, a.getPosition().y+4);
     }
+    if(inputHandler->getUP()){
+        a.setPosition(a.getPosition().x, a.getPosition().y-4);
+    }
+
+    if(a.getPosition().y > inputHandler->windowHeight){
+        worldHandler->offSetYby(-inputHandler->windowHeight);
+        a.setPosition(a.getPosition().x, 0);
+    }
+    
+    if(a.getPosition().y < 0){
+        worldHandler->offSetYby(inputHandler->windowHeight);
+        a.setPosition(a.getPosition().x, inputHandler->windowHeight-SPRITE_SIZE);
+    }
+
 }
 
 void GameState::draw(){

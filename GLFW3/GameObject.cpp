@@ -24,3 +24,8 @@ const Math::Vector2D& GameObject::getPosition(){
 void GameObject::setPosition(const Math::Vector2D &v){
     this->position = v;
 }
+
+void GameObject::setPosition(const float &x, const float &y){
+    this->position.x = x;
+    this->position.y = y;
+}
