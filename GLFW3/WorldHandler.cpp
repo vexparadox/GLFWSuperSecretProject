@@ -29,6 +29,7 @@ int WorldHandler::getOffSetY(){
 void WorldHandler::offSetby(int x, int y){
     offSetX += x;
     offSetY += y;
+    std::cout << offSetX <<  " " << offSetY << std::endl;
 }
 
 void WorldHandler::offSetby(const Math::Vector2D &v){
@@ -62,19 +63,28 @@ void WorldHandler::loadWorld(int worldNum){
 
 void WorldHandler::renderWorld(){
     SpriteHandler* temp = SpriteHandler::getInstance();
+    //it needs to be abs'd but not the actual value
+    int tempOffSetX = offSetX;
+    int tempOffSetY = offSetY;
+    Math::absolute(tempOffSetY);
+    Math::absolute(tempOffSetX);
+    
     //this is so it only loops on the ones that are to be displayed
+    int minOffSetX = tempOffSetX*(windowWidth/SPRITE_CODE::SPRITE_SIZE);
+    int minOffSetY = tempOffSetY*(windowHeight/SPRITE_CODE::SPRITE_SIZE);
     
-    int minOffSetX = offSetX*(windowWidth/SPRITE_CODE::SPRITE_SIZE);
-    int minOffSetY = offSetY*(windowHeight/SPRITE_CODE::SPRITE_SIZE);
+    int maxOffSetX = (tempOffSetX+1)*(windowWidth/SPRITE_CODE::SPRITE_SIZE);
+    int maxOffSetY = (tempOffSetY+1)*(windowHeight/SPRITE_CODE::SPRITE_SIZE);
     
-    int maxOffSetX = (offSetX+1)*(windowWidth/SPRITE_CODE::SPRITE_SIZE);
-    int maxOffSetY = (offSetY+1)*(windowHeight/SPRITE_CODE::SPRITE_SIZE);
-    
+    if(maxOffSetX+maxOffSetY*xMapSize > map.size() || maxOffSetX > xMapSize){
+        std::cout << "Map coords out of bounds";
+        return;
+    }
     
     for(int i = minOffSetY; i < maxOffSetY; i++){
         for(int j = minOffSetX; j < maxOffSetX; j++){
             //draw the sprites
-            temp->get(map[j+i*xMapSize].textureCode).draw((j*SPRITE_CODE::SPRITE_SIZE), (i*SPRITE_CODE::SPRITE_SIZE), SPRITE_CODE::SPRITE_SIZE, SPRITE_CODE::SPRITE_SIZE);
+            temp->get(map[j+i*xMapSize].textureCode).draw(((j-minOffSetX)*SPRITE_CODE::SPRITE_SIZE), ((i-minOffSetY)*SPRITE_CODE::SPRITE_SIZE), SPRITE_CODE::SPRITE_SIZE, SPRITE_CODE::SPRITE_SIZE);
         }
     }
 }

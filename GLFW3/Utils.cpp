@@ -8,14 +8,16 @@
 
 #include "Utils.h"
 namespace Math {
-    void absolute(float &f){
+    float& absolute(float &f){
         if(f < 0){
             f = f*-1;
         }
+        return f;
     }
-    void absolute(int &i){
+    int& absolute(int &i){
         if(i < 0){
             i = i*-1;
         }
+        return i;
     }
 }

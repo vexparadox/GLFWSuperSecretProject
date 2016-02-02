@@ -12,8 +12,8 @@
 #include <stdio.h>
 
 namespace Math {
-    void absolute(float &f);
-    void absolute(int &i);
+    float& absolute(float &f);
+    int& absolute(int &i);
 }
 
 #endif /* Utils_hpp */
