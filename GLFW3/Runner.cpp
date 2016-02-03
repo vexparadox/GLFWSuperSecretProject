@@ -57,10 +57,13 @@ Runner::Runner(float windowWidth, float windowHeight, int frameRate,const char* 
     while (!glfwWindowShouldClose(window))
     {
         int iconified = glfwGetWindowAttrib(window, GLFW_ICONIFIED);
-        if(iconified){
+        int focused = glfwGetWindowAttrib(window, GLFW_FOCUSED);
+        
+        if(iconified || !focused){
             glfwWaitEvents();
+        
         }
-        if(!fps(frameRate)){
+        if(fps(frameRate)){
             continue;
         }
         glClearColor(r, g, b, a);
