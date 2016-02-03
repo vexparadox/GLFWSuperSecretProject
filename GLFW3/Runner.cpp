@@ -9,6 +9,10 @@
 #include "Runner.hpp"
 float Runner::windowWidth = 0;
 float Runner::windowHeight = 0;
+float Runner::r = 1;
+float Runner::g = 1;
+float Runner::b = 1;
+float Runner::a = 1;
 
 Runner::Runner(float windowWidth, float windowHeight, int frameRate,const char* title,BaseCore* c){
     Runner::windowWidth = windowWidth;
@@ -50,7 +54,7 @@ Runner::Runner(float windowWidth, float windowHeight, int frameRate,const char* 
     //call setup for first time run
     c->setup();
     //the game loop
-    glClearColor(1, 1, 1, 1);
+    glClearColor(r, g, b, a);
     while (!glfwWindowShouldClose(window))
     {
         int iconified = glfwGetWindowAttrib(window, GLFW_ICONIFIED);

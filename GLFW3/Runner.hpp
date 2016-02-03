@@ -15,6 +15,7 @@ class Runner{
     double currentTime, lastTime;
     bool fps(int framerate);
 public:
+    static float r, g, b, a;
     static float windowWidth, windowHeight;
     Runner(float windowWidth, float windowHeight, int frameRate, const char* title, BaseCore* c);
     ~Runner(){};

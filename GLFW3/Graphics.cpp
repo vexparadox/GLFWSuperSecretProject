@@ -7,6 +7,7 @@
 //
 
 #include "Graphics.hpp"
+#include "Runner.hpp"
 namespace Graphics{
     void drawTriangle(Triangle& t){
         drawTriangle(t.v1, t.v2, t.v3);
@@ -66,7 +67,10 @@ namespace Graphics{
     
     
     void setBackground(float r, float g, float b, float a){
-        glClearColor(r/255, g/255, b/255, a/255);
+        Runner::r = r/255;
+        Runner::g = g/255;
+        Runner::b = b/255;
+        Runner::a = a/255;
     }
     
     void setBackground(float r, float g, float b){

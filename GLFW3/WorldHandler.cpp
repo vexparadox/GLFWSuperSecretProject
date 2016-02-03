@@ -38,6 +38,7 @@ void WorldHandler::offSetby(const Math::Vector2D &v){
 }
 
 void WorldHandler::loadWorld(int worldNum){
+    const char seperator = ',';
     std::ifstream worldFile("data/world"+std::to_string(worldNum)+".txt", std::ios::in); //declare a file stream
     if (worldFile.is_open()) //checks if the file is open??
     {
@@ -47,12 +48,13 @@ void WorldHandler::loadWorld(int worldNum){
             std::string read;
             for(int i = 0; i <= str.length(); i++){
                 //convert the string into an int
-                if(strcmp(&str[i], " ") != 0){
-                    read += str[i];
-                }else{
+                if(str[i] == seperator|| i > str.length()){
                     int tempInt = atoi(read.c_str());
+                    read.clear();
                     map.push_back(Tile(tempInt));
                     xMapSize++;
+                }else{
+                    read += str[i];
                 }
             }
             //count how many lines there are
@@ -73,7 +75,6 @@ void WorldHandler::renderWorld(){
     int tempOffSetY = offSetY;
     Math::absolute(tempOffSetY);
     Math::absolute(tempOffSetX);
-    
     //this is so it only loops on the ones that are to be displayed
     int minOffSetX = tempOffSetX*(windowWidth/SPRITE_CODE::SPRITE_SIZE);
     int minOffSetY = tempOffSetY*(windowHeight/SPRITE_CODE::SPRITE_SIZE);

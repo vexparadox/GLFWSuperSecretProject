@@ -26,6 +26,7 @@ void Core::setup(){
     State::setState(gameState);
     WorldHandler::getInstance()->windowHeight = Runner::windowHeight;
     WorldHandler::getInstance()->windowWidth = Runner::windowWidth;
+    Graphics::setBackground(30, 40, 50, 255);
 }
 
 void Core::update(){
