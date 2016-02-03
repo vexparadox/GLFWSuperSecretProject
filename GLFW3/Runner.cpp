@@ -61,7 +61,7 @@ Runner::Runner(float windowWidth, float windowHeight, int frameRate,const char* 
         if(iconified == 1){
             glfwWaitEvents();
         }
-        if(fps(frameRate)){
+        if(!fps(frameRate)){
             continue;
         }
         int width, height;

@@ -72,14 +72,14 @@ void WorldHandler::loadWorld(int worldNum){
         loaded = true;
     }else{
         loaded = false;
-        std::cout << "World file failed to load";
+        std::cout << "World file failed to load" << std::endl;
     }
 }
 
 void WorldHandler::renderWorld(){
     //don't draw if it's not been loaded
     if(!loaded){
-        std::cout << "No world loaded";
+        std::cout << "No world loaded" << std::endl;
         return;
     }
     SpriteHandler* temp = SpriteHandler::getInstance();
@@ -98,7 +98,7 @@ void WorldHandler::renderWorld(){
     
     //check if they're trying to load out of bounds
     if(maxOffSetY > yMapSize || maxOffSetX > xMapSize){
-        std::cout << "Map coords out of bounds";
+        std::cout << "Map coords out of bounds" << std::endl;
         return;
     }
     //draw the world using the offsets
