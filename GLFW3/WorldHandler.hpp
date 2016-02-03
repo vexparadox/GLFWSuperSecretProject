@@ -27,6 +27,7 @@ public:
     int getOffSetX();
     int getOffSetY();
     int windowWidth, windowHeight;
+    bool isLoaded();
 private:
     //creation and singleton method blocks
     WorldHandler(){}; //no creation needed
@@ -36,7 +37,7 @@ private:
     static WorldHandler* instance;
     
     int offSetX = 0, offSetY = 0;
-    
+    bool loaded = false;
     //private class to the world handler
     class Tile{
     public:

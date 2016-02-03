@@ -26,6 +26,10 @@ int WorldHandler::getOffSetY(){
     return offSetY;
 }
 
+bool WorldHandler::isLoaded(){
+    return loaded;
+}
+
 void WorldHandler::offSetby(int x, int y){
     offSetX += x;
     offSetY += y;
@@ -47,7 +51,9 @@ void WorldHandler::loadWorld(int worldNum){
             //loop through and push all the ints to a vector
             std::string read;
             for(int i = 0; i <= str.length(); i++){
-                //convert the string into an int
+                //find seperators and split the integers
+                //this allows for >1 digit ints
+                // i >= str.length finds the end of the line
                 if(str[i] == seperator || i >= str.length()){
                     xMapSize++;
                     int tempInt = atoi(read.c_str());
@@ -63,12 +69,19 @@ void WorldHandler::loadWorld(int worldNum){
         //xMapSize will end up being xSize*number of lines
         //so fix that
         xMapSize = xMapSize/yMapSize;
+        loaded = true;
     }else{
+        loaded = false;
         std::cout << "World file failed to load";
     }
 }
 
 void WorldHandler::renderWorld(){
+    //don't draw if it's not been loaded
+    if(!loaded){
+        std::cout << "No world loaded";
+        return;
+    }
     SpriteHandler* temp = SpriteHandler::getInstance();
     //it needs to be abs'd but not the actual value
     int tempOffSetX = offSetX;
@@ -76,18 +89,19 @@ void WorldHandler::renderWorld(){
     Math::absolute(tempOffSetY);
     Math::absolute(tempOffSetX);
     //this is so it only loops on the ones that are to be displayed
+    //this cuts CPU and GPU strain by a crazy amount
     int minOffSetX = tempOffSetX*(windowWidth/SPRITE_CODE::SPRITE_SIZE);
     int minOffSetY = tempOffSetY*(windowHeight/SPRITE_CODE::SPRITE_SIZE);
     
     int maxOffSetX = (tempOffSetX+1)*(windowWidth/SPRITE_CODE::SPRITE_SIZE);
     int maxOffSetY = (tempOffSetY+1)*(windowHeight/SPRITE_CODE::SPRITE_SIZE);
     
-    
+    //check if they're trying to load out of bounds
     if(maxOffSetY > yMapSize || maxOffSetX > xMapSize){
         std::cout << "Map coords out of bounds";
         return;
     }
-    
+    //draw the world using the offsets
     for(int i = minOffSetY; i < maxOffSetY; i++){
         for(int j = minOffSetX; j < maxOffSetX; j++){
             //draw the sprites
