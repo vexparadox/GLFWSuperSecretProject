@@ -81,8 +81,8 @@ void WorldHandler::renderWorld(){
     
     int maxOffSetX = (tempOffSetX+1)*(windowWidth/SPRITE_CODE::SPRITE_SIZE);
     int maxOffSetY = (tempOffSetY+1)*(windowHeight/SPRITE_CODE::SPRITE_SIZE);
-    
-    if(maxOffSetX+maxOffSetY*xMapSize > map.size() || maxOffSetX > xMapSize){
+
+    if(minOffSetX+maxOffSetY*xMapSize > map.size() || maxOffSetX > xMapSize){
         std::cout << "Map coords out of bounds";
         return;
     }
