@@ -34,25 +34,37 @@ void Player::update(){
     }
     
     //check the positioning, move the world accordingly
-    if(this->getPosition().y > worldHandler->windowHeight){
-        worldHandler->offSetby(0, -1);
-        this->setPosition(this->getPosition().x, 0);
+    if(this->getPosition().y+SPRITE_SIZE > worldHandler->windowHeight){
+        if(worldHandler->offSetby(0, -1)){
+            this->setPosition(this->getPosition().x, 0);
+        }else{
+            this->setPosition(this->getPosition().x, worldHandler->windowHeight-SPRITE_SIZE);
+        }
     }
     
     if(this->getPosition().y < 0){
-        worldHandler->offSetby(0, 1);
-        this->setPosition(this->getPosition().x, worldHandler->windowHeight-SPRITE_SIZE);
+        if(worldHandler->offSetby(0, 1)){
+            this->setPosition(this->getPosition().x, worldHandler->windowHeight-SPRITE_SIZE);
+        }else{
+            this->setPosition(this->getPosition().x, 0);
+        }
     }
     
     //left and right screen detectors
     if(this->getPosition().x < 0){
-        worldHandler->offSetby(-1, 0);
-        this->setPosition(worldHandler->windowWidth-SPRITE_SIZE, this->getPosition().y);
+        if(worldHandler->offSetby(-1, 0)){
+            this->setPosition(worldHandler->windowWidth-SPRITE_SIZE, this->getPosition().y);
+        }else{
+            this->setPosition(0, this->getPosition().y);
+        }
     }
     
-    if(this->getPosition().x > worldHandler->windowWidth){
-        worldHandler->offSetby(1, 0);
-        this->setPosition(0, this->getPosition().y);
+    if(this->getPosition().x+SPRITE_SIZE > worldHandler->windowWidth){
+        if(worldHandler->offSetby(1, 0)){
+            this->setPosition(0, this->getPosition().y);
+        }else{
+            this->setPosition(worldHandler->windowWidth-SPRITE_SIZE, this->getPosition().y);
+        }
     }
 }
 

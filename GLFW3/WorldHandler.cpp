@@ -30,15 +30,37 @@ bool WorldHandler::isLoaded(){
     return loaded;
 }
 
-void WorldHandler::offSetby(int x, int y){
+bool WorldHandler::offSetby(int x, int y){
+    //if it's less than the size of the map
+    if(offSetX+x < 0 || offSetY+y > 0){
+        return false;
+    }
+    //if it's bigger than the size of the map
+    if(offSetX+x > xMapSize/(windowWidth/SPRITE_CODE::SPRITE_SIZE) ||
+       offSetY+y > yMapSize/(windowHeight/SPRITE_CODE::SPRITE_SIZE)){
+        return false;
+    }
+    std::cout << yMapSize/(windowHeight/SPRITE_CODE::SPRITE_SIZE);
+
     offSetX += x;
     offSetY += y;
-    std::cout << offSetX <<  " " << offSetY << std::endl;
+    return true;
 }
 
-void WorldHandler::offSetby(const Math::Vector2D &v){
+bool WorldHandler::offSetby(const Math::Vector2D &v){
+    //if it's less than the size of the map
+    if(offSetX+v.x < 0 || offSetY+v.y > 0){
+        return false;
+    }
+    //if it's bigger than the size of the map
+    if(offSetX+v.x > xMapSize/(windowWidth/SPRITE_CODE::SPRITE_SIZE) ||
+       offSetY+v.y > yMapSize/(windowHeight/SPRITE_CODE::SPRITE_SIZE)){
+        return false;
+    }
+    
     this->offSetX += v.x;
     this->offSetY += v.y;
+    return true;
 }
 
 void WorldHandler::loadWorld(int worldNum){

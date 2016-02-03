@@ -22,8 +22,8 @@ public:
     static WorldHandler* getInstance();
     void loadWorld(int i);
     void renderWorld();
-    void offSetby(int x, int y);
-    void offSetby(const Math::Vector2D &v);
+    bool offSetby(int x, int y);
+    bool offSetby(const Math::Vector2D &v);
     int getOffSetX();
     int getOffSetY();
     int windowWidth, windowHeight;
