@@ -54,16 +54,16 @@ Runner::Runner(float windowWidth, float windowHeight, int frameRate,const char* 
     //call setup for first time run
     c->setup();
     //the game loop
-    glClearColor(r, g, b, a);
     while (!glfwWindowShouldClose(window))
     {
         int iconified = glfwGetWindowAttrib(window, GLFW_ICONIFIED);
-        if(iconified == 1){
+        if(iconified){
             glfwWaitEvents();
         }
         if(!fps(frameRate)){
             continue;
         }
+        glClearColor(r, g, b, a);
         int width, height;
         //this allows GLtransparancy
         glEnable (GL_BLEND);
@@ -80,13 +80,13 @@ Runner::Runner(float windowWidth, float windowHeight, int frameRate,const char* 
         glMatrixMode(GL_MODELVIEW);
         glLoadIdentity();
         //call update and then draw if the window isn't iconified
-        if(iconified != 1){
+        if(!iconified){
             //draw
             c->draw();
         }
         //swap the buffers
         glfwSwapBuffers(window);
-        if(iconified != 1){
+        if(!iconified){
             c->update();
         }
         glfwPollEvents();
