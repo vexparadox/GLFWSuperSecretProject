@@ -48,11 +48,11 @@ void WorldHandler::loadWorld(int worldNum){
             std::string read;
             for(int i = 0; i <= str.length(); i++){
                 //convert the string into an int
-                if(str[i] == seperator|| i > str.length()){
+                if(str[i] == seperator || i >= str.length()){
+                    xMapSize++;
                     int tempInt = atoi(read.c_str());
                     read.clear();
                     map.push_back(Tile(tempInt));
-                    xMapSize++;
                 }else{
                     read += str[i];
                 }
@@ -81,8 +81,9 @@ void WorldHandler::renderWorld(){
     
     int maxOffSetX = (tempOffSetX+1)*(windowWidth/SPRITE_CODE::SPRITE_SIZE);
     int maxOffSetY = (tempOffSetY+1)*(windowHeight/SPRITE_CODE::SPRITE_SIZE);
-
-    if(minOffSetX+maxOffSetY*xMapSize > map.size() || maxOffSetX > xMapSize){
+    
+    
+    if(maxOffSetY > yMapSize || maxOffSetX > xMapSize){
         std::cout << "Map coords out of bounds";
         return;
     }

@@ -12,21 +12,19 @@
 #include <stdio.h>
 #include "CoreMain.h"
 enum SPRITE_CODE{
-    player = 0,
-    unused1 = 1,
-    waterDown = 2,
-    unusded2 = 3,
-    waterTopRight = 4,
-    waterTopLeft = 5,
-    waterLeft = 6,
-    waterTop = 7,
-    grass1 = 8,
-    grass2 = 9,
-    waterRight = 10,
-    unused3 = 11,
-    waterBottomRight = 12,
-    waterBottomLeft = 13,
-    END_SPRITE = 14,
+    grass1 = 0,
+    grass2 = 1,
+    waterDTop = 2,
+    waterDLeft = 3,
+    waterDRigt = 4,
+    waterDBottom = 5,
+    waterDTopRight = 6,
+    waterDTopLeft = 7,
+    waterDBotRight = 8,
+    waterDBotLeft = 9,
+    stonePath = 10,
+    player = 11,
+    END_SPRITE = 12,
     SPRITE_SIZE = 64
 };
 
