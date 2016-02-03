@@ -44,11 +44,16 @@ void WorldHandler::loadWorld(int worldNum){
         std::string str; //declare a string for storage
         while (getline(worldFile, str)){ //get a line from the file, put in the string
             //loop through and push all the ints to a vector
-            for(int i = 0; i <= str.length(); i+=2){
+            std::string read;
+            for(int i = 0; i <= str.length(); i++){
                 //convert the string into an int
-                int tempInt = (int)str[i] - 48;
-                map.push_back(Tile(tempInt));
-                xMapSize++;
+                if(strcmp(&str[i], " ") != 0){
+                    read += str[i];
+                }else{
+                    int tempInt = atoi(read.c_str());
+                    map.push_back(Tile(tempInt));
+                    xMapSize++;
+                }
             }
             //count how many lines there are
             yMapSize++;

@@ -17,7 +17,7 @@ GameState::GameState(){
     //load world and sprites
     SpriteHandler::getInstance()->loadImages();
     worldHandler = WorldHandler::getInstance();
-    worldHandler->loadWorld(0);
+    worldHandler->loadWorld(1);
     inputHandler = InputHandler::getInstance();
     //add the player to the object loop
     renderObjects.push_back(&player);

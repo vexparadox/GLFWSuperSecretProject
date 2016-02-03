@@ -12,13 +12,21 @@
 #include <stdio.h>
 #include "CoreMain.h"
 enum SPRITE_CODE{
-    tile0 = 0,
-    tile1 = 1,
-    tile2 = 2,
-    tile3 = 3,
-    player = 4,
-    enemy = 5,
-    END_SPRITE = 6,
+    player = 0,
+    unused1 = 1,
+    waterDown = 2,
+    unusded2 = 3,
+    waterTopRight = 4,
+    waterTopLeft = 5,
+    waterLeft = 6,
+    waterTop = 7,
+    grass1 = 8,
+    grass2 = 9,
+    waterRight = 10,
+    unused3 = 11,
+    waterBottomRight = 12,
+    waterBottomLeft = 13,
+    END_SPRITE = 14,
     SPRITE_SIZE = 64
 };
 
