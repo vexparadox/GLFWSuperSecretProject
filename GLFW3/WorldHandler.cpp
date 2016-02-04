@@ -17,7 +17,6 @@ WorldHandler* WorldHandler::getInstance(){
     return instance;
 }
 
-
 int WorldHandler::getOffSetX(){
     return offSetX;
 }
@@ -35,15 +34,16 @@ bool WorldHandler::offSetby(int x, int y){
     if(offSetX+x < 0 || offSetY+y > 0){
         return false;
     }
+    std::cout << yMapSize/(windowHeight/SPRITE_CODE::SPRITE_SIZE);
     //if it's bigger than the size of the map
-    if(offSetX+x > xMapSize/(windowWidth/SPRITE_CODE::SPRITE_SIZE) ||
-       offSetY+y > yMapSize/(windowHeight/SPRITE_CODE::SPRITE_SIZE)){
+    if(offSetX+x >= xMapSize/(windowWidth/SPRITE_CODE::SPRITE_SIZE) ||
+       //minus offsetY because it's negative
+       (-offSetY)-y >= yMapSize/(windowHeight/SPRITE_CODE::SPRITE_SIZE)){
         return false;
     }
-    std::cout << yMapSize/(windowHeight/SPRITE_CODE::SPRITE_SIZE);
-
     offSetX += x;
     offSetY += y;
+    std::cout << -offSetY << " " << offSetX << std::endl;
     return true;
 }
 
@@ -53,11 +53,11 @@ bool WorldHandler::offSetby(const Math::Vector2D &v){
         return false;
     }
     //if it's bigger than the size of the map
-    if(offSetX+v.x > xMapSize/(windowWidth/SPRITE_CODE::SPRITE_SIZE) ||
-       offSetY+v.y > yMapSize/(windowHeight/SPRITE_CODE::SPRITE_SIZE)){
+    if(offSetX+v.x >= xMapSize/(windowWidth/SPRITE_CODE::SPRITE_SIZE) ||
+       //negative offsetbecase its negative
+       (-offSetY)-v.y >= yMapSize/(windowHeight/SPRITE_CODE::SPRITE_SIZE)){
         return false;
     }
-    
     this->offSetX += v.x;
     this->offSetY += v.y;
     return true;
