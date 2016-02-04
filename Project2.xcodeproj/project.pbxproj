@@ -69,6 +69,7 @@
 		C2071E921C15D67A00648169 /* Graphics.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Graphics.cpp; sourceTree = "<group>"; };
 		C2071E931C15D67A00648169 /* Graphics.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Graphics.hpp; sourceTree = "<group>"; };
 		C2071E961C15E18600648169 /* Rect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rect.h; sourceTree = "<group>"; };
+		C20CA48F1C63E5E900F2B6D4 /* CSVLoader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CSVLoader.hpp; sourceTree = "<group>"; };
 		C21493CA1C637E2000C25A1A /* ScenedObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ScenedObject.cpp; sourceTree = "<group>"; };
 		C21493CB1C637E2000C25A1A /* ScenedObject.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ScenedObject.hpp; sourceTree = "<group>"; };
 		C217295E1C1AEC1B00E2869A /* Font.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Font.cpp; sourceTree = "<group>"; };
@@ -153,6 +154,7 @@
 				C20671B11C184FA70006C6B1 /* Runner.hpp */,
 				C20671B31C184FCC0006C6B1 /* BaseCore.cpp */,
 				C20671B41C184FCC0006C6B1 /* BaseCore.hpp */,
+				C20CA4911C63E5F300F2B6D4 /* Files */,
 				C2071E901C15D2DA00648169 /* Math */,
 				C20671A91C1736630006C6B1 /* Types */,
 				C20671B61C1855130006C6B1 /* Graphics */,
@@ -215,6 +217,14 @@
 				C2071E8D1C15D29100648169 /* Vector2D.h */,
 			);
 			name = Math;
+			sourceTree = "<group>";
+		};
+		C20CA4911C63E5F300F2B6D4 /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				C20CA48F1C63E5E900F2B6D4 /* CSVLoader.hpp */,
+			);
+			name = Files;
 			sourceTree = "<group>";
 		};
 		C21493CE1C63852D00C25A1A /* PixelReliant */ = {
