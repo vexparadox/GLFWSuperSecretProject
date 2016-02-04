@@ -11,8 +11,9 @@
 
 #include <stdio.h>
 #include "CoreMain.h"
+#include "Object.hpp"
 
-class GameObject{
+class GameObject : public Object{
 protected:
     Math::Vector2D position, nextPosition;
     bool visible;

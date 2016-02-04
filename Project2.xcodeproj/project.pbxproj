@@ -13,6 +13,7 @@
 		C2071E811C15CBBE00648169 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2071E801C15CBBE00648169 /* main.cpp */; };
 		C2071E881C15CBD700648169 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2071E871C15CBD700648169 /* OpenGL.framework */; };
 		C2071E941C15D67A00648169 /* Graphics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2071E921C15D67A00648169 /* Graphics.cpp */; settings = {ASSET_TAGS = (); }; };
+		C21493CC1C637E2000C25A1A /* ScenedObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C21493CA1C637E2000C25A1A /* ScenedObject.cpp */; settings = {ASSET_TAGS = (); }; };
 		C21729601C1AEC1B00E2869A /* Font.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C217295E1C1AEC1B00E2869A /* Font.cpp */; settings = {ASSET_TAGS = (); }; };
 		C22E64001C51082B00386E87 /* Creature.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C22E63F21C51082B00386E87 /* Creature.cpp */; };
 		C22E64021C51082B00386E87 /* GameObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C22E63F41C51082B00386E87 /* GameObject.cpp */; };
@@ -68,6 +69,8 @@
 		C2071E921C15D67A00648169 /* Graphics.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Graphics.cpp; sourceTree = "<group>"; };
 		C2071E931C15D67A00648169 /* Graphics.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Graphics.hpp; sourceTree = "<group>"; };
 		C2071E961C15E18600648169 /* Rect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rect.h; sourceTree = "<group>"; };
+		C21493CA1C637E2000C25A1A /* ScenedObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ScenedObject.cpp; sourceTree = "<group>"; };
+		C21493CB1C637E2000C25A1A /* ScenedObject.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ScenedObject.hpp; sourceTree = "<group>"; };
 		C217295E1C1AEC1B00E2869A /* Font.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Font.cpp; sourceTree = "<group>"; };
 		C217295F1C1AEC1B00E2869A /* Font.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Font.hpp; sourceTree = "<group>"; };
 		C22E63F01C50E07D00386E87 /* CoreMain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreMain.h; sourceTree = "<group>"; };
@@ -214,25 +217,45 @@
 			name = Math;
 			sourceTree = "<group>";
 		};
+		C21493CE1C63852D00C25A1A /* PixelReliant */ = {
+			isa = PBXGroup;
+			children = (
+				C22E63F41C51082B00386E87 /* GameObject.cpp */,
+				C22E63F51C51082B00386E87 /* GameObject.hpp */,
+				C22E64131C51088900386E87 /* Player */,
+			);
+			name = PixelReliant;
+			sourceTree = "<group>";
+		};
+		C21493CF1C63853F00C25A1A /* SceneReliant */ = {
+			isa = PBXGroup;
+			children = (
+				C21493CA1C637E2000C25A1A /* ScenedObject.cpp */,
+				C21493CB1C637E2000C25A1A /* ScenedObject.hpp */,
+				C22E64111C51087600386E87 /* Creatures */,
+			);
+			name = SceneReliant;
+			sourceTree = "<group>";
+		};
 		C22E640E1C51083800386E87 /* GameCode */ = {
 			isa = PBXGroup;
 			children = (
 				C2E9BD8C1C5176730005A77A /* States */,
-				C22E640F1C51086200386E87 /* GameObjects */,
+				C22E640F1C51086200386E87 /* Objects */,
 				C22E64101C51086900386E87 /* Handlers */,
 			);
 			name = GameCode;
 			sourceTree = "<group>";
 		};
-		C22E640F1C51086200386E87 /* GameObjects */ = {
+		C22E640F1C51086200386E87 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
-				C22E63F41C51082B00386E87 /* GameObject.cpp */,
-				C22E63F51C51082B00386E87 /* GameObject.hpp */,
-				C22E64111C51087600386E87 /* Creatures */,
-				C22E64141C51089300386E87 /* Objects */,
+				C22E63F81C51082B00386E87 /* Object.cpp */,
+				C22E63F91C51082B00386E87 /* Object.hpp */,
+				C21493CF1C63853F00C25A1A /* SceneReliant */,
+				C21493CE1C63852D00C25A1A /* PixelReliant */,
 			);
-			name = GameObjects;
+			name = Objects;
 			sourceTree = "<group>";
 		};
 		C22E64101C51086900386E87 /* Handlers */ = {
@@ -255,7 +278,6 @@
 				C22E63F21C51082B00386E87 /* Creature.cpp */,
 				C22E63F31C51082B00386E87 /* Creature.hpp */,
 				C22E64121C51088400386E87 /* NPCs */,
-				C22E64131C51088900386E87 /* Player */,
 			);
 			name = Creatures;
 			sourceTree = "<group>";
@@ -276,15 +298,6 @@
 				C22E63FB1C51082B00386E87 /* Player.hpp */,
 			);
 			name = Player;
-			sourceTree = "<group>";
-		};
-		C22E64141C51089300386E87 /* Objects */ = {
-			isa = PBXGroup;
-			children = (
-				C22E63F81C51082B00386E87 /* Object.cpp */,
-				C22E63F91C51082B00386E87 /* Object.hpp */,
-			);
-			name = Objects;
 			sourceTree = "<group>";
 		};
 		C28CF8611C5A1C7600607332 /* MapCreation */ = {
@@ -391,6 +404,7 @@
 				C28CF8601C5A1B9500607332 /* MapCreationState.cpp in Sources */,
 				C2E9BD8B1C5174E50005A77A /* GameState.cpp in Sources */,
 				C22E64021C51082B00386E87 /* GameObject.cpp in Sources */,
+				C21493CC1C637E2000C25A1A /* ScenedObject.cpp in Sources */,
 				C22E64041C51082B00386E87 /* NPC.cpp in Sources */,
 				C22E64061C51082B00386E87 /* Object.cpp in Sources */,
 				C22E64081C51082B00386E87 /* Player.cpp in Sources */,

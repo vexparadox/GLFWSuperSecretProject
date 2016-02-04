@@ -10,11 +10,11 @@
 #define Object_hpp
 
 #include <stdio.h>
-#include "GameObject.hpp"
 
-class Object : public GameObject{
+class Object{
+    bool visible;
 protected:
-    Object(Math::Vector2D position, bool visible);
+    Object(bool visible = false);
 };
 
 #endif /* Object_hpp */

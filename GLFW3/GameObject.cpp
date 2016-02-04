@@ -9,10 +9,10 @@
 #include "GameObject.hpp"
 
 
-GameObject::GameObject(const Math::Vector2D &position, bool visible = true): visible(visible), position(position){
+GameObject::GameObject(const Math::Vector2D &position, bool visible = true): Object(visible), position(position){
 }
 
-GameObject::GameObject(float x, float y, bool visible = true): visible(visible){
+GameObject::GameObject(float x, float y, bool visible = true): Object(visible){
     position.x = x;
     position.y = y;
 }

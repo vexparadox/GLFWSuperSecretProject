@@ -13,9 +13,9 @@
 #include "Creature.hpp"
 #include "Handlers.h"
 
-class Player : public Creature{
+class Player : public GameObject{
 public:
-    Player(const Math::Vector2D &position, bool visible, float health);
+    Player(const Math::Vector2D &position, bool visible);
     ~Player();
     virtual void render();
     virtual void update();

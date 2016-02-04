@@ -11,6 +11,7 @@
 
 #include <stdio.h>
 #include "GameObject.hpp"
+#include "ScenedObject.hpp"
 
 class Creature: public GameObject{
 protected:

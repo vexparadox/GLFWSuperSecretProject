@@ -27,6 +27,6 @@ public:
     std::vector<GameObject*> renderObjects;
     //holds GOs that need to be updated
     std::vector<GameObject*> updateObjects;
-    Player player = Player(Math::Vector2D(500, 400), true, 50);
+    Player player = Player(Math::Vector2D(500, 400), true);
 };
 #endif /* GameState_hpp */
