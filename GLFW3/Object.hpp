@@ -15,6 +15,9 @@ class Object{
     bool visible;
 protected:
     Object(bool visible = false);
+public:
+    virtual void render(){};
+    virtual void update(){};
 };
 
 #endif /* Object_hpp */

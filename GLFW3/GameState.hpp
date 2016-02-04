@@ -24,9 +24,9 @@ public:
     InputHandler* inputHandler;
     WorldHandler* worldHandler;
     //holds GOs that needs to be rendered
-    std::vector<GameObject*> renderObjects;
+    std::vector<Object*> renderObjects;
     //holds GOs that need to be updated
-    std::vector<GameObject*> updateObjects;
+    std::vector<Object*> updateObjects;
     Player player = Player(Math::Vector2D(500, 400), true);
 };
 #endif /* GameState_hpp */

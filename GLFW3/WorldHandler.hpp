@@ -24,10 +24,12 @@ public:
     void renderWorld();
     bool offSetby(int x, int y);
     bool offSetby(const Math::Vector2D &v);
+    void loadTileTypes(int typeNum);
     int getOffSetX();
     int getOffSetY();
     int windowWidth, windowHeight;
-    bool isLoaded();
+    bool isWorldLoaded();
+    bool isTypesLoaded();
 private:
     //creation and singleton method blocks
     WorldHandler(){}; //no creation needed
@@ -37,19 +39,24 @@ private:
     static WorldHandler* instance;
     
     int offSetX = 0, offSetY = 0;
-    bool loaded = false;
+    bool worldLoaded = false, typeLoaded = false;
     //private class to the world handler
     class Tile{
     public:
+        Tile(int tc, bool solid){
+            this->textureCode = tc;
+            this->solid = solid;
+        }
         Tile(int tc){
             this->textureCode = tc;
         }
         int textureCode;
-        int damage = 0;
+        bool solid = false;
     };
     
     //the map
-    std::vector<Tile> map;
+    std::vector<Tile*> map;
+    std::vector<Tile> tiles;
     int xMapSize = 0, yMapSize = 0;
 };
 

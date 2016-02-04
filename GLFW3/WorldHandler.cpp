@@ -25,8 +25,12 @@ int WorldHandler::getOffSetY(){
     return offSetY;
 }
 
-bool WorldHandler::isLoaded(){
-    return loaded;
+bool WorldHandler::isWorldLoaded(){
+    return worldLoaded;
+}
+
+bool WorldHandler::isTypesLoaded(){
+    return typeLoaded;
 }
 
 bool WorldHandler::offSetby(int x, int y){
@@ -61,13 +65,54 @@ bool WorldHandler::offSetby(const Math::Vector2D &v){
     return true;
 }
 
+void WorldHandler::loadTileTypes(int typeNum){
+    const char seperator = ',';
+    std::ifstream worldFile("data/tiles"+std::to_string(typeNum)+".txt", std::ios::in); //declare a file stream
+    if (worldFile.is_open()) //checks if the file is open??
+    {
+        std::string str;
+        while (getline(worldFile, str)){
+            //if it's a / just ignore the entire line
+            if(str[0] == '/'){
+                continue;
+            }
+            
+            //loop through and push all the tiles into a vector
+            std::vector<int> readIntegers; // this will hold the data
+            std::string read;
+            for(int i = 0; i <= str.length(); i++){
+                //find seperators and split the integers
+                //this allows for >1 digit ints
+                // i >= str.length finds the end of the line
+                if(str[i] == seperator || i >= str.length()){
+                    int tempInt = atoi(read.c_str());
+                    read.clear();
+                    readIntegers.push_back(tempInt);
+                }else{
+                    read += str[i];
+                }
+            }
+            //now push the integers in
+            tiles.push_back(Tile(readIntegers[0], readIntegers[1]));
+        }
+        typeLoaded = true;
+    }else{
+        typeLoaded = false;
+        std::cout << "Tile file failed to load" << std::endl;
+    }
+}
+
 void WorldHandler::loadWorld(int worldNum){
+    if(!typeLoaded){
+        this->loadTileTypes(worldNum);
+    }
+    
     const char seperator = ',';
     std::ifstream worldFile("data/world"+std::to_string(worldNum)+".txt", std::ios::in); //declare a file stream
     if (worldFile.is_open()) //checks if the file is open??
     {
-        std::string str; //declare a string for storage
-        while (getline(worldFile, str)){ //get a line from the file, put in the string
+        std::string str;
+        while (getline(worldFile, str)){
             //loop through and push all the ints to a vector
             std::string read;
             for(int i = 0; i <= str.length(); i++){
@@ -76,9 +121,14 @@ void WorldHandler::loadWorld(int worldNum){
                 // i >= str.length finds the end of the line
                 if(str[i] == seperator || i >= str.length()){
                     xMapSize++;
-                    int tempInt = atoi(read.c_str());
-                    read.clear();
-                    map.push_back(Tile(tempInt));
+                    int tempInt = atoi(read.c_str()); // turn into an int
+                    read.clear(); // clear the read String for next time
+                    //if the tempInt is incorrect or invalid
+                    if(tempInt > tiles.size() || tempInt < 0){
+                        std::cout << "World failed to load, invalid tile ID";
+                        return;
+                    }
+                    map.push_back(&tiles[tempInt]);
                 }else{
                     read += str[i];
                 }
@@ -89,16 +139,16 @@ void WorldHandler::loadWorld(int worldNum){
         //xMapSize will end up being xSize*number of lines
         //so fix that
         xMapSize = xMapSize/yMapSize;
-        loaded = true;
+        worldLoaded = true;
     }else{
-        loaded = false;
+        worldLoaded = false;
         std::cout << "World file failed to load" << std::endl;
     }
 }
 
 void WorldHandler::renderWorld(){
     //don't draw if it's not been loaded
-    if(!loaded){
+    if(!worldLoaded){
         std::cout << "No world loaded" << std::endl;
         return;
     }
@@ -125,7 +175,7 @@ void WorldHandler::renderWorld(){
     for(int i = minOffSetY; i < maxOffSetY; i++){
         for(int j = minOffSetX; j < maxOffSetX; j++){
             //draw the sprites
-            temp->get(map[j+i*xMapSize].textureCode).draw(((j-minOffSetX)*SPRITE_CODE::SPRITE_SIZE), ((i-minOffSetY)*SPRITE_CODE::SPRITE_SIZE), SPRITE_CODE::SPRITE_SIZE, SPRITE_CODE::SPRITE_SIZE);
+            temp->get(map[j+i*xMapSize]->textureCode).draw(((j-minOffSetX)*SPRITE_CODE::SPRITE_SIZE), ((i-minOffSetY)*SPRITE_CODE::SPRITE_SIZE), SPRITE_CODE::SPRITE_SIZE, SPRITE_CODE::SPRITE_SIZE);
         }
     }
 }

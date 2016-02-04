@@ -48,6 +48,7 @@ namespace Graphics{
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP);
         glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, this->w, this->h, 0, GL_RGBA, GL_UNSIGNED_BYTE, imageDataPtr);
         glEnd();
+        std::cout << imageDataPtr << std::endl;
         SOIL_free_image_data(imageDataPtr);
         this->textureID = texture_id;
     }
