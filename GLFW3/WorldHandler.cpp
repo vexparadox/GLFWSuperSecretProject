@@ -67,7 +67,7 @@ bool WorldHandler::offSetby(const Math::Vector2D &v){
 
 void WorldHandler::loadTileTypes(int typeNum){
     const char seperator = ',';
-    std::ifstream worldFile("data/tiles"+std::to_string(typeNum)+".txt", std::ios::in); //declare a file stream
+    std::ifstream worldFile("data/tiles"+std::to_string(typeNum)+".csv", std::ios::in); //declare a file stream
     if (worldFile.is_open()) //checks if the file is open??
     {
         std::string str;
@@ -108,7 +108,7 @@ void WorldHandler::loadWorld(int worldNum){
     }
     
     const char seperator = ',';
-    std::ifstream worldFile("data/world"+std::to_string(worldNum)+".txt", std::ios::in); //declare a file stream
+    std::ifstream worldFile("data/world"+std::to_string(worldNum)+".csv", std::ios::in); //declare a file stream
     if (worldFile.is_open()) //checks if the file is open??
     {
         std::string str;
