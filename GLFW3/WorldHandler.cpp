@@ -34,7 +34,6 @@ bool WorldHandler::offSetby(int x, int y){
     if(offSetX+x < 0 || offSetY+y > 0){
         return false;
     }
-    std::cout << yMapSize/(windowHeight/SPRITE_CODE::SPRITE_SIZE);
     //if it's bigger than the size of the map
     if(offSetX+x >= xMapSize/(windowWidth/SPRITE_CODE::SPRITE_SIZE) ||
        //minus offsetY because it's negative
@@ -43,7 +42,6 @@ bool WorldHandler::offSetby(int x, int y){
     }
     offSetX += x;
     offSetY += y;
-    std::cout << -offSetY << " " << offSetX << std::endl;
     return true;
 }
 
