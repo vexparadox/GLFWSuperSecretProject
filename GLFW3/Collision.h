@@ -9,7 +9,7 @@
 #ifndef Collision_h
 #define Collision_h
 #include "Rect.h"
-#include "Triangle.h"
+#include "Dorito.h"
 namespace Math {
     struct lineCollide{
         Math::Vector2D v1, v2;
@@ -24,7 +24,7 @@ namespace Math {
     //returns if v3 is inside of v1-v2
     bool isInsideQuad(const Vector2D &v1, const Vector2D &v2, const Vector2D &v3);
     
-    bool isInsideQuad(const Vector2D &point, const Graphics::Triangle &t);
+    bool isInsideQuad(const Vector2D &point, const Graphics::Dorito &t);
     
     bool isInsideQuad(const Vector2D &point, const Vector2D &v, float w, float h);
     
@@ -34,11 +34,11 @@ namespace Math {
     
     float signVector(const Vector2D &v1, const Vector2D &v2, const Vector2D &v3);
     
-    float signVector(const Graphics::Triangle &t);
+    float signVector(const Graphics::Dorito &t);
     
     bool isInsideTriangle(const Vector2D &point, const Vector2D &v1, const Vector2D &v2, const Vector2D &v3);
     
-    bool isInsideTriangle(const Vector2D &point, const Graphics::Triangle &t);
+    bool isInsideTriangle(const Vector2D &point, const Graphics::Dorito &t);
     
     float vectorDistance(const Vector2D& v1, const Vector2D& v2);
     

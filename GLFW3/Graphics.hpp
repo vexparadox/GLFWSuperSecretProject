@@ -15,7 +15,7 @@
 
 namespace Graphics{
     //Triangles
-    void drawTriangle(const Triangle &t);
+    void drawTriangle(const Dorito &t);
     void drawTriangle(const Math::Vector2D &v1, const Math::Vector2D &v2, const Math::Vector2D &v3);
     void drawTriangle(float x1, float y1, float x2, float y2, float x3, float y3);
     //Rectangles

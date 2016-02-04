@@ -9,7 +9,7 @@
 #include "Graphics.hpp"
 #include "Runner.hpp"
 namespace Graphics{
-    void drawTriangle(Triangle& t){
+    void drawTriangle(Dorito& t){
         drawTriangle(t.v1, t.v2, t.v3);
     }
 

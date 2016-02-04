@@ -21,9 +21,14 @@ Core::~Core(){
 void Core::setup(){
     //this needs to be set here otherwise c
     inputHandler = InputHandler::getInstance();
+    
+    //initialise the state
     gameState = new GameState();
     mapState = new MapCreationState();
+    //set the current state to the game
     State::setState(gameState);
+    
+    //set the windowHeight, windoWidth
     WorldHandler::getInstance()->windowHeight = Runner::windowHeight;
     WorldHandler::getInstance()->windowWidth = Runner::windowWidth;
     Graphics::setBackground(30, 40, 50, 255);
