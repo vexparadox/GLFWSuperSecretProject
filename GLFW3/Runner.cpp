@@ -24,7 +24,7 @@ Runner::Runner(float windowWidth, float windowHeight, int frameRate,const char* 
     GLFWwindow* window = c->getWindow();
     //sets the event call back method in basecore
     //set the error method in basecore
-    glfwSetErrorCallback(error_callback);
+    glfwSetErrorCallback(errorCallback);
     //if it fails then exit
     if (!glfwInit()){
         exit(EXIT_FAILURE);
@@ -36,11 +36,11 @@ Runner::Runner(float windowWidth, float windowHeight, int frameRate,const char* 
     //set a userpointer for the window to this version of Runner
     glfwSetWindowUserPointer(window, this);
     //set the key_callback method
-    glfwSetKeyCallback(window, key_callback);
+    glfwSetKeyCallback(window, keyCallback);
     //set mousepressed callback
-    glfwSetMouseButtonCallback(window, mouse_callback);
+    glfwSetMouseButtonCallback(window, mouseCallback);
     //set cursor call back
-    glfwSetCursorPosCallback(window, cursor_callback);
+    glfwSetCursorPosCallback(window, cursorCallback);
     //if the window is dead, stop the program
     if (!window)
     {
@@ -83,13 +83,13 @@ Runner::Runner(float windowWidth, float windowHeight, int frameRate,const char* 
         glMatrixMode(GL_MODELVIEW);
         glLoadIdentity();
         //call update and then draw if the window isn't iconified
-        if(!iconified){
+        if(!iconified && focused){
             //draw
             c->draw();
         }
         //swap the buffers
         glfwSwapBuffers(window);
-        if(!iconified){
+        if(!iconified && focused){
             c->update();
         }
         glfwPollEvents();
@@ -112,18 +112,18 @@ bool Runner::fps(int framerate)
 }
 
 
-void Runner::error_callback(int error, const char* description){
+void Runner::errorCallback(int error, const char* description){
     fputs(description, stderr);
 }
 
-void Runner::cursor_callback(GLFWwindow* window, double xpos, double ypos){
+void Runner::cursorCallback(GLFWwindow* window, double xpos, double ypos){
     void* data = glfwGetWindowUserPointer(window);
     Runner* r = static_cast<Runner*>(data);
     r->c->mouseX = xpos;
     r->c->mouseY = ypos;
 }
 
-void Runner::mouse_callback(GLFWwindow *window, int button, int action, int mods){
+void Runner::mouseCallback(GLFWwindow *window, int button, int action, int mods){
     void* data = glfwGetWindowUserPointer(window);
     Runner* r = static_cast<Runner*>(data);
     if(action == GLFW_PRESS){
@@ -140,7 +140,7 @@ void Runner::mouse_callback(GLFWwindow *window, int button, int action, int mods
     }
 }
 
-void Runner::key_callback(GLFWwindow* window, int key, int scancode, int action, int mods){
+void Runner::keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods){
     if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS){
         glfwSetWindowShouldClose(window, GL_TRUE);
         return;
