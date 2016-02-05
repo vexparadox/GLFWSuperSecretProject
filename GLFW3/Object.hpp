@@ -15,7 +15,7 @@
 class Object{
     bool visible;
 protected:
-    Object(const Graphics::Rect &bounds, bool visible = false);
+    Object(bool visible = false, const Graphics::Rect &bounds = Graphics::Rect(0,0,0,0));
     Graphics::Rect bounds;
 
 public:
