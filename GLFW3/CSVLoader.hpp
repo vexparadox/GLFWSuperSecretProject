@@ -27,11 +27,9 @@ class CSVLoader{
         this->seperator = seperator;
         this->ignore = ignore;
     }
-    
-    CSVLoader(std::string name){
+    CSVLoader(const std::string &name){
         this->name = name;
     }
-    
     std::vector<vector<int> >& loadfile(){
         std::ifstream file(name, std::ios::in); //declare a file stream
         if (worldFile.is_open()) //checks if the file is open??
@@ -42,7 +40,6 @@ class CSVLoader{
                 if(str[0] == ignore){
                     continue;
                 }
-            
                 //loop through and push all the tiles into a vector
                 std::vector<int> readLine; // this will hold the data
                 std::string read;
@@ -66,7 +63,6 @@ class CSVLoader{
         }
         return fileVector;
     }
-    
 };
 
 #endif /* CSVLoader_hpp */

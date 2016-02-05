@@ -31,7 +31,7 @@ void Core::setup(){
     //set the windowHeight, windoWidth
     WorldHandler::getInstance()->windowHeight = Runner::windowHeight;
     WorldHandler::getInstance()->windowWidth = Runner::windowWidth;
-    Graphics::setBackground(30, 40, 50, 255);
+    Graphics::setBackground(0, 128, 128, 255);
 }
 
 void Core::update(){
