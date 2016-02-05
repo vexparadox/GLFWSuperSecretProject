@@ -9,4 +9,4 @@
 #include "Object.hpp"
 
 
-Object::Object(bool visible) : visible(visible){}
+Object::Object(const Graphics::Rect &bounds, bool visible) : visible(visible), bounds(bounds){}

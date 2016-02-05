@@ -8,7 +8,7 @@
 
 #include "Player.hpp"
 
-Player::Player(const Math::Vector2D &position, bool visible): GameObject(position, visible){
+Player::Player(const Math::Vector2D &position, const Graphics::Rect &bounds, bool visible): GameObject(position, bounds, visible){
     worldHandler = WorldHandler::getInstance();
     inputHandler = InputHandler::getInstance();
 }

@@ -9,5 +9,5 @@
 #include "NPC.hpp"
 
 
-NPC::NPC(const Math::Vector2D &position, bool visible, float health) : Creature(position, visible, health){
+NPC::NPC(const Math::Vector2D &position, const Graphics::Rect &bounds, bool visible, float health) : Creature(position, bounds,visible, health){
 }

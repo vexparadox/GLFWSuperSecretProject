@@ -10,11 +10,14 @@
 #define Object_hpp
 
 #include <stdio.h>
+#include "Math.h"
 
 class Object{
     bool visible;
 protected:
-    Object(bool visible = false);
+    Object(const Graphics::Rect &bounds, bool visible = false);
+    Graphics::Rect bounds;
+
 public:
     virtual void render(){};
     virtual void update(){};

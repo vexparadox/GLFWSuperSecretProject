@@ -15,7 +15,7 @@
 
 class Player : public GameObject{
 public:
-    Player(const Math::Vector2D &position, bool visible);
+    Player(const Math::Vector2D &position, const Graphics::Rect &bounds, bool visible);
     ~Player();
     virtual void render();
     virtual void update();
