@@ -10,6 +10,7 @@
 #define Collision_h
 #include "Rect.h"
 #include "Dorito.h"
+#include <vector>
 namespace Math {
     struct lineCollide{
         Math::Vector2D v1, v2;
@@ -43,6 +44,9 @@ namespace Math {
     float vectorDistance(const Vector2D& v1, const Vector2D& v2);
     
     float vectorDistance(float x1, float y1, float x2, float y2);
+    
+    std::vector<Math::Vector2D> collisionCheck(const Graphics::Rect &r1, const Graphics::Rect &r2);
+    std::vector<Math::Vector2D> collisionCheck(const Math::Vector2D &point, const Graphics::Rect &r2);
 }
 
 #endif /* Collision_h */
