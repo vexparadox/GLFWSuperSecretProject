@@ -11,7 +11,7 @@
 
 #include <stdio.h>
 #include "Math.h"
-
+#include "WorldHandler.hpp"
 class Object{
     bool visible;
 protected:

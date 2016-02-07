@@ -8,5 +8,5 @@
 
 #include "Creature.hpp"
 
-Creature::Creature(const Math::Vector2D &position, const Graphics::Rect &bounds, bool visible = true, float health = 0): GameObject(position, bounds, visible), health(health){
+Creature::Creature(const Math::Vector2D &position, const Math::Vector2D &scene, const Graphics::Rect &bounds, bool visible = true, float health = 0): ScenedObject(scene, position, bounds, visible), health(health){
 }

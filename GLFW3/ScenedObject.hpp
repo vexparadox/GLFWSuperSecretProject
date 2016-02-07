@@ -14,8 +14,9 @@
 #include "Object.hpp"
 
 class ScenedObject : public Object{
+protected:
     Math::Vector2D scene, tile;
-    ScenedObject(Math::Vector2D scene, Math::Vector2D tile, const Graphics::Rect &bounds, bool visible);
+    ScenedObject(Math::Vector2D tile, Math::Vector2D scene, const Graphics::Rect &bounds, bool visible);
 };
 
 #endif /* ScenedObject_hpp */

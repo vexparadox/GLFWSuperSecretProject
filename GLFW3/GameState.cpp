@@ -22,7 +22,9 @@ GameState::GameState(){
     
     //add the player to the render and update loop
     renderObjects.push_back(&player);
+    renderObjects.push_back(&t);
     updateObjects.push_back(&player);
+    updateObjects.push_back(&t);
 }
 
 void GameState::update(){
