@@ -15,21 +15,34 @@
 #include <fstream>
 #include "SpriteHandler.hpp"
 #include "InputHandler.hpp"
+#include "Object.hpp"
 
 class WorldHandler{
 public:
-        //returns the instance of the handler
+    //returns the instance of the handler
     static WorldHandler* getInstance();
+    
+    //loads a specific world from a csv file
     void loadWorld(int i);
+    
+    //renders and updates objects in the world
     void renderWorld();
+    void updateWorld();
+    
+    //manages offsets in rendering
     bool offSetby(int x, int y);
     bool offSetby(const Math::Vector2D &v);
-    void loadTileTypes(int typeNum);
     int getOffSetX();
     int getOffSetY();
-    int windowWidth, windowHeight;
+    
+    //loads the tile types, will be called if not called before loadWorld is called
+    void loadTileTypes(int typeNum);
+    
+    //returns if things are loaded
     bool isWorldLoaded();
     bool isTypesLoaded();
+    
+    int windowWidth, windowHeight;
 private:
     //creation and singleton method blocks
     WorldHandler(){}; //no creation needed
@@ -38,9 +51,13 @@ private:
     //the only instance allowed
     static WorldHandler* instance;
     
+    //initial offset
     int offSetX = 0, offSetY = 0;
+    
+    //if the world/tiles are loaded
     bool worldLoaded = false, typeLoaded = false;
-    //private class to the world handler
+    
+    //private class tile, one is loaded for each type of tile in the world
     class Tile{
     public:
         Tile(int tc, bool solid){
@@ -53,10 +70,16 @@ private:
         int textureCode;
         bool solid = false;
     };
+    //objects
+    std::vector<Object*> renderVector;
+    std::vector<Object*> updateVector;
     
-    //the map
+    //map holds pointers to tiles in the tiles vector
     std::vector<Tile*> map;
+    //tiles holds the initial information of each tile
     std::vector<Tile> tiles;
+    
+    //this holds how big the map is in tiles
     int xMapSize = 0, yMapSize = 0;
 };
 

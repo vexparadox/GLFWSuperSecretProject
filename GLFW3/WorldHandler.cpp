@@ -146,6 +146,13 @@ void WorldHandler::loadWorld(int worldNum){
     }
 }
 
+void WorldHandler::updateWorld(){
+    for(auto o : updateVector){
+        o->update();
+    }
+}
+
+
 void WorldHandler::renderWorld(){
     //don't draw if it's not been loaded
     if(!worldLoaded){
@@ -154,15 +161,15 @@ void WorldHandler::renderWorld(){
     }
     SpriteHandler* temp = SpriteHandler::getInstance();
     //it needs to be abs'd but not the actual value
-    int tempOffSetX = offSetX;
-    int tempOffSetY = offSetY;
-    Math::absolute(tempOffSetY);
-    Math::absolute(tempOffSetX);
-    //this is so it only loops on the ones that are to be displayed
+    int tempOffSetX = Math::absolute(offSetX);
+    int tempOffSetY = Math::absolute(offSetY);
+    
+    //the min and max offsets are so it only renders the curreent scene
     //this cuts CPU and GPU strain by a crazy amount
     int minOffSetX = tempOffSetX*(windowWidth/SPRITE_CODE::SPRITE_SIZE);
     int minOffSetY = tempOffSetY*(windowHeight/SPRITE_CODE::SPRITE_SIZE);
     
+    //needs +1 to correct the mathematics
     int maxOffSetX = (tempOffSetX+1)*(windowWidth/SPRITE_CODE::SPRITE_SIZE);
     int maxOffSetY = (tempOffSetY+1)*(windowHeight/SPRITE_CODE::SPRITE_SIZE);
     
@@ -177,5 +184,10 @@ void WorldHandler::renderWorld(){
             //draw the sprites
             temp->get(map[j+i*xMapSize]->textureCode).draw(((j-minOffSetX)*SPRITE_CODE::SPRITE_SIZE), ((i-minOffSetY)*SPRITE_CODE::SPRITE_SIZE), SPRITE_CODE::SPRITE_SIZE, SPRITE_CODE::SPRITE_SIZE);
         }
+    }
+    
+    //after the world has been rendered, render the objects
+    for(auto o : renderVector){
+        o->render();
     }
 }
