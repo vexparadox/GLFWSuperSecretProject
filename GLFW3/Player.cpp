@@ -69,5 +69,5 @@ void Player::update(){
 }
 
 void Player::render(){
-    SpriteHandler::getInstance()->get(SPRITE_CODE::player).draw(this->getPosition());
+    SpriteHandler::getInstance()->get(SPRITE_CODE::player)->draw(this->getPosition());
 }

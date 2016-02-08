@@ -11,6 +11,7 @@
 
 #include <stdio.h>
 #include "CoreMain.h"
+#include <memory>
 enum SPRITE_CODE{
     grass1 = 0,
     grass2 = 1,
@@ -31,19 +32,19 @@ enum SPRITE_CODE{
 class SpriteHandler{
 public:
     //returns the instance of the handler
-    static SpriteHandler* getInstance();
-    
+    static std::shared_ptr<SpriteHandler> getInstance();
     void loadImages();
-    Graphics::Image& get(int i);
+    std::unique_ptr<Graphics::Image>& get(int i);
+    SpriteHandler(){}; //no creation needed
+
 private:
     //creation and singleton method blocks
-    SpriteHandler(){}; //no creation needed
     SpriteHandler(SpriteHandler const &s){}; // no copy constructor
     //SpriteHandler& operator=(SpriteHandler const &s){}; //no assignment
     //the only instance allowed
-    static SpriteHandler* instance;
+    static std::shared_ptr<SpriteHandler> instance;
     
     //actual sprite things
-    Graphics::Image images[SPRITE_CODE::END_SPRITE];
+    std::unique_ptr<Graphics::Image> images[SPRITE_CODE::END_SPRITE];
 };
 #endif /* SpriteHandler_hpp */
