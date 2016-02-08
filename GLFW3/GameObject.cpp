@@ -9,12 +9,7 @@
 #include "GameObject.hpp"
 
 
-GameObject::GameObject(const Math::Vector2D &position, const Graphics::Rect &bounds, bool visible = true): Object(visible, bounds), position(position){
-}
-
-GameObject::GameObject(float x, float y, bool visible = true): Object(visible){
-    position.x = x;
-    position.y = y;
+GameObject::GameObject(const Math::Vector2D &scene, const Math::Vector2D &position, const Graphics::Rect &bounds, bool visible = true): Object(visible, bounds), position(position), scene(scene){
 }
 
 const Math::Vector2D& GameObject::getPosition(){

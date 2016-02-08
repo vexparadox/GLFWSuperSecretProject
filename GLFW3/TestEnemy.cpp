@@ -13,7 +13,7 @@ TestEnemy::TestEnemy(const Math::Vector2D &position, const Math::Vector2D &scene
 }
 
 void TestEnemy::update(){
-    this->tile.x++;
+    this->position.x++;
 }
 
 void TestEnemy::render(){
@@ -21,6 +21,6 @@ void TestEnemy::render(){
     int worldY = -WorldHandler::getInstance()->getOffSetY();
 
     if(worldX == scene.x && worldY == scene.y){
-        SpriteHandler::getInstance()->get(SPRITE_CODE::player).draw(this->tile);
+        SpriteHandler::getInstance()->get(SPRITE_CODE::player).draw(this->position);
     }
 }

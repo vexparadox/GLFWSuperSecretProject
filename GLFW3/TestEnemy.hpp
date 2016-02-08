@@ -11,6 +11,7 @@
 
 #include <stdio.h>
 #include "NPC.hpp"
+#include "WorldHandler.hpp"
 
 
 class TestEnemy : public NPC{

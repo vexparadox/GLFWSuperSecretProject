@@ -11,9 +11,8 @@
 
 #include <stdio.h>
 #include "GameObject.hpp"
-#include "ScenedObject.hpp"
 
-class Creature: public ScenedObject{
+class Creature: public GameObject{
 protected:
     float health;
     Creature(const Math::Vector2D &position, const Math::Vector2D &scene, const Graphics::Rect &bounds, bool visible, float health);
