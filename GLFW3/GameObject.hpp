@@ -21,7 +21,9 @@ protected:
 public:
     const bool& isVisible();
     const Math::Vector2D& getPosition();
+    Math::Vector2D& editPosition();
     const Math::Vector2D& getScene();
+    Math::Vector2D& editScene();
     virtual void update() = 0;
     virtual void render() = 0;
     void setPosition(const Math::Vector2D &v);

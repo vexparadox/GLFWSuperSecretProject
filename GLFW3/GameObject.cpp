@@ -20,7 +20,15 @@ const Math::Vector2D& GameObject::getPosition(){
     return position;
 }
 
+Math::Vector2D& GameObject::editPosition(){
+    return position;
+}
+
 const Math::Vector2D& GameObject::getScene(){
+    return scene;
+}
+
+Math::Vector2D& GameObject::editScene(){
     return scene;
 }
 

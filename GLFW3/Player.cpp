@@ -21,51 +21,23 @@ Player::~Player(){
 void Player::update(){
     //on player movement
     if(inputHandler->getDOWN()){
-        this->setPosition(this->getPosition().x, this->getPosition().y+speed);
+        Math::Vector2D sv(0, speed);
+        worldHandler->movementCheck(editPosition(), sv, true);
     }
     if(inputHandler->getUP()){
+        Math::Vector2D sv(0, -speed);
+        worldHandler->movementCheck(editPosition(), sv, true);
         this->setPosition(this->getPosition().x, this->getPosition().y-speed);
     }
     if(inputHandler->getRIGHT()){
-        this->setPosition(this->getPosition().x+speed, this->getPosition().y);
+        Math::Vector2D sv(speed, 0);
+        worldHandler->movementCheck(editPosition(), sv, true);
     }
     if(inputHandler->getLEFT()){
-        this->setPosition(this->getPosition().x-speed, this->getPosition().y);
+        Math::Vector2D sv(-speed, 0);
+        worldHandler->movementCheck(editPosition(), sv, true);
     }
-    
-    //check the positioning, move the world accordingly
-    if(this->getPosition().y+SPRITE_SIZE > worldHandler->windowHeight){
-        if(worldHandler->offSetby(0, -1)){
-            this->setPosition(this->getPosition().x, 0);
-        }else{
-            this->setPosition(this->getPosition().x, worldHandler->windowHeight-SPRITE_SIZE);
-        }
-    }
-    
-    if(this->getPosition().y < 0){
-        if(worldHandler->offSetby(0, 1)){
-            this->setPosition(this->getPosition().x, worldHandler->windowHeight-SPRITE_SIZE);
-        }else{
-            this->setPosition(this->getPosition().x, 0);
-        }
-    }
-    
-    //left and right screen detectors
-    if(this->getPosition().x < 0){
-        if(worldHandler->offSetby(-1, 0)){
-            this->setPosition(worldHandler->windowWidth-SPRITE_SIZE, this->getPosition().y);
-        }else{
-            this->setPosition(0, this->getPosition().y);
-        }
-    }
-    
-    if(this->getPosition().x+SPRITE_SIZE > worldHandler->windowWidth){
-        if(worldHandler->offSetby(1, 0)){
-            this->setPosition(0, this->getPosition().y);
-        }else{
-            this->setPosition(worldHandler->windowWidth-SPRITE_SIZE, this->getPosition().y);
-        }
-    }
+
 }
 
 void Player::render(){

@@ -12,8 +12,7 @@
 #include <stdio.h>
 #include <memory>
 
-//this class handles keyboard input with predefined buttons and static methods
-
+//this class handles keyboard input with predefined buttons
 class InputHandler{
     static std::shared_ptr<InputHandler> instance;
     InputHandler(InputHandler const &s){}; // no copy constructor

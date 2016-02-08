@@ -37,6 +37,8 @@ public:
     int getOffSetX();
     int getOffSetY();
     
+    void movementCheck(Math::Vector2D &current, Math::Vector2D &velocity, bool offScreen);
+    
     void addToRQueue(GameObject*);
     void addToUQueue(GameObject*);
     void addToQueues(GameObject*);

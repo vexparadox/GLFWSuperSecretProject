@@ -50,6 +50,49 @@ void WorldHandler::addToUQueue(GameObject *go){
     updateVector.push_back(go);
 }
 
+void WorldHandler::movementCheck(Math::Vector2D &current, Math::Vector2D &velocity, bool offScreen){
+    
+    //collision check
+    current = current+velocity;
+    
+    if(!offScreen){
+        return;
+    }
+    
+    if(current.y+SPRITE_SIZE > this->windowHeight){
+        if(offSetby(0, -1)){
+            current.y = 0;
+        }else{
+            current.y = windowHeight-SPRITE_SIZE;
+        }
+    }
+    
+    if(current.y < 0){
+        if(offSetby(0, 1)){
+            current.y = windowHeight-SPRITE_SIZE;
+        }else{
+            current.y = 0;
+        }
+    }
+    
+    //left and right screen detectors
+    if(current.x < 0){
+        if(offSetby(-1, 0)){
+            current.x = windowWidth-SPRITE_SIZE;
+        }else{
+            current.x = 0;
+        }
+    }
+    if(current.x+SPRITE_SIZE > windowWidth){
+        if(offSetby(1, 0)){
+            current.x = 0;
+        }else{
+            current.x = windowWidth-SPRITE_SIZE;
+        }
+    }
+
+}
+
 bool WorldHandler::offSetby(int x, int y){
     //if it's less than the size of the map
     if(offSetX+x < 0 || offSetY+y > 0){
@@ -181,7 +224,7 @@ void WorldHandler::renderWorld(){
     int tempOffSetX = Math::absolute(offSetX);
     int tempOffSetY = Math::absolute(offSetY);
     
-    //the min and max offsets are so it only renders the curreent scene
+    //the min and  max offsets are so it only renders the curreent scene
     //this cuts CPU and GPU strain by a crazy amount
     int minOffSetX = tempOffSetX*(windowWidth/SPRITE_CODE::SPRITE_SIZE);
     int minOffSetY = tempOffSetY*(windowHeight/SPRITE_CODE::SPRITE_SIZE);
