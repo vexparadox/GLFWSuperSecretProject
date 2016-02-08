@@ -205,6 +205,13 @@ void WorldHandler::renderWorld(){
     
     //after the world has been rendered, render the objects
     for(auto o : renderVector){
-        o->render();
+        //if it's visible
+        if(o->isVisible()){
+            //if it's in the right scene
+            if(tempOffSetX == o->getScene().x && tempOffSetY == o->getScene().y){
+                //call render
+                o->render();
+            }
+        }
     }
 }

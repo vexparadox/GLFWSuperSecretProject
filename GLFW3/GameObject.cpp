@@ -9,7 +9,11 @@
 #include "GameObject.hpp"
 
 
-GameObject::GameObject(const Math::Vector2D &scene, const Math::Vector2D &position, const Graphics::Rect &bounds, bool visible): visible(visible), bounds(bounds), position(position), scene(scene){
+GameObject::GameObject(const Math::Vector2D &position, const Math::Vector2D &scene,  const Graphics::Rect &bounds, bool visible): visible(visible), bounds(bounds), position(position), scene(scene){
+}
+
+const bool& GameObject::isVisible(){
+    return visible;
 }
 
 const Math::Vector2D& GameObject::getPosition(){

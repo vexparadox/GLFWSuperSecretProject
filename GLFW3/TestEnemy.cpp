@@ -17,10 +17,5 @@ void TestEnemy::update(){
 }
 
 void TestEnemy::render(){
-    int worldX = WorldHandler::getInstance()->getOffSetX();
-    int worldY = -WorldHandler::getInstance()->getOffSetY();
-
-    if(worldX == getScene().x && worldY == getScene().y){
-        SpriteHandler::getInstance()->get(SPRITE_CODE::player).draw(this->getPosition());
-    }
+    SpriteHandler::getInstance()->get(SPRITE_CODE::player).draw(this->getPosition());
 }

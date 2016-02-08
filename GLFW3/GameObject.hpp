@@ -17,8 +17,9 @@ class GameObject{
     Graphics::Rect bounds;
     bool visible = false;
 protected:
-    GameObject(const Math::Vector2D &scene,const Math::Vector2D &position, const Graphics::Rect &bounds, bool visible = false);
+    GameObject(const Math::Vector2D &position, const Math::Vector2D &scene, const Graphics::Rect &bounds, bool visible = false);
 public:
+    const bool& isVisible();
     const Math::Vector2D& getPosition();
     const Math::Vector2D& getScene();
     virtual void update() = 0;
