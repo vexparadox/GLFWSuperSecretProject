@@ -10,6 +10,10 @@
 
 WorldHandler* WorldHandler::instance;
 
+WorldHandler::~WorldHandler(){
+    
+}
+
 WorldHandler* WorldHandler::getInstance(){
     if(!instance){
         instance = new WorldHandler;
@@ -31,6 +35,19 @@ bool WorldHandler::isWorldLoaded(){
 
 bool WorldHandler::isTypesLoaded(){
     return typeLoaded;
+}
+
+void WorldHandler::addToQueues(GameObject *go){
+    renderVector.push_back(go);
+    updateVector.push_back(go);
+}
+
+void WorldHandler::addToRQueue(GameObject *go){
+    renderVector.push_back(go);
+}
+
+void WorldHandler::addToUQueue(GameObject *go){
+    updateVector.push_back(go);
 }
 
 bool WorldHandler::offSetby(int x, int y){

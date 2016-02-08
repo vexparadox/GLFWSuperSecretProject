@@ -8,11 +8,6 @@
 
 #include "GameState.hpp"
 
-GameState::~GameState(){
-    inputHandler = nullptr;
-    worldHandler = nullptr;
-}
-
 GameState::GameState(){
     //load world and sprites
     SpriteHandler::getInstance()->loadImages();
@@ -21,22 +16,14 @@ GameState::GameState(){
     inputHandler = InputHandler::getInstance();
     
     //add the player to the render and update loop
-    renderObjects.push_back(&player);
-    renderObjects.push_back(&t);
-    updateObjects.push_back(&player);
-    updateObjects.push_back(&t);
+    worldHandler->addToQueues(&player);
+    worldHandler->addToQueues(&t);
 }
 
 void GameState::update(){
-    for(auto u: updateObjects){
-        u->update();
-    }
+    worldHandler->updateWorld();
 }
 
 void GameState::draw(){
     worldHandler->renderWorld();
-    //render loop
-    for(auto g: renderObjects){
-        g->render();
-    }
 }

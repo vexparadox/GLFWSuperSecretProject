@@ -15,7 +15,7 @@
 #include <fstream>
 #include "SpriteHandler.hpp"
 #include "InputHandler.hpp"
-#include "Object.hpp"
+#include "GameObject.hpp"
 
 class WorldHandler{
 public:
@@ -35,6 +35,10 @@ public:
     int getOffSetX();
     int getOffSetY();
     
+    void addToRQueue(GameObject*);
+    void addToUQueue(GameObject*);
+    void addToQueues(GameObject*);
+    
     //loads the tile types, will be called if not called before loadWorld is called
     void loadTileTypes(int typeNum);
     
@@ -47,6 +51,7 @@ private:
     //creation and singleton method blocks
     WorldHandler(){}; //no creation needed
     WorldHandler(WorldHandler const &s){}; // no copy constructor
+    ~WorldHandler();
     //WorldHandler& operator=(WorldHandler const &s){}; //no assignment
     //the only instance allowed
     static WorldHandler* instance;
@@ -71,8 +76,8 @@ private:
         bool solid = false;
     };
     //objects
-    std::vector<Object*> renderVector;
-    std::vector<Object*> updateVector;
+    std::vector<GameObject*> renderVector;
+    std::vector<GameObject*> updateVector;
     
     //map holds pointers to tiles in the tiles vector
     std::vector<Tile*> map;

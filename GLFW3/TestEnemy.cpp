@@ -13,14 +13,14 @@ TestEnemy::TestEnemy(const Math::Vector2D &position, const Math::Vector2D &scene
 }
 
 void TestEnemy::update(){
-    this->position.x++;
+    this->setPosition(getPosition().x+1, getPosition().y);
 }
 
 void TestEnemy::render(){
     int worldX = WorldHandler::getInstance()->getOffSetX();
     int worldY = -WorldHandler::getInstance()->getOffSetY();
 
-    if(worldX == scene.x && worldY == scene.y){
-        SpriteHandler::getInstance()->get(SPRITE_CODE::player).draw(this->position);
+    if(worldX == getScene().x && worldY == getScene().y){
+        SpriteHandler::getInstance()->get(SPRITE_CODE::player).draw(this->getPosition());
     }
 }
