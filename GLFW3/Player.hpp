@@ -20,8 +20,8 @@ public:
     virtual void render();
     virtual void update();
     int speed = 10;
-    WorldHandler* worldHandler;
-    InputHandler* inputHandler;
+    std::shared_ptr<WorldHandler>  worldHandler;
+    std::shared_ptr<InputHandler> inputHandler;
 };
 
 #endif /* Player_hpp */

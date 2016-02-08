@@ -10,18 +10,18 @@
 #define InputHandler_hpp
 
 #include <stdio.h>
+#include <memory>
 
 //this class handles keyboard input with predefined buttons and static methods
 
 class InputHandler{
-    static InputHandler* instance;
-    ~InputHandler();
-    InputHandler(){};
+    static std::shared_ptr<InputHandler> instance;
     InputHandler(InputHandler const &s){}; // no copy constructor
     bool UP, LEFT, RIGHT, DOWN, isKeyPressed, SPACE, MOUSE0, MOUSE1, isMousePressed;
     int mouseX = 0, mouseY = 0;
 public:
-    static InputHandler* getInstance();
+    InputHandler(){};
+    static std::shared_ptr<InputHandler> getInstance();
     void mouseInput(int x, int y);
     int getMouseX();
     int getMouseY();

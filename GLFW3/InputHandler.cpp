@@ -8,16 +8,11 @@
 
 #include "InputHandler.hpp"
 
-InputHandler* InputHandler::instance;
+std::shared_ptr<InputHandler> InputHandler::instance;
 
-InputHandler::~InputHandler(){
-    delete instance;
-    instance = nullptr;
-}
-
-InputHandler* InputHandler::getInstance(){
+std::shared_ptr<InputHandler> InputHandler::getInstance(){
     if(!instance){
-        instance = new InputHandler;
+        instance = std::make_shared<InputHandler>();
     }
     return instance;
 }

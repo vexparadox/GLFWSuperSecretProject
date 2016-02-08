@@ -15,6 +15,7 @@ GameState::GameState(){
     worldHandler->loadWorld(2);
     inputHandler = InputHandler::getInstance();
     
+    
     //add the player to the render and update loop
     worldHandler->addToQueues(&player);
     worldHandler->addToQueues(&t);

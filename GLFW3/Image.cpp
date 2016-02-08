@@ -8,6 +8,11 @@
 
 #include "Image.hpp"
 namespace Graphics{
+    Image::~Image(){
+        //remove the textures from the GL buffer
+        glDeleteTextures(1, &textureID);
+    }
+    
     Image::Image(std::string name){
         this->loadImage(name);
     }

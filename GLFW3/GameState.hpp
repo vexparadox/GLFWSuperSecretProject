@@ -21,12 +21,11 @@ public:
     GameState();
     virtual ~GameState(){
         inputHandler = nullptr;
-        worldHandler = nullptr;
     }
     virtual void update();
     virtual void draw();
-    InputHandler* inputHandler;
-    WorldHandler* worldHandler;
+    std::shared_ptr<InputHandler> inputHandler;
+    std::shared_ptr<WorldHandler> worldHandler;
     Player player = Player(Math::Vector2D(50, 50), Math::Vector2D(0, 0), Graphics::Rect(0, 0, 50, 250), true);
     TestEnemy t = TestEnemy(Math::Vector2D(50, 50), Math::Vector2D(1, 1), Graphics::Rect(0, 0, 50, 250), true, 50);
 };

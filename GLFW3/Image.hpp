@@ -23,6 +23,7 @@ private:
     void openGlLoad(const char* name);
 public:
     Image(){};
+    ~Image();
     Image(std::string nameInput);
     bool loadImage(std::string nameInput);
     void draw(const Math::Vector2D &v, float w, float h);

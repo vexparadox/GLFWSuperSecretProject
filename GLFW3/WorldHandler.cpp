@@ -8,15 +8,15 @@
 
 #include "WorldHandler.hpp"
 
-WorldHandler* WorldHandler::instance;
+std::shared_ptr<WorldHandler> WorldHandler::instance;
 
 WorldHandler::~WorldHandler(){
     
 }
 
-WorldHandler* WorldHandler::getInstance(){
+std::shared_ptr<WorldHandler> WorldHandler::getInstance(){
     if(!instance){
-        instance = new WorldHandler;
+        instance = std::make_shared<WorldHandler>();
     }
     return instance;
 }

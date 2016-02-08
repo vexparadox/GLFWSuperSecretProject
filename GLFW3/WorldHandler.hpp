@@ -12,6 +12,7 @@
 #include <stdio.h>
 #include <vector>
 #include "coreMain.h"
+#include <memory>
 #include <fstream>
 #include "SpriteHandler.hpp"
 #include "InputHandler.hpp"
@@ -19,8 +20,9 @@
 
 class WorldHandler{
 public:
+    WorldHandler(){}; //no creation needed
     //returns the instance of the handler
-    static WorldHandler* getInstance();
+    static std::shared_ptr<WorldHandler> getInstance();
     
     //loads a specific world from a csv file
     void loadWorld(int i);
@@ -47,14 +49,13 @@ public:
     bool isTypesLoaded();
     
     int windowWidth, windowHeight;
+    ~WorldHandler();
 private:
     //creation and singleton method blocks
-    WorldHandler(){}; //no creation needed
     WorldHandler(WorldHandler const &s){}; // no copy constructor
-    ~WorldHandler();
     //WorldHandler& operator=(WorldHandler const &s){}; //no assignment
     //the only instance allowed
-    static WorldHandler* instance;
+    static std::shared_ptr<WorldHandler> instance;
     
     //initial offset
     int offSetX = 0, offSetY = 0;
