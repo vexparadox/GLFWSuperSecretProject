@@ -50,50 +50,74 @@ void WorldHandler::addToUQueue(GameObject *go){
     updateVector.push_back(go);
 }
 
-void WorldHandler::movementCheck(Math::Vector2D &current, Math::Vector2D &velocity, bool offScreen){
+void WorldHandler::movementCheck(Math::Vector2D &current, Math::Vector2D &velocity, Math::Vector2D &scene, bool allowedOffscreen, bool moveScene){
     
     //collision check
     current = current+velocity;
     
-    if(!offScreen){
+    //if it's not allowed off screen, just stop here
+    if(!allowedOffscreen){
         return;
     }
-    
+    //UP
     if(current.y+SPRITE_SIZE > this->windowHeight){
-        if(offSetby(0, -1)){
+        //check ther is a scene ontop
+        if(offSetby(0, -1, moveScene)){
+            //adjust the y to the top of the next scene
             current.y = 0;
+            //change the scene so it's rendered
+            //-1 is techincally down
+            scene.y += 1;
         }else{
+            //if not do box collision
             current.y = windowHeight-SPRITE_SIZE;
         }
     }
     
+    //DOWN
     if(current.y < 0){
-        if(offSetby(0, 1)){
+        //check if there is anything below
+        if(offSetby(0, 1, moveScene)){
+            //change y to the bottom of next scene
             current.y = windowHeight-SPRITE_SIZE;
+            //adjust scene
+            //1 is technically up
+            scene.y += -1;
         }else{
+            //else correct the collision
             current.y = 0;
         }
     }
     
-    //left and right screen detectors
+    //LEFT
     if(current.x < 0){
-        if(offSetby(-1, 0)){
+        //check if there is a scene to the left
+        if(offSetby(-1, 0, moveScene)){
+            //set the x to the far left of the next scene
             current.x = windowWidth-SPRITE_SIZE;
+            //adjust the scene
+            scene.x += -1;
         }else{
             current.x = 0;
         }
     }
+    
+    //RIGHT
     if(current.x+SPRITE_SIZE > windowWidth){
-        if(offSetby(1, 0)){
+        //check if there is a scene to the rihgt
+        if(offSetby(1, 0, moveScene)){
+            //adjust values
             current.x = 0;
+            scene.x += 1;
         }else{
+            //correct collision
             current.x = windowWidth-SPRITE_SIZE;
         }
     }
 
 }
 
-bool WorldHandler::offSetby(int x, int y){
+bool WorldHandler::offSetby(int x, int y, bool set){
     //if it's less than the size of the map
     if(offSetX+x < 0 || offSetY+y > 0){
         return false;
@@ -104,12 +128,14 @@ bool WorldHandler::offSetby(int x, int y){
        (-offSetY)-y >= yMapSize/(windowHeight/SPRITE_CODE::SPRITE_SIZE)){
         return false;
     }
-    offSetX += x;
-    offSetY += y;
+    if(set){
+        this->offSetX += x;
+        this->offSetY += y;
+    }
     return true;
 }
 
-bool WorldHandler::offSetby(const Math::Vector2D &v){
+bool WorldHandler::offSetby(const Math::Vector2D &v, bool set){
     //if it's less than the size of the map
     if(offSetX+v.x < 0 || offSetY+v.y > 0){
         return false;
@@ -120,8 +146,10 @@ bool WorldHandler::offSetby(const Math::Vector2D &v){
        (-offSetY)-v.y >= yMapSize/(windowHeight/SPRITE_CODE::SPRITE_SIZE)){
         return false;
     }
-    this->offSetX += v.x;
-    this->offSetY += v.y;
+    if(set){
+        this->offSetX += v.x;
+        this->offSetY += v.y;
+    }
     return true;
 }
 
@@ -250,7 +278,6 @@ void WorldHandler::renderWorld(){
     for(auto o : renderVector){
         //if it's visible
         if(o->isVisible()){
-            
             //if it's in the right scene
             if(tempOffSetX == o->getScene().x && tempOffSetY == o->getScene().y){
                 //call render

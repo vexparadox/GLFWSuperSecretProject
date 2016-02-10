@@ -13,7 +13,8 @@ TestEnemy::TestEnemy(const Math::Vector2D &position, const Math::Vector2D &scene
 }
 
 void TestEnemy::update(){
-    this->setPosition(getPosition().x+1, getPosition().y);
+    Math::Vector2D sv(1, 0);
+    WorldHandler::getInstance()->movementCheck(editPosition(), sv, editScene(), true, false);
 }
 
 void TestEnemy::render(){

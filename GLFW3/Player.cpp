@@ -19,25 +19,21 @@ Player::~Player(){
 }
 
 void Player::update(){
+    Math::Vector2D sv(0, 0);
     //on player movement
     if(inputHandler->getDOWN()){
-        Math::Vector2D sv(0, speed);
-        worldHandler->movementCheck(editPosition(), sv, true);
+        sv.y += speed;
     }
     if(inputHandler->getUP()){
-        Math::Vector2D sv(0, -speed);
-        worldHandler->movementCheck(editPosition(), sv, true);
-        this->setPosition(this->getPosition().x, this->getPosition().y-speed);
+        sv.y += -speed;
     }
     if(inputHandler->getRIGHT()){
-        Math::Vector2D sv(speed, 0);
-        worldHandler->movementCheck(editPosition(), sv, true);
+        sv.x += speed;
     }
     if(inputHandler->getLEFT()){
-        Math::Vector2D sv(-speed, 0);
-        worldHandler->movementCheck(editPosition(), sv, true);
+        sv.x += -speed;
     }
-
+    worldHandler->movementCheck(editPosition(), sv, editScene(), true, true);
 }
 
 void Player::render(){

@@ -104,12 +104,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GLFW3/WorldHandler.cpp"
-            timestampString = "476645829.062715"
+            timestampString = "476804456.969658"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "118"
-            endingLineNumber = "118"
-            landmarkName = "WorldHandler::offSetby(const Math::Vector2D &amp;v)"
+            startingLineNumber = "144"
+            endingLineNumber = "144"
+            landmarkName = "WorldHandler::movementCheck(Math::Vector2D &amp;current, Math::Vector2D &amp;velocity, Math::Vector2D &amp;scene, bool allowedOffscreen, bool moveScene)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -134,77 +134,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GLFW3/WorldHandler.cpp"
-            timestampString = "476645829.062715"
+            timestampString = "476804456.969658"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "162"
-            endingLineNumber = "162"
-            landmarkName = "WorldHandler::loadTileTypes(int typeNum)"
+            startingLineNumber = "190"
+            endingLineNumber = "190"
+            landmarkName = "WorldHandler::movementCheck(Math::Vector2D &amp;current, Math::Vector2D &amp;velocity, Math::Vector2D &amp;scene, bool allowedOffscreen, bool moveScene)"
             landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GLFW3/TestEnemy.cpp"
-            timestampString = "476625394.903282"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
-            landmarkName = "TestEnemy::render()"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GLFW3/TestEnemy.cpp"
-            timestampString = "476625403.173879"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "12"
-            endingLineNumber = "12"
-            landmarkName = "TestEnemy::TestEnemy(const Math::Vector2D &amp;position, const Math::Vector2D &amp;scene, const Graphics::Rect &amp;bounds, bool visible, float health)"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TestEnemy::TestEnemy(Math::Vector2D const&amp;, Math::Vector2D const&amp;, Graphics::Rect const&amp;, bool, float)"
-                  moduleName = "Project2"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/williammeaton/Desktop/closedFrameworks/GLFW3/TestEnemy.cpp"
-                  timestampString = "476625405.498749"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "114">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TestEnemy::TestEnemy(Math::Vector2D const&amp;, Math::Vector2D const&amp;, Graphics::Rect const&amp;, bool, float)"
-                  moduleName = "Project2"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/williammeaton/Desktop/closedFrameworks/GLFW3/TestEnemy.cpp"
-                  timestampString = "476625405.499002"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "72">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

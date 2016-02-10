@@ -32,12 +32,12 @@ public:
     void updateWorld();
     
     //manages offsets in rendering
-    bool offSetby(int x, int y);
-    bool offSetby(const Math::Vector2D &v);
+    bool offSetby(int x, int y, bool set);
+    bool offSetby(const Math::Vector2D &v, bool set);
     int getOffSetX();
     int getOffSetY();
     
-    void movementCheck(Math::Vector2D &current, Math::Vector2D &velocity, bool offScreen);
+    void movementCheck(Math::Vector2D &current, Math::Vector2D &velocity, Math::Vector2D &scene, bool allowedOffscreen, bool moveScene);
     
     void addToRQueue(GameObject*);
     void addToUQueue(GameObject*);
