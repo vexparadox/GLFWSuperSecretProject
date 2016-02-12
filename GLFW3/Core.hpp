@@ -10,8 +10,6 @@
 #define Core_hpp
 
 #include "Runner.hpp" //THIS IS NEEDED
-#include "States.h"
-#include "InputHandler.hpp"
 
 class Core : public BaseCore{
 public:
@@ -24,9 +22,6 @@ public:
     void keyReleased(int key);
     void mousePressed(int button);
     void mouseReleased(int button);
-    GameState* gameState;
-    MapCreationState* mapState;
-    std::shared_ptr<InputHandler> inputHandler;
 };
 
 #endif /* Core_hpp */
