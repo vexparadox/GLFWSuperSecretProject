@@ -46,6 +46,7 @@ namespace Math {
     float vectorDistance(float x1, float y1, float x2, float y2);
     
     std::vector<Math::Vector2D> collisionCheck(const Graphics::Rect &r1, const Graphics::Rect &r2);
+    
     std::vector<Math::Vector2D> collisionCheck(const Math::Vector2D &point, const Graphics::Rect &r2);
 }
 

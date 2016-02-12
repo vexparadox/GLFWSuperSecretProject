@@ -16,7 +16,6 @@
 class Player : public GameObject{
 public:
     Player(const Math::Vector2D &scene, const Math::Vector2D &position, const Graphics::Rect &bounds, bool visible);
-    ~Player();
     virtual void render();
     virtual void update();
     int speed = 10;

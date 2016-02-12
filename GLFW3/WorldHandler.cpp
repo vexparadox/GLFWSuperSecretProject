@@ -50,8 +50,12 @@ void WorldHandler::addToUQueue(GameObject *go){
     updateVector.push_back(go);
 }
 
+
 void WorldHandler::movementCheck(Math::Vector2D &current, Math::Vector2D &velocity, Math::Vector2D &scene, bool allowedOffscreen, bool moveScene){
     
+    if(worldCollide(current, scene, velocity)){
+        return;
+    }
     //collision check
     current = current+velocity;
     
@@ -152,6 +156,46 @@ bool WorldHandler::offSetby(const Math::Vector2D &v, bool set){
     }
     return true;
 }
+
+bool WorldHandler::worldCollide(Math::Vector2D &position, Math::Vector2D &scene, Math::Vector2D &v){
+    float xBound, yBound;
+    if(v.x> 0){
+        //if it's going right
+        xBound = position.x + v.x + SPRITE_SIZE;
+    }else if(v.x < 0){
+        //if it's going left
+        xBound = position.x - v.x;
+    }else if (v.x == 0){
+        //if x is 0, thus no x movement
+        xBound = position.x + SPRITE_SIZE/2;
+    }
+    
+    if(v.y > 0){
+        //if it's going down
+        yBound = position.y + v.y + SPRITE_SIZE/2;
+    }else if (v.y < 0){
+        //if it's going up
+        yBound = position.y - v.y;
+    } else if (v.y == 0){
+        //if y is 0, thus no y movement
+        yBound = position.y + SPRITE_SIZE/2;
+    }
+    
+    Math::Vector2D gridPos = Math::Vector2D((int)xBound/SPRITE_SIZE, (int)yBound/SPRITE_SIZE);
+    
+    gridPos.x += scene.x*(windowWidth/SPRITE_SIZE);
+    gridPos.y += scene.y*(windowHeight/SPRITE_SIZE);
+    
+    if(gridPos.x < 0 || gridPos.y < 0 || gridPos.x > xMapSize || gridPos.y > xMapSize){
+        return false;
+    }
+    
+    if(map[gridPos.x + gridPos.y*xMapSize]->solid){
+        return true;
+    }
+    return false;
+}
+
 
 void WorldHandler::loadTileTypes(int typeNum){
     const char seperator = ',';

@@ -37,6 +37,9 @@ public:
     int getOffSetX();
     int getOffSetY();
     
+    bool worldCollide(Math::Vector2D &position, Math::Vector2D &scene, Math::Vector2D &v);
+    
+    //all objects that move must go through this method, it contains collisions and scene changing
     void movementCheck(Math::Vector2D &current, Math::Vector2D &velocity, Math::Vector2D &scene, bool allowedOffscreen, bool moveScene);
     
     void addToRQueue(GameObject*);
@@ -78,6 +81,7 @@ private:
         int textureCode;
         bool solid = false;
     };
+    
     //objects
     std::vector<GameObject*> renderVector;
     std::vector<GameObject*> updateVector;

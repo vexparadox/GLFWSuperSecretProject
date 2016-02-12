@@ -14,7 +14,9 @@
 
 //this class handles keyboard input with predefined buttons
 class InputHandler{
+    
     static std::shared_ptr<InputHandler> instance;
+    
     InputHandler(InputHandler const &s){}; // no copy constructor
     bool UP, LEFT, RIGHT, DOWN, isKeyPressed, SPACE, MOUSE0, MOUSE1, isMousePressed;
     int mouseX = 0, mouseY = 0;

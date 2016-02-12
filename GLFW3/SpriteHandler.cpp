@@ -17,7 +17,6 @@ std::shared_ptr<SpriteHandler> SpriteHandler::getInstance(){
     return instance;
 }
 
-
 void SpriteHandler::loadImages(){
     //load the images and confirm if they are or not
     for(int i = 0; i < SPRITE_CODE::END_SPRITE; i++){

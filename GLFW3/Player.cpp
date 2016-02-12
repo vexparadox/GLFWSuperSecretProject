@@ -13,11 +13,6 @@ Player::Player(const Math::Vector2D &scene, const Math::Vector2D &position, cons
     inputHandler = InputHandler::getInstance();
 }
 
-Player::~Player(){
-    worldHandler = nullptr;
-    inputHandler = nullptr;
-}
-
 void Player::update(){
     Math::Vector2D sv(0, 0);
     //on player movement

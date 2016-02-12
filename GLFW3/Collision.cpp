@@ -85,12 +85,9 @@ namespace Math {
     std::vector<Math::Vector2D> collisionCheck(const Graphics::Rect &r1, const Graphics::Rect &r2){
         return collisionCheck(Math::Vector2D(r1.v.y+r1.w/2, r1.v.y+r1.h/2) , r2);
     }
+    
     std::vector<Math::Vector2D> collisionCheck(const Math::Vector2D &point, const Graphics::Rect &r2){
         std::vector<Math::Vector2D> collisions;
-        
         return collisions;
     }
-
-    
-    
 }
