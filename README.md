@@ -1,8 +1,8 @@
-# GLFWSuperSecretProject
+# closedFrameworks V0.1
 
-GLFW3 and SOIL is included in the download and automatically linked
+A basic 2D game framework written in C++.
 
-Please note the very limited functionality.
+Please note the very limited functionality currently.
 
 Core.cpp and Core.hpp is where user code should be put. The Methods contained are self-explanatory.
 
