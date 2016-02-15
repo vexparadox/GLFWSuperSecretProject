@@ -71,6 +71,17 @@ namespace Math {
             return *this;
         }
         
+        inline Vector3D& normalise(){
+            float length = (float)sqrt(this->x*this->x + this->y*this->y + this->z*this->z);
+            if(length > 0) {
+                this->x/= length;
+                this->y/= length;
+                this->z/= length;
+            }
+            return *this;
+        }
+
+        
     };
 }
 

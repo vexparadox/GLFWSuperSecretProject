@@ -17,11 +17,12 @@
 
 #include <stdio.h>
 #include <vector>
-
+namespace Files{
 class CSVLoader{
     std::string name;
     char seperator = ',', ignore = '/';
     std::vector<vector<int> > fileVector;
+public:
     CSVLoader(const std::string &name, const char &seperator, const char &ignore){
         this->name = name;
         this->seperator = seperator;
@@ -63,6 +64,10 @@ class CSVLoader{
         }
         return fileVector;
     }
+    
+    void clearData(){
+        fileVector.clear();
+    }
 };
-
+}
 #endif /* CSVLoader_hpp */

@@ -1,4 +1,4 @@
-# closedFrameworks V0.1
+# closedFrameworks v0.2
 
 A basic 2D game framework written in C++.
 
@@ -13,3 +13,9 @@ A Runner object controls the main game loop. There is currently only functionali
 You can use images by making an Image type and using loadImage(string, width, height) to load in an image. draw(x, y) will draw the image on screen.
 
 See Graphics.hpp for shape drawing.
+
+
+## v0.2 Changelog
+Finalised the CSV Reader
+You can normalise 3D Vectors
+Triangles are now labelled properly

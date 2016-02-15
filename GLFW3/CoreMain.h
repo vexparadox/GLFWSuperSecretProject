@@ -12,5 +12,6 @@
 #include "Math.h"
 #include "Types.h"
 #include "Graphics.hpp"
+#include "CSVLoader.hpp"
 
 #endif /* CoreMain_h */
