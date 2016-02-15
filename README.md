@@ -16,6 +16,8 @@ See Graphics.hpp for shape drawing.
 
 
 ## v0.2 Changelog
-Finalised the CSV Reader
-You can normalise 3D Vectors
-Triangles are now labelled properly
+-Finalised the CSV Reader
+
+-You can normalise 3D Vectors
+
+-Triangles are now labelled properly
