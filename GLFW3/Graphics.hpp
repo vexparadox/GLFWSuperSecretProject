@@ -26,8 +26,10 @@ namespace Graphics{
     void drawPoly(Polygon &p);
     void drawPoly(std::vector<Math::Vector2D>& v);
     
+    //gets the pixel data between two points, (x,y) and (w,h)
     std::vector<unsigned char> getScreenData(int x, int y, int w, int h);
     
+    //set the background to be flushed
     void setBackground(float r, float g, float b, float a);
     void setBackground(float r, float g, float b);
     void setBackground(const Colour &c);

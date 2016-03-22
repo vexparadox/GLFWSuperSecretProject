@@ -26,20 +26,20 @@ namespace Graphics{
     }
 
     void drawRect(float x, float y, float w, float h){
-        drawRect(Math::Vector2D(x, y), w, h);
+        glBegin(GL_QUADS);
+        glVertex3f(x, y, 0.0f);
+        //top left
+        glVertex3f(x, y+h, 0.0f );
+        //bottom left
+        glVertex3f(x+w, y+h, 0.0f );
+        //bottom right
+        glVertex3f(x+w, y, 0.0f );
+        //top right
+        glEnd();
     }
 
     void drawRect(const Math::Vector2D &v, float w, float h){
-        glBegin(GL_QUADS);
-        glVertex3f(v.x, v.y, 0.0f);
-        //top left
-        glVertex3f(v.x, v.y+h, 0.0f );
-        //bottom left
-        glVertex3f(v.x+w, v.y+h, 0.0f );
-        //bottom right
-        glVertex3f(v.x+w, v.y, 0.0f );
-        //top right
-        glEnd();
+        drawRect(v.x, v.y, w, h);
     }
     
     void drawPoly(Polygon &p){
@@ -63,9 +63,7 @@ namespace Graphics{
         std::vector<unsigned char> data(4*w*h);
         glReadPixels(x, y, w, h, GL_RGBA, GL_UNSIGNED_BYTE, &data[0]);
         return data;
-    }
-    
-    
+    }    
     void setBackground(float r, float g, float b, float a){
         Runner::r = r/255;
         Runner::g = g/255;

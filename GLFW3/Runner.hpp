@@ -10,13 +10,19 @@
 #define Runner_hpp
 
 #include "BaseCore.hpp"
+//this class controls the main game loop, calls BaseCore update and render
 class Runner{
     BaseCore* c;
     double currentTime, lastTime;
     bool fps(int framerate);
+    static int keysPressed;
+    static int mbsPressed;
 public:
+    //the RGBA of the next screen flush
     static float r, g, b, a;
+    //the windowWidht and Height
     static float windowWidth, windowHeight;
+    //the creation of the runner
     Runner(float windowWidth, float windowHeight, int frameRate, const char* title, BaseCore* c);
     ~Runner(){};
     static void errorCallback(int error, const char* description);

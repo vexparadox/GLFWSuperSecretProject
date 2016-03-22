@@ -1,4 +1,4 @@
-# closedFrameworks v0.2
+# closedFrameworks v0.3
 
 A basic 2D game framework written in C++.
 
@@ -14,6 +14,8 @@ You can use images by making an Image type and using loadImage(string, width, he
 
 See Graphics.hpp for shape drawing.
 
+## v0.3 Changelog
+-Mainly Optimisations
 
 ## v0.2 Changelog
 -Finalised the CSV Reader

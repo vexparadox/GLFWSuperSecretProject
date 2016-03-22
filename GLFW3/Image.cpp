@@ -39,6 +39,7 @@ namespace Graphics{
         }
         return false;
     }
+    
     void Image::openGlLoad(const char* name){
         glEnable(GL_TEXTURE_2D);
         GLuint texture_id;
@@ -49,8 +50,8 @@ namespace Graphics{
         unsigned char* imageDataPtr =SOIL_load_image(name, &this->w, &this->h, 0, SOIL_LOAD_RGBA);
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP);
-        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP);
+        glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+        glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
         glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, this->w, this->h, 0, GL_RGBA, GL_UNSIGNED_BYTE, imageDataPtr);
         glEnd();
         SOIL_free_image_data(imageDataPtr);
@@ -78,11 +79,15 @@ namespace Graphics{
         glBindTexture(GL_TEXTURE_2D, textureID);
         glEnable(GL_TEXTURE_2D);
         glBegin(GL_QUADS);
+        
         glTexCoord2d(0, 1); glVertex2f(x, y+height);
+        
         //bottom left
         glTexCoord2d(0, 0); glVertex2f(x,y);
+        
         //top left
         glTexCoord2d(1, 0); glVertex2f(x+width, y);
+        
         //top right
         glTexCoord2d(1, 1); glVertex2f(x+width, y+height);
         //bottom right

@@ -11,16 +11,20 @@
 using namespace Graphics;
 
 Core::~Core(){
+
 }
 
 void Core::setup(){
-    Graphics::setBackground(0, 128, 128, 255);
+    Graphics::setBackground(255, 255, 255, 255);
 }
 
 void Core::update(){
 }
 
 void Core::draw(){
+}
+
+void Core::exitCalled(){
 }
 
 void Core::keyPressed(int key){

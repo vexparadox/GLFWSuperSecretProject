@@ -9,6 +9,8 @@
 #ifndef Vector2D_h
 #define Vector2D_h
 #include <cmath>
+
+//A much more fleshed out 2D vector
 namespace Math {
     class Vector2D{
     public:
@@ -17,6 +19,8 @@ namespace Math {
             this->x = x;
             this->y = y;
         }
+        
+        //ADD, dot, scale, subtract, 
         Vector2D(){}
         ~Vector2D(){}
         inline friend bool operator== (const Vector2D& v1, const Vector2D& v2){
@@ -41,19 +45,25 @@ namespace Math {
             return *this;
         }
         
+        inline Vector2D& operator+ (const float& f){
+            this->x += f;
+            this->y += f;
+            return *this;
+        }
+        
         inline Vector2D& operator= (const Vector2D& v){
             this->x = v.x;
             this->y = v.y;
             return *this;
         }
         
-        inline Vector2D& operator*(const Vector2D& v){
+        inline Vector2D& operator* (const Vector2D& v){
             this->x *= v.x;
             this->y *= v.y;
             return *this;
         }
         
-        inline Vector2D& operator*(float n){
+        inline Vector2D& operator*(const float& n){
             this->x *= n;
             this->y *= n;
             return *this;
@@ -67,6 +77,12 @@ namespace Math {
         inline Vector2D& operator- (const Vector2D& v) {
             this->x -= v.x;
             this->y -= v.y;
+            return *this;
+        }
+        
+        inline Vector2D& operator- (const float& f){
+            this->x -= f;
+            this->y -= f;
             return *this;
         }
         
@@ -86,7 +102,7 @@ namespace Math {
             v1 = v1/v2;
             return;
         }
-        
+            
         //normalise
         inline Vector2D& normalise(){
             float length = (float)sqrt(this->x*this->x + this->y*this->y);

@@ -24,29 +24,40 @@ namespace Math {
     
     //returns if v3 is inside of v1-v2
     bool isInsideQuad(const Vector2D &v1, const Vector2D &v2, const Vector2D &v3);
+<<<<<<< HEAD
+=======
     
     bool isInsideQuad(const Vector2D &point, const Graphics::Triangle &t);
     
+>>>>>>> 8cdec25b328d207ede2d434dcc6deb7aa8e42e3e
     bool isInsideQuad(const Vector2D &point, const Vector2D &v, float w, float h);
-    
     bool isInsideQuad(float x1, float y1, float x2, float y2, float x3, float y3);
     
+    //returns the sign of the vectors
     float signVector(float x1, float y1, float x2, float y2, float x3, float y3);
-    
     float signVector(const Vector2D &v1, const Vector2D &v2, const Vector2D &v3);
-    
     float signVector(const Graphics::Triangle &t);
     
-    bool isInsideTriangle(const Vector2D &point, const Vector2D &v1, const Vector2D &v2, const Vector2D &v3);
+<<<<<<< HEAD
+    //returns if point is inside of the triangle v1, v2, v3
+=======
+    float signVector(const Graphics::Triangle &t);
     
+>>>>>>> 8cdec25b328d207ede2d434dcc6deb7aa8e42e3e
+    bool isInsideTriangle(const Vector2D &point, const Vector2D &v1, const Vector2D &v2, const Vector2D &v3);
     bool isInsideTriangle(const Vector2D &point, const Graphics::Triangle &t);
     
-    float vectorDistance(const Vector2D& v1, const Vector2D& v2);
+<<<<<<< HEAD
+    //returns the distance between v1 and v2
+=======
+    bool isInsideTriangle(const Vector2D &point, const Graphics::Triangle &t);
     
+>>>>>>> 8cdec25b328d207ede2d434dcc6deb7aa8e42e3e
+    float vectorDistance(const Vector2D& v1, const Vector2D& v2);
     float vectorDistance(float x1, float y1, float x2, float y2);
     
+    //volision work, WIP
     std::vector<Math::Vector2D> collisionCheck(const Graphics::Rect &r1, const Graphics::Rect &r2);
-    
     std::vector<Math::Vector2D> collisionCheck(const Math::Vector2D &point, const Graphics::Rect &r2);
 }
 

@@ -22,6 +22,7 @@ public:
     void keyReleased(int key);
     void mousePressed(int button);
     void mouseReleased(int button);
+    void exitCalled();
 };
 
 #endif /* Core_hpp */
