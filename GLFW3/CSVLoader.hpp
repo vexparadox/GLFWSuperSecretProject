@@ -17,17 +17,14 @@
 
 #include <stdio.h>
 #include <vector>
-namespace Files{
+
 class CSVLoader{
     std::string name;
     char seperator = ',', ignore = '/';
     //where the last load will be saved
     std::vector<vector<int> > fileVector;
 public:
-<<<<<<< HEAD
     //create the object
-=======
->>>>>>> 8cdec25b328d207ede2d434dcc6deb7aa8e42e3e
     CSVLoader(const std::string &name, const char &seperator, const char &ignore){
         this->name = name;
         this->seperator = seperator;
@@ -72,17 +69,11 @@ public:
         return fileVector;
     }
     
-<<<<<<< HEAD
     //returns the fileVector
     std::vector<vector<int> >& getFileVector(){
         return fileVector;
     }
 
-=======
-    void clearData(){
-        fileVector.clear();
-    }
->>>>>>> 8cdec25b328d207ede2d434dcc6deb7aa8e42e3e
 };
-}
+
 #endif /* CSVLoader_hpp */

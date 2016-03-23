@@ -11,7 +11,6 @@
 using namespace Graphics;
 
 Core::~Core(){
-
 }
 
 void Core::setup(){

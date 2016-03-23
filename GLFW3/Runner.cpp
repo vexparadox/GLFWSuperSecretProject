@@ -58,6 +58,7 @@ Runner::Runner(float windowWidth, float windowHeight, int frameRate,const char* 
         int iconified = glfwGetWindowAttrib(window, GLFW_ICONIFIED);
         int focused = glfwGetWindowAttrib(window, GLFW_FOCUSED);
         
+        //this stops the window running in the background and if it's been minimised
         if(iconified || !focused){
             glfwWaitEvents();
         
@@ -93,6 +94,7 @@ Runner::Runner(float windowWidth, float windowHeight, int frameRate,const char* 
         }
         glfwPollEvents();
     }
+    //end the program
     glfwDestroyWindow(window);
     glfwTerminate();
     exit(EXIT_SUCCESS);
