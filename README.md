@@ -11,9 +11,12 @@ A Runner object controls the main game loop. There is currently only functionali
 
 You can use images by making an Image type and using loadImage(string, width, height) to load in an image. draw(x, y) will draw the image on screen.
 
-See Graphics.hpp for shape drawing.
+See:
+Graphics.hpp for shapes
+Image.hpp for images
+Text.hpp for text
 
-v0.3 Changelog
+##v0.3 Changelog
 
 -Optimised shape drawing
 -Added text rendering! Only uses glyphmaps at the moment
@@ -25,7 +28,7 @@ v0.3 Changelog
 -Cleaned up Vector code
 -Added GLEW for text rendering
 
-v0.2 Changelog
+##v0.2 Changelog
 
 -Finalised the CSV Reader
 
