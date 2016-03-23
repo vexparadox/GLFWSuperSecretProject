@@ -33,6 +33,9 @@ namespace Graphics{
     void setBackground(float r, float g, float b, float a);
     void setBackground(float r, float g, float b);
     void setBackground(const Colour &c);
+    
+    void pushMatrix();
+    void popMatrix();
 }
 
 

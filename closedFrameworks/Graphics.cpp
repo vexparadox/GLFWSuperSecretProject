@@ -78,4 +78,13 @@ namespace Graphics{
     void setBackground(const Colour &c){
         setBackground(c.r, c.g, c.b, c.a);
     }
+    
+    void popMatrix(){
+        glPopMatrix();
+    }
+    
+    void pushMatrix(){
+        glPushMatrix();
+    }
+    
 }
