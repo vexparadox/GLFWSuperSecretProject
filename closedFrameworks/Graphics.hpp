@@ -40,8 +40,8 @@ namespace Graphics{
     void popMatrix();
     
     //translate the current pushed matrix
-    void translate(float x, float y, float z);
-    void translate(float x, float y);
+    void translate(float &x, float &y, float &z);
+    void translate(float &x, float &y);
     void translate(const Math::Vector2D& v);
     void translate(const Math::Vector3D& v);
 }

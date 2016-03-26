@@ -86,11 +86,11 @@ namespace Graphics{
         glPushMatrix();
     }
     
-    void translate(float x, float y, float z){
+    void translate(float &x, float &y, float &z){
         glTranslatef(x, y, z);
     }
     
-    void translate(float x, float y){
+    void translate(float &x, float &y){
         glTranslatef(x, y, 0);
     }
     
