@@ -155,8 +155,6 @@
 		C27B13AF1CA2D8E900645348 /* Maths */ = {
 			isa = PBXGroup;
 			children = (
-				C27B13691CA2D7A400645348 /* Collision.cpp */,
-				C27B136A1CA2D7A400645348 /* Collision.h */,
 				C27B13751CA2D7A400645348 /* Math.h */,
 				C27B13771CA2D7A400645348 /* Random.h */,
 				C27B137D1CA2D7A400645348 /* Timer.cpp */,
@@ -165,6 +163,8 @@
 				C27B13821CA2D7A400645348 /* Utils.h */,
 				C27B13831CA2D7A400645348 /* Vector2D.h */,
 				C27B13841CA2D7A400645348 /* Vector3D.h */,
+				C27B136A1CA2D7A400645348 /* Collision.h */,
+				C27B13691CA2D7A400645348 /* Collision.cpp */,
 			);
 			name = Maths;
 			sourceTree = "<group>";
@@ -451,6 +451,7 @@
 				C27B135E1CA2D57400645348 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

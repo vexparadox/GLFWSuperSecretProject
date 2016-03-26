@@ -8,9 +8,9 @@
 
 #ifndef Collision_h
 #define Collision_h
-#include "Rect.h"
-#include "Triangle.h"
 #include <vector>
+#include "Math.h"
+#include "Types.h"
 namespace Math {
     struct lineCollide{
         Math::Vector2D v1, v2;
@@ -39,10 +39,6 @@ namespace Math {
     //returns the distance between v1 and v2
     float vectorDistance(const Vector2D& v1, const Vector2D& v2);
     float vectorDistance(float x1, float y1, float x2, float y2);
-    
-    //volision work, WIP
-    std::vector<Math::Vector2D> collisionCheck(const Graphics::Rect &r1, const Graphics::Rect &r2);
-    std::vector<Math::Vector2D> collisionCheck(const Math::Vector2D &point, const Graphics::Rect &r2);
 }
 
 #endif /* Collision_h */
