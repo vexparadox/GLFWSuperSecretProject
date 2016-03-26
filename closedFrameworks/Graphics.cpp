@@ -58,7 +58,6 @@ namespace Graphics{
         glEnd();
     }
     
-    
     std::vector<unsigned char> getScreenData(int x, int y, int w, int h){
         std::vector<unsigned char> data(4*w*h);
         glReadPixels(x, y, w, h, GL_RGBA, GL_UNSIGNED_BYTE, &data[0]);
@@ -87,4 +86,19 @@ namespace Graphics{
         glPushMatrix();
     }
     
+    void translate(float x, float y, float z){
+        glTranslatef(x, y, z);
+    }
+    
+    void translate(float x, float y){
+        glTranslatef(x, y, 0);
+    }
+    
+    void translate(const Math::Vector2D &v){
+        glTranslatef(v.x, v.y, 0);
+    }
+    
+    void translate(const Math::Vector3D &v){
+        glTranslatef(v.x, v.y, v.z);
+    }
 }

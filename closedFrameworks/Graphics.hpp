@@ -12,6 +12,7 @@
 #include "Types.h"
 #include "GLFW/glfw3.h"
 #include <vector>
+#include "Math.h"
 
 namespace Graphics{
     //Triangles
@@ -34,8 +35,15 @@ namespace Graphics{
     void setBackground(float r, float g, float b);
     void setBackground(const Colour &c);
     
+    //push and pop a new matrix
     void pushMatrix();
     void popMatrix();
+    
+    //translate the current pushed matrix
+    void translate(float x, float y, float z);
+    void translate(float x, float y);
+    void translate(const Math::Vector2D& v);
+    void translate(const Math::Vector3D& v);
 }
 
 
