@@ -15,5 +15,6 @@
 #include "Image.hpp"
 #include "Colour.h"
 #include "Text.hpp"
+#include "Ellipse.h"
 
 #endif /* Types_h */
