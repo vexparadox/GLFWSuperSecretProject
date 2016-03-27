@@ -10,11 +10,12 @@
 #define Ellipse_h
 namespace Graphics{
     class Ellipse{
-    public:
+    private:
         //Center point
         Math::Vector2D cp;
         //x radius and y radius
         float xR, yR;
+    public:
         
         Ellipse(const Math::Vector2D &cp, float xR, float yR)
         {
@@ -79,6 +80,13 @@ namespace Graphics{
             yR = r;
             
         }
+        
+        //Getters
+        float getCX(){ return cp.x;};
+        float getCY(){ return cp.y;};
+        float getXR(){ return xR;};
+        float getYR(){ return yR;};
+        
     };
 }
 

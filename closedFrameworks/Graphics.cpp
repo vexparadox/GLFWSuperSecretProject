@@ -59,6 +59,74 @@ namespace Graphics{
         glEnd();
     }
     
+    void drawEllipse(Ellipse &e)
+    {
+        float centerX = e.getCX();
+        float centerY = e.getCY();
+        float radiusX = e.getXR();
+        float radiusY = e.getYR();
+        
+        glBegin(GL_TRIANGLE_FAN);
+        
+        for(int i = 0; i < 360; i++)
+        {
+            float rad = i*(M_PI/180.0);
+            glVertex3f(cos(rad)*radiusX+centerX, sin(rad)*radiusY+centerY, 0.0f);
+        }
+        
+        glEnd();
+    }
+    void drawEllipse(const Math::Vector2D &cp, float xR, float yR)
+    {
+        float centerX = cp.x;
+        float centerY = cp.y;
+        
+        glBegin(GL_TRIANGLE_FAN);
+        
+        for(int i = 0; i < 360; i++)
+        {
+            float rad = i*(M_PI/180.0);
+            glVertex3f(cos(rad)*xR+centerX, sin(rad)*yR+centerY, 0.0f);
+        }
+        glEnd();
+    }
+    void drawEllipse(const Math::Vector2D &cp, float r)
+    {
+        float centerX = cp.x;
+        float centerY = cp.y;
+        
+        glBegin(GL_TRIANGLE_FAN);
+        
+        for(int i = 0; i < 360; i++)
+        {
+            float rad = i*(M_PI/180.0);
+            glVertex3f(cos(rad)*r+centerX, sin(rad)*r+centerY, 0.0f);
+        }
+        glEnd();
+    }
+    void drawEllipse(float x, float y, float xR, float yR)
+    {
+        glBegin(GL_TRIANGLE_FAN);
+        
+        for(int i = 0; i < 360; i++)
+        {
+            float rad = i*(M_PI/180.0);
+            glVertex3f(cos(rad)*xR+x, sin(rad)*yR+y, 0.0f);
+        }
+        glEnd();
+    }
+    void drawEllipse(float x, float y, float r)
+    {
+        glBegin(GL_TRIANGLE_FAN);
+        
+        for(int i = 0; i < 360; i++)
+        {
+            float rad = i*(M_PI/180.0);
+            glVertex3f(cos(rad)*r+x, sin(rad)*r+y, 0.0f);
+        }
+        glEnd();
+    }
+    
     std::vector<unsigned char> getScreenData(int x, int y, int w, int h){
         std::vector<unsigned char> data(4*w*h);
         glReadPixels(x, y, w, h, GL_RGBA, GL_UNSIGNED_BYTE, &data[0]);

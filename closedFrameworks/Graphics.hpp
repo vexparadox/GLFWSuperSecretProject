@@ -26,6 +26,12 @@ namespace Graphics{
     //Polygons
     void drawPoly(Polygon &p);
     void drawPoly(std::vector<Math::Vector2D>& v);
+    //Ellipses
+    void drawEllipse(Ellipse &e);
+    void drawEllipse(const Math::Vector2D &cp, float xR, float yR);
+    void drawEllipse(const Math::Vector2D &cp, float r);
+    void drawEllipse(float x, float y, float xR, float yR);
+    void drawEllipse(float x, float y, float r);
     
     //gets the pixel data between two points, (x,y) and (w,h)
     std::vector<unsigned char> getScreenData(int x, int y, int w, int h);
