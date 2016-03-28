@@ -12,6 +12,7 @@
 #include "Runner.hpp"
 
 namespace Graphics{
+    //TRIANGLES
     void drawTriangle(Triangle& t){
         drawTriangle(t.getV1(), t.getV2(), t.getV3());
     }
@@ -28,6 +29,7 @@ namespace Graphics{
         glEnd();
     }
 
+    //RECTANGLES
     void drawRect(float x, float y, float w, float h){
         glBegin(GL_QUADS);
         glVertex3f(x, y, 0.0f);
@@ -45,6 +47,7 @@ namespace Graphics{
         drawRect(v.x, v.y, w, h);
     }
     
+    //POLYGONS
     void drawPoly(const Polygon &p){
         drawPoly(p.getVerticies());
     }
@@ -57,56 +60,24 @@ namespace Graphics{
         glEnd();
     }
     
-    void drawEllipse(Ellipse &e)
-    {
-        float centerX = e.getCX();
-        float centerY = e.getCY();
-        float radiusX = e.getXR();
-        float radiusY = e.getYR();
-        float degToRad = M_PI/180.0;
-        
-        glBegin(GL_TRIANGLE_FAN);
-        
-        for(int i = 0; i < 360; i++)
-        {
-            float rad = i*degToRad;
-            glVertex3f(cos(rad)*radiusX+centerX, sin(rad)*radiusY+centerY, 0.0f);
-        }
-        
-        glEnd();
+    //ELLIPSES
+    void drawEllipse(Ellipse &e){
+        drawEllipse(e.getCX(), e.getCY(), e.getXR(), e.getYR());
     }
-    void drawEllipse(const Math::Vector2D &cp, float xR, float yR)
-    {
-        float centerX = cp.x;
-        float centerY = cp.y;
-        float degToRad = M_PI/180.0;
-        
-        glBegin(GL_TRIANGLE_FAN);
-        
-        for(int i = 0; i < 360; i++)
-        {
-            float rad = i*degToRad;
-            glVertex3f(cos(rad)*xR+centerX, sin(rad)*yR+centerY, 0.0f);
-        }
-        glEnd();
+    
+    void drawEllipse(const Math::Vector2D &cp, float xR, float yR){
+        drawEllipse(cp.x, cp.y, xR, yR);
     }
-    void drawEllipse(const Math::Vector2D &cp, float r)
-    {
-        float centerX = cp.x;
-        float centerY = cp.y;
-        float degToRad = M_PI/180.0;
-        
-        glBegin(GL_TRIANGLE_FAN);
-        
-        for(int i = 0; i < 360; i++)
-        {
-            float rad = i*degToRad;
-            glVertex3f(cos(rad)*r+centerX, sin(rad)*r+centerY, 0.0f);
-        }
-        glEnd();
+    
+    void drawEllipse(const Math::Vector2D &cp, float r){
+        drawEllipse(cp.x, cp.y, r, r);
     }
-    void drawEllipse(float x, float y, float xR, float yR)
-    {
+    
+    void drawEllipse(float x, float y, float r){
+        drawEllipse(x, y, r, r);
+    }
+    
+    void drawEllipse(float x, float y, float xR, float yR){
         glBegin(GL_TRIANGLE_FAN);
     
         float degToRad = M_PI/180.0;
@@ -118,25 +89,14 @@ namespace Graphics{
         }
         glEnd();
     }
-    void drawEllipse(float x, float y, float r)
-    {
-        glBegin(GL_TRIANGLE_FAN);
-        
-        float degToRad = M_PI/180.0;
-        
-        for(int i = 0; i < 360; i++)
-        {
-            float rad = i*degToRad;
-            glVertex3f(cos(rad)*r+x, sin(rad)*r+y, 0.0f);
-        }
-        glEnd();
-    }
     
     std::vector<unsigned char> getScreenData(int x, int y, int w, int h){
         std::vector<unsigned char> data(4*w*h);
         glReadPixels(x, y, w, h, GL_RGBA, GL_UNSIGNED_BYTE, &data[0]);
         return data;
-    }    
+    }
+    
+    //BACKGROUNDS
     void setBackground(float r, float g, float b, float a){
         Runner::r = r/255;
         Runner::g = g/255;
@@ -152,6 +112,7 @@ namespace Graphics{
         setBackground(c.getR(), c.getG(), c.getB(), c.getA());
     }
     
+    //MATRIXES
     void popMatrix(){
         glPopMatrix();
     }
@@ -176,6 +137,8 @@ namespace Graphics{
         glTranslatef(v.x, v.y, v.z);
     }
     
+    
+    //FILLS
     void fill(const Graphics::Colour &c){
         glColor4f(c.getR(), c.getG(), c.getB(), c.getA());
     }
@@ -183,5 +146,10 @@ namespace Graphics{
     void fill(const float &r, const float &g, const float &b, const float &a){
         glColor4f(r/255, g/255, b/255, a/255);
     }
+    
+    void fill(const float &r, const float &g, const float &b){
+        glColor4f(r/255, g/255, b/255, 1);
+    }
+
 
 }
