@@ -8,6 +8,7 @@
 
 #ifndef Ellipse_h
 #define Ellipse_h
+
 namespace Graphics{
     class Ellipse{
     private:
@@ -82,10 +83,11 @@ namespace Graphics{
         }
         
         //Getters
-        float getCX(){ return cp.x;};
-        float getCY(){ return cp.y;};
-        float getXR(){ return xR;};
-        float getYR(){ return yR;};
+        Math::Vector2D getVec() const { return  cp;};
+        float getCX() const { return cp.x;};
+        float getCY() const { return cp.y;};
+        float getXR() const { return xR;};
+        float getYR() const { return yR;};
         
     };
 }
