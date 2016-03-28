@@ -150,6 +150,10 @@ namespace Graphics{
     void fill(const float &r, const float &g, const float &b){
         glColor4f(r/255, g/255, b/255, 1);
     }
+    
+    void clearFill(){
+        glColor4f(1, 1, 1, 1);
+    }
 
 
 }
