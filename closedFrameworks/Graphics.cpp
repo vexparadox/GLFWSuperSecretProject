@@ -67,12 +67,13 @@ namespace Graphics{
         float centerY = e.getCY();
         float radiusX = e.getXR();
         float radiusY = e.getYR();
+        float degToRad = M_PI/180.0;
         
         glBegin(GL_TRIANGLE_FAN);
         
         for(int i = 0; i < 360; i++)
         {
-            float rad = i*(M_PI/180.0);
+            float rad = i*degToRad;
             glVertex3f(cos(rad)*radiusX+centerX, sin(rad)*radiusY+centerY, 0.0f);
         }
         
@@ -82,12 +83,13 @@ namespace Graphics{
     {
         float centerX = cp.x;
         float centerY = cp.y;
+        float degToRad = M_PI/180.0;
         
         glBegin(GL_TRIANGLE_FAN);
         
         for(int i = 0; i < 360; i++)
         {
-            float rad = i*(M_PI/180.0);
+            float rad = i*degToRad;
             glVertex3f(cos(rad)*xR+centerX, sin(rad)*yR+centerY, 0.0f);
         }
         glEnd();
@@ -96,12 +98,13 @@ namespace Graphics{
     {
         float centerX = cp.x;
         float centerY = cp.y;
+        float degToRad = M_PI/180.0;
         
         glBegin(GL_TRIANGLE_FAN);
         
         for(int i = 0; i < 360; i++)
         {
-            float rad = i*(M_PI/180.0);
+            float rad = i*degToRad;
             glVertex3f(cos(rad)*r+centerX, sin(rad)*r+centerY, 0.0f);
         }
         glEnd();
@@ -110,9 +113,11 @@ namespace Graphics{
     {
         glBegin(GL_TRIANGLE_FAN);
         
+        float degToRad = M_PI/180.0;
+        
         for(int i = 0; i < 360; i++)
         {
-            float rad = i*(M_PI/180.0);
+            float rad = i*degToRad;
             glVertex3f(cos(rad)*xR+x, sin(rad)*yR+y, 0.0f);
         }
         glEnd();
@@ -121,9 +126,11 @@ namespace Graphics{
     {
         glBegin(GL_TRIANGLE_FAN);
         
+        float degToRad = M_PI/180.0;
+        
         for(int i = 0; i < 360; i++)
         {
-            float rad = i*(M_PI/180.0);
+            float rad = i*degToRad;
             glVertex3f(cos(rad)*r+x, sin(rad)*r+y, 0.0f);
         }
         glEnd();

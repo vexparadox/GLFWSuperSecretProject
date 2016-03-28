@@ -11,6 +11,7 @@
 #include <vector>
 #include "Math.h"
 #include "Types.h"
+
 namespace Math {
     struct lineCollide{
         Math::Vector2D v1, v2;
@@ -35,6 +36,14 @@ namespace Math {
     //returns if point is inside of the triangle v1, v2, v3
     bool isInsideTriangle(const Vector2D &point, const Vector2D &v1, const Vector2D &v2, const Vector2D &v3);
     bool isInsideTriangle(const Vector2D &point, const Graphics::Triangle &t);
+    
+    //returns if point is inside of the circles
+    bool isInsideEllipse(const Vector2D &point, const Vector2D &cp, float xR, float yR);
+    bool isInsideEllipse(const Vector2D &point, const Vector2D &cp, float r)
+    {
+        return isInsideEllipse(point, cp, r, r);
+    }
+    bool isInsideEllipse(const Vector2D &point, const Graphics::Ellipse &e);
     
     //returns the distance between v1 and v2
     float vectorDistance(const Vector2D& v1, const Vector2D& v2);

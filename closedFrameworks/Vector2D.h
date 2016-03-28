@@ -110,7 +110,12 @@ namespace Math {
                     this->x/= length;
                     this->y/= length;
                 }
-            return *this;
+          return *this;
+        }
+        
+        //Returns the length of a vec using Pythag (A^2+B^2 = C^2)
+        float length() const{
+            return sqrt(x*x+y*y);
         }
 
     };

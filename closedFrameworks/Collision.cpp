@@ -74,6 +74,17 @@ namespace Math {
         return isInsideTriangle(point, t.getV1(), t.getV2(), t.getV3());
     }
     
+    bool isInsideEllipse(const Vector2D &point, const Vector2D &cp, float xR, float yR)
+    {
+        //(((x-cp.x)^2)/rX^2 + ((y-cp.y)^2)/rY^2) <= 1
+        return  ( (pow((point.x-cp.x),2)/pow(xR,2)) + (pow((point.y-cp.y),2)/pow(yR,2)) ) <=1;
+    }
+    bool isInsideEllipse(const Vector2D &point, const Graphics::Ellipse &e)
+    {
+        //(((x-cp.x)^2)/rX^2 + ((y-cp.y)^2)/rY^2) <= 1
+        return  ( (pow((point.x-e.getVec().x),2)/pow(e.getXR(),2)) + (pow((point.y-e.getVec().y),2)/pow(e.getYR(),2)) ) <=1;
+    }
+    
     float vectorDistance(const Vector2D& v1, const Vector2D& v2){
         return sqrt((v1.x-v2.x)*(v1.x-v2.x)+(v1.y-v2.y)*(v1.y-v2.y));
     }
