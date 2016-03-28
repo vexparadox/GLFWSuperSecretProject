@@ -24,8 +24,8 @@ namespace Graphics{
     void drawRect(const Math::Vector2D &v1, float w, float h);
     void drawRect(float x, float y, float w, float h);
     //Polygons
-    void drawPoly(Polygon &p);
-    void drawPoly(std::vector<Math::Vector2D>& v);
+    void drawPoly(const Polygon &p);
+    void drawPoly(const std::vector<Math::Vector2D>& v);
     //Ellipses
     void drawEllipse(Ellipse &e);
     void drawEllipse(const Math::Vector2D &cp, float xR, float yR);

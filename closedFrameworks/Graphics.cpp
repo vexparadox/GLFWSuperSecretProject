@@ -45,15 +45,11 @@ namespace Graphics{
         drawRect(v.x, v.y, w, h);
     }
     
-    void drawPoly(Polygon &p){
-        glBegin(GL_POLYGON);
-        for(auto points : p.getVerticies()){
-            glVertex3f(points.x, points.y, 0.0f);
-        }
-        glEnd();
+    void drawPoly(const Polygon &p){
+        drawPoly(p.getVerticies());
     }
     
-    void drawPoly(std::vector<Math::Vector2D>& v){
+    void drawPoly(const std::vector<Math::Vector2D>& v){
         glBegin(GL_POLYGON);
         for(auto points : v){
             glVertex3f(points.x, points.y, 0.0f);
@@ -112,7 +108,7 @@ namespace Graphics{
     void drawEllipse(float x, float y, float xR, float yR)
     {
         glBegin(GL_TRIANGLE_FAN);
-        
+    
         float degToRad = M_PI/180.0;
         
         for(int i = 0; i < 360; i++)

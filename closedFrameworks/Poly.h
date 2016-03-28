@@ -25,7 +25,7 @@ public:
         this->v.clear();
     }
     
-    std::vector<Math::Vector2D> getVerticies(){
+    std::vector<Math::Vector2D> getVerticies() const{
         return v;
     }
     
