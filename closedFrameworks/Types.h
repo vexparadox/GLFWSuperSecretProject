@@ -9,12 +9,12 @@
 #ifndef Types_h
 #define Types_h
 
+#include "Ellipse.h"
 #include "Triangle.h"
 #include "Rect.h"
 #include "Poly.h"
 #include "Image.hpp"
 #include "Colour.h"
 #include "Text.hpp"
-#include "Ellipse.h"
 
 #endif /* Types_h */

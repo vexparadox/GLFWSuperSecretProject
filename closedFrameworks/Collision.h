@@ -17,7 +17,6 @@ namespace Math {
         Math::Vector2D v1, v2;
         lineCollide(const Math::Vector2D &v1, const Math::Vector2D &v2);
     };
-    
     //this method checks a proposed position and returns a corrected position
     Math::Vector2D lineCollisionCheckX(const Math::Vector2D &originalPosition, const Math::Vector2D &proposedMovement, const lineCollide &lc);
     
@@ -39,10 +38,7 @@ namespace Math {
     
     //returns if point is inside of the circles
     bool isInsideEllipse(const Vector2D &point, const Vector2D &cp, float xR, float yR);
-    bool isInsideEllipse(const Vector2D &point, const Vector2D &cp, float r)
-    {
-        return isInsideEllipse(point, cp, r, r);
-    }
+    bool isInsideEllipse(const Vector2D &point, const Vector2D &cp, float r);
     bool isInsideEllipse(const Vector2D &point, const Graphics::Ellipse &e);
     
     //returns the distance between v1 and v2

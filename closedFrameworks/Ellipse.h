@@ -8,6 +8,7 @@
 
 #ifndef Ellipse_h
 #define Ellipse_h
+#include "Vector2D.h"
 
 namespace Graphics{
     class Ellipse{
@@ -17,7 +18,7 @@ namespace Graphics{
         //x radius and y radius
         float xR, yR;
     public:
-        
+
         Ellipse(const Math::Vector2D &cp, float xR, float yR)
         {
             this->cp=cp;

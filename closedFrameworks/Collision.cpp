@@ -85,6 +85,12 @@ namespace Math {
         return  ( (pow((point.x-e.getVec().x),2)/pow(e.getXR(),2)) + (pow((point.y-e.getVec().y),2)/pow(e.getYR(),2)) ) <=1;
     }
     
+    bool isInsideEllipse(const Vector2D &point, const Vector2D &cp, float r)
+    {
+        return isInsideEllipse(point, cp, r, r);
+    }
+
+    
     float vectorDistance(const Vector2D& v1, const Vector2D& v2){
         return sqrt((v1.x-v2.x)*(v1.x-v2.x)+(v1.y-v2.y)*(v1.y-v2.y));
     }
