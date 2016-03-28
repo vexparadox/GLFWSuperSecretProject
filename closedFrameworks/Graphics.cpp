@@ -5,6 +5,8 @@
 //  Created by William Meaton on 07/12/2015.
 //  Copyright © 2015 WillMeaton.uk. All rights reserved.
 //
+//Ellipse work by Charlie Ringer
+//
 
 #include "Graphics.hpp"
 #include "Runner.hpp"

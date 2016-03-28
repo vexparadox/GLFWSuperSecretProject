@@ -92,6 +92,7 @@
 		C27E3AC91C87233900E1B900 /* libdrawtext-noft.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libdrawtext-noft.a"; path = "lib/libdrawtext-noft.a"; sourceTree = "<group>"; };
 		C27E3ACB1C8723B200E1B900 /* libGLEW.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGLEW.a; path = lib/libGLEW.a; sourceTree = "<group>"; };
 		C27E3ACD1C87240F00E1B900 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		C2E8EEA41CA984BF0036A073 /* Ellipse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ellipse.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,10 +208,11 @@
 				C27B13721CA2D7A400645348 /* Image.cpp */,
 				C27B13731CA2D7A400645348 /* Image.hpp */,
 				C27B137B1CA2D7A400645348 /* Text.cpp */,
-				C27B137C1CA2D7A400645348 /* Text.hpp */,
+				C2E8EEA41CA984BF0036A073 /* Ellipse.h */,
 				C27B13761CA2D7A400645348 /* Poly.h */,
-				C27B13781CA2D7A400645348 /* Rect.h */,
 				C27B137F1CA2D7A400645348 /* Triangle.h */,
+				C27B13781CA2D7A400645348 /* Rect.h */,
+				C27B137C1CA2D7A400645348 /* Text.hpp */,
 				C27B13801CA2D7A400645348 /* Types.h */,
 			);
 			name = Types;
