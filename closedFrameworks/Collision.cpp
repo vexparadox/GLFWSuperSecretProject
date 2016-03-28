@@ -30,22 +30,22 @@ namespace Math {
     
     //returns if v3 is inside of v1-v2
     bool isInsideQuad(const Vector2D &point, const Vector2D &v1, const Vector2D &v2){
-        if(point.x > v1.x && point.x < v2.x && point.y > v1.y && point.y < v2.y){
-            return true;
-        }
-        return false;
+        return Math::isInsideQuad(point.x, point.y, v1.x, v1.y, v2.x, v2.y);
     }
     
     bool isInsideQuad(const Vector2D &point, const Vector2D &v, float w, float h){
-        return isInsideQuad(point, v, Vector2D(w, h));
+        return Math::isInsideQuad(point.x, point.y, v.x, v.y, w, h);
     }
     
     bool isInsideQuad(const Vector2D &point, const Graphics::Rect &r){
-        return isInsideQuad(point, r.v, Vector2D(r.w, r.h));
+        return Math::isInsideQuad(point.x, point.y, r.getX(), r.getY(), r.getWidth(), r.getHeight());
     }
     
-    bool isInsideQuad(float &x1, float &y1, float &x2, float &y2, float &x3, float &y3){
-        return isInsideQuad(Vector2D(x1, x2), Vector2D(x2, y2), Vector2D(x3, y3));
+    bool isInsideQuad(const float &x1, const float &y1, const float &x2, const float &y2, const float &x3, const float &y3){
+        if(x1 > x2 && x1 < x3 && y1 > y2 && x3 < y3){
+            return true;
+        }
+        return false;
     }
     
     float signVector(float x1, float y1, float x2, float y2, float x3, float y3){
@@ -59,7 +59,7 @@ namespace Math {
     }
     
     float signVector(const Graphics::Triangle &t){
-        return signVector(t.v1, t.v2, t.v3);
+        return signVector(t.getV1(), t.getV2(), t.getV3());
     }
     
     bool isInsideTriangle(const Vector2D &point, const Vector2D &v1, const Vector2D &v2, const Vector2D &v3){
@@ -71,7 +71,7 @@ namespace Math {
     }
     
     bool isInsideTriangle(const Vector2D &point, const Graphics::Triangle &t){
-        return isInsideTriangle(point, t.v1, t.v2, t.v3);
+        return isInsideTriangle(point, t.getV1(), t.getV2(), t.getV3());
     }
     
     float vectorDistance(const Vector2D& v1, const Vector2D& v2){

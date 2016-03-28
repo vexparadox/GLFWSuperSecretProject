@@ -13,7 +13,7 @@
 
 namespace Graphics{
     void drawTriangle(Triangle& t){
-        drawTriangle(t.v1, t.v2, t.v3);
+        drawTriangle(t.getV1(), t.getV2(), t.getV3());
     }
 
     void drawTriangle(const Math::Vector2D &v1, const Math::Vector2D &v2, const Math::Vector2D &v3){

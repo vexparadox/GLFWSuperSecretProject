@@ -12,9 +12,9 @@
 #include "Math.h"
 namespace Graphics{
     class Rect{
-    public:
         Math::Vector2D v;
         float w, h;
+    public:
         Rect(const Math::Vector2D &v1, float w, float h){
             this->v = v1;
             this->w = w;
@@ -35,6 +35,22 @@ namespace Graphics{
         
         void set(float x, float y, float w, float h){
             this->set(Math::Vector2D(x, y), w, h);
+        }
+        
+        const float getX() const{
+            return v.x;
+        }
+        
+        const float getY() const{
+            return v.y;
+        }
+        
+        const float getWidth() const{
+            return w;
+        }
+        
+        const float getHeight() const{
+            return h;
         }
     };
 }

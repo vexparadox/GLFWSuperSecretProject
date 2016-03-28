@@ -25,7 +25,7 @@ namespace Math {
     //returns if v3 is inside of v1-v2
     bool isInsideQuad(const Vector2D &v1, const Vector2D &v2, const Vector2D &v3);
     bool isInsideQuad(const Vector2D &point, const Vector2D &v, float w, float h);
-    bool isInsideQuad(float x1, float y1, float x2, float y2, float x3, float y3);
+    bool isInsideQuad(const float &x1, const float &y1, const float &x2, const float &y2, const float &x3, const float &y3);
     
     //returns the sign of the vectors
     float signVector(float x1, float y1, float x2, float y2, float x3, float y3);
