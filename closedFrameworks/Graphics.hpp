@@ -50,6 +50,10 @@ namespace Graphics{
     void translate(float &x, float &y);
     void translate(const Math::Vector2D& v);
     void translate(const Math::Vector3D& v);
+    
+    //colours
+    void fill(const Graphics::Colour &c);
+    void fill(const float &r, const float &g, const float &b, const float &a);
 }
 
 

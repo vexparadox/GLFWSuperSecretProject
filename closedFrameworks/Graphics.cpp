@@ -149,7 +149,7 @@ namespace Graphics{
     }
     
     void setBackground(const Colour &c){
-        setBackground(c.r, c.g, c.b, c.a);
+        setBackground(c.getR(), c.getG(), c.getB(), c.getA());
     }
     
     void popMatrix(){
@@ -175,4 +175,13 @@ namespace Graphics{
     void translate(const Math::Vector3D &v){
         glTranslatef(v.x, v.y, v.z);
     }
+    
+    void fill(const Graphics::Colour &c){
+        glColor4f(c.getR(), c.getG(), c.getB(), c.getA());
+    }
+    
+    void fill(const float &r, const float &g, const float &b, const float &a){
+        glColor4f(r/255, g/255, b/255, a/255);
+    }
+
 }
