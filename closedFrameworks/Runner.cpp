@@ -7,8 +7,6 @@
 //
 
 #include "Runner.hpp"
-float Runner::windowWidth = 0;
-float Runner::windowHeight = 0;
 float Runner::r = 1;
 float Runner::g = 1;
 float Runner::b = 1;
@@ -16,8 +14,6 @@ float Runner::a = 1;
 int Runner::keysPressed =0;
 int Runner::mbsPressed = 0;
 Runner::Runner(float windowWidth, float windowHeight, int frameRate,const char* title,BaseCore* c){
-    Runner::windowWidth = windowWidth;
-    Runner::windowHeight = windowHeight;
     //assign the core to the pointer
     this->c = c;
         //sets the event call back method in basecore
@@ -40,6 +36,9 @@ Runner::Runner(float windowWidth, float windowHeight, int frameRate,const char* 
     glfwSetMouseButtonCallback(window, mouseCallback);
     //set cursor call back
     glfwSetCursorPosCallback(window, cursorCallback);
+    //set the window height/width in the BaseCore
+    c->windowHeight = windowHeight;
+    c->windowWidth = windowWidth;
     //if the window is dead, stop the program
     if (!window)
     {

@@ -20,8 +20,6 @@ class Runner{
 public:
     //the RGBA of the next screen flush
     static float r, g, b, a;
-    //the windowWidht and Height
-    static float windowWidth, windowHeight;
     //the creation of the runner
     Runner(float windowWidth, float windowHeight, int frameRate, const char* title, BaseCore* c);
     ~Runner(){};

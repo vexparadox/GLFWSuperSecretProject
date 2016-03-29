@@ -26,6 +26,7 @@ protected:
     //Needs assignemnet made private
 public:
     int mouseX = 0, mouseY = 0;
+    int windowWidth= 0, windowHeight = 0;
     bool keyIsPressed = false;
     bool mouseIsPressed = false;
     int mouseButton = -1;

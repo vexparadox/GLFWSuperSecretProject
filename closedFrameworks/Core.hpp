@@ -8,8 +8,8 @@
 
 #ifndef Core_hpp
 #define Core_hpp
+#include "Runner.hpp" //This file is required.
 
-#include "Runner.hpp" //THIS IS NEEDED
 class Core : public BaseCore{
 public:
     Core(){};
