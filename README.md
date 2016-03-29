@@ -1,20 +1,17 @@
 #closedFrameworks v0.3
-A basic 2D game framework written in C++.
+A basic 2D game framework written in C++, runnable on xCode OSX 10.7+
 
-Please note the very limited functionality currently.
+Core.cpp and Core.hpp is the user entry point into the framework. The methods contained are explained in the wiki.
 
-Core.cpp and Core.hpp is where user code should be put. The Methods contained are self-explanatory.
+## Recent additions
 
-Setup > Update > Draw > Update > Draw > etc...
+-Push pop Matrixes
 
-A Runner object controls the main game loop. There is currently only functionality to draw polygons, rectangles, triangles, images and key events.
+-Ellipse rendering and collision
 
-You can use images by making an Image type and using loadImage(string, width, height) to load in an image. draw(x, y) will draw the image on screen.
+-Colour fills
 
-See:
-Graphics.hpp for shapes
-Image.hpp for images
-Text.hpp for text
+-Increased perforamce in collisions
 
 ##v0.3 Changelog
 
