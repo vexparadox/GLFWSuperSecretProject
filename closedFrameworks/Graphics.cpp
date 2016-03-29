@@ -152,7 +152,7 @@ namespace Graphics{
     }
     
     void clearFill(){
-        glColor4f(1, 1, 1, 1);
+        glColor4f(1, 1, 1, 0);
     }
 
 

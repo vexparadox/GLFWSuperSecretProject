@@ -49,6 +49,8 @@ Runner::Runner(float windowWidth, float windowHeight, int frameRate,const char* 
     glfwMakeContextCurrent(window);
     //sets the intervals of buffer swaps
     glfwSwapInterval(1);
+    //set a base colour of black, makes it easier for beginners
+    glColor4f(1, 1, 1, 1);
     //call setup for first time run
     c->setup();
     //the game loop
