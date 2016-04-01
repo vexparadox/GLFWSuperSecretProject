@@ -9,7 +9,9 @@
 #include "Timer.hpp"
 namespace Math{
     Timer::Timer(bool startNow){
-        beginTime = clock();
+        if(startNow){
+            beginTime = clock();
+        }
     }
     Timer::Timer(){
         
