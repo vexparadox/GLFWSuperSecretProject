@@ -32,12 +32,12 @@ namespace Math{
 
     float Timer::elapsedTime(){
         if(running){
-            return ((float) clock() - beginTime)/100000;
+            return ((float) clock() - beginTime)/CLOCKS_PER_SEC;
         }
         if(!started){
             return 0;
         }
-        return ((float) endTime - beginTime)/100000;
+        return ((float) endTime - beginTime)/CLOCKS_PER_SEC;
     }
     bool Timer::isRunning(){
         return running;
