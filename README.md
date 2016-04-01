@@ -1,17 +1,23 @@
-#closedFrameworks v0.3
+#closedFrameworks v0.4
 A basic 2D game framework written in C++, runnable on xCode OSX 10.7+
 
 Core.cpp and Core.hpp is the user entry point into the framework. The methods contained are explained in the wiki.
 
-## Recent additions
+##v0.4 Changelog
 
 -Push pop Matrixes
 
+-Matrix translation
+
+-Fixes to the timer
+
+-New Wiki pages!
+
 -Ellipse rendering and collision
 
--Colour fills
+-Colour fills, you can now easily colour shapes
 
--Increased perforamce in collisions
+-Increased perforamce other collisions
 
 ##v0.3 Changelog
 
