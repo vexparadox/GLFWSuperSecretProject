@@ -10,7 +10,7 @@
 namespace Math{
     Timer::Timer(bool startNow){
         if(startNow){
-            beginTime = clock();
+            this->start();
         }
     }
     Timer::Timer(){
