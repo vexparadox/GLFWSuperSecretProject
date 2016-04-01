@@ -79,15 +79,15 @@
 		C27B13691CA2D7A400645348 /* Collision.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Collision.cpp; sourceTree = "<group>"; };
 		C27B136A1CA2D7A400645348 /* Collision.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Collision.h; sourceTree = "<group>"; };
 		C27B136B1CA2D7A400645348 /* Colour.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Colour.h; sourceTree = "<group>"; };
-		C27B136C1CA2D7A400645348 /* Core.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Core.cpp; sourceTree = "<group>"; };
-		C27B136D1CA2D7A400645348 /* Core.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Core.hpp; sourceTree = "<group>"; };
+		C27B136C1CA2D7A400645348 /* Core.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Core.cpp; path = closedFrameworks/Core.cpp; sourceTree = "<group>"; };
+		C27B136D1CA2D7A400645348 /* Core.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Core.hpp; path = closedFrameworks/Core.hpp; sourceTree = "<group>"; };
 		C27B136E1CA2D7A400645348 /* CoreMain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreMain.h; sourceTree = "<group>"; };
 		C27B136F1CA2D7A400645348 /* CSVLoader.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CSVLoader.hpp; sourceTree = "<group>"; };
 		C27B13701CA2D7A400645348 /* Graphics.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Graphics.cpp; sourceTree = "<group>"; };
 		C27B13711CA2D7A400645348 /* Graphics.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Graphics.hpp; sourceTree = "<group>"; };
 		C27B13721CA2D7A400645348 /* Image.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Image.cpp; sourceTree = "<group>"; };
 		C27B13731CA2D7A400645348 /* Image.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Image.hpp; sourceTree = "<group>"; };
-		C27B13741CA2D7A400645348 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		C27B13741CA2D7A400645348 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = closedFrameworks/main.cpp; sourceTree = "<group>"; };
 		C27B13751CA2D7A400645348 /* Math.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Math.h; sourceTree = "<group>"; };
 		C27B13761CA2D7A400645348 /* Poly.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Poly.h; sourceTree = "<group>"; };
 		C27B13771CA2D7A400645348 /* Random.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Random.h; sourceTree = "<group>"; };
@@ -163,6 +163,9 @@
 				C22E64231C51206700386E87 /* libglfw3.a */,
 				C27E3AC91C87233900E1B900 /* libdrawtext-noft.a */,
 				C2071E871C15CBD700648169 /* OpenGL.framework */,
+				C27B13741CA2D7A400645348 /* main.cpp */,
+				C27B136C1CA2D7A400645348 /* Core.cpp */,
+				C27B136D1CA2D7A400645348 /* Core.hpp */,
 				C27B13591CA2D57400645348 /* closedFrameworks */,
 				C2071E7E1C15CBBE00648169 /* Products */,
 			);
@@ -180,9 +183,6 @@
 		C27B13591CA2D57400645348 /* closedFrameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C27B13741CA2D7A400645348 /* main.cpp */,
-				C27B136C1CA2D7A400645348 /* Core.cpp */,
-				C27B136D1CA2D7A400645348 /* Core.hpp */,
 				C27B13B21CA2D91400645348 /* Framework */,
 				C27B13B01CA2D8F300645348 /* Files */,
 				C27B13B31CA2D93D00645348 /* Types */,
@@ -505,6 +505,7 @@
 					/usr/local/libs,
 				);
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/lib";
+				ON_DEMAND_RESOURCES_INITIAL_INSTALL_TAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -523,6 +524,7 @@
 					/usr/local/libs,
 				);
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/lib";
+				ON_DEMAND_RESOURCES_INITIAL_INSTALL_TAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
