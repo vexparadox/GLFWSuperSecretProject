@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<true/>
 			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+		<key>closedFrameworksLib.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
 	</dict>
@@ -20,6 +25,11 @@
 			<true/>
 		</dict>
 		<key>C27B13571CA2D57400645348</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C2B55C871CAE7901006F72D7</key>
 		<dict>
 			<key>primary</key>
 			<true/>

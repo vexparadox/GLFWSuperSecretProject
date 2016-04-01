@@ -1,3 +1,4 @@
 /Build/Intermediates/
 /Build/Products/Debug/
 /bin/closedFrameworks
+/bin/lib/libclosedFrameworksLib.a
