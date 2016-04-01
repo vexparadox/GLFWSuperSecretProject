@@ -593,6 +593,7 @@
 				C2B55C8B1CAE7901006F72D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

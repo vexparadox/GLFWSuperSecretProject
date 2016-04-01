@@ -105,7 +105,7 @@ namespace Math {
             
         //normalise
         inline Vector2D& normalise(){
-            float length = (float)sqrt(this->x*this->x + this->y*this->y);
+            float length = this->length();
                 if(length > 0) {
                     this->x/= length;
                     this->y/= length;
