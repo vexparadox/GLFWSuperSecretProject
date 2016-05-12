@@ -10,6 +10,7 @@
 #define Component_hpp
 
 #include <stdio.h>
+#include "Math.h"
 class Component{
     
 };

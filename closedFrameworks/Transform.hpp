@@ -13,6 +13,10 @@
 #include "Component.hpp"
 
 class Transform : public Component{
-    
+    Math::Vector2D position;
+public:
+    Transform();
+    Transform(const Math::Vector2D& pos);
+    Math::Vector2D& getPos();
 };
 #endif /* Transform_hpp */

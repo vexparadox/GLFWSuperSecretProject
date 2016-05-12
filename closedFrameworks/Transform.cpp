@@ -7,3 +7,15 @@
 //
 
 #include "Transform.hpp"
+
+Transform::Transform(){
+    
+}
+
+Transform::Transform(const Math::Vector2D& pos): position(pos){
+    
+}
+
+Math::Vector2D& Transform::getPos(){
+    return position;
+}

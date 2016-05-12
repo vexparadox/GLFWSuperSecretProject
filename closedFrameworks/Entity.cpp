@@ -9,18 +9,13 @@
 #include "Entity.hpp"
 
 Entity::Entity(){
-    this->init();
+    addComponent(new Transform);
 }
 
 Entity::Entity(const Math::Vector2D& pos){
-    this->init();
+    addComponent(new Transform(pos));
 }
 
-bool Entity::init(){
-    
-    return true;
-}
-
-void Entity::addComponent(){
-    
+void Entity::addComponent(Component* c){
+    components.push_back(c);
 }
