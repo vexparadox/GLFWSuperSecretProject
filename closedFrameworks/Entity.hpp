@@ -11,12 +11,19 @@
 
 #include <stdio.h>
 #include "Math.h"
+#include "Transform.hpp"
 
 #endif /* Entity_hpp */
 
 class Entity{
+    //initialise, called from constructors
     bool init();
+    //a list of components
+    std::vector<Component> components;
 public:
+    //constructors
     Entity();
     Entity(const Math::Vector2D& pos);
+    //add a new component
+    void addComponent();
 };

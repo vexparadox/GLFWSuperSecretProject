@@ -10,6 +10,8 @@
 #define Transform_hpp
 
 #include <stdio.h>
+#include "Component.hpp"
+
 class Transform : public Component{
     
 };
