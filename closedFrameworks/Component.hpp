@@ -12,7 +12,9 @@
 #include <stdio.h>
 #include "Math.h"
 class Component{
-    
+protected:
+    Component();
+    virtual void update();
 };
 
 #endif /* Component_hpp */

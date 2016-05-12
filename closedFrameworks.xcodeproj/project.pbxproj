@@ -10,6 +10,7 @@
 		C2593E481CE4FDC700923107 /* Entity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2593E461CE4FDC700923107 /* Entity.cpp */; };
 		C2593E4B1CE4FE8300923107 /* Transform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2593E491CE4FE8300923107 /* Transform.cpp */; };
 		C2593E4E1CE4FE9E00923107 /* Component.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2593E4C1CE4FE9E00923107 /* Component.cpp */; };
+		C2593E521CE51D1F00923107 /* RigidBody.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2593E501CE51D1F00923107 /* RigidBody.cpp */; };
 		C27B135F1CA2D58D00645348 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C27E3AC51C871FF100E1B900 /* Cocoa.framework */; };
 		C27B13601CA2D59200645348 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C27E3ACD1C87240F00E1B900 /* IOKit.framework */; };
 		C27B13611CA2D59800645348 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C22E64271C5122C600386E87 /* CoreVideo.framework */; };
@@ -82,6 +83,8 @@
 		C2593E4A1CE4FE8300923107 /* Transform.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Transform.hpp; sourceTree = "<group>"; };
 		C2593E4C1CE4FE9E00923107 /* Component.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Component.cpp; sourceTree = "<group>"; };
 		C2593E4D1CE4FE9E00923107 /* Component.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Component.hpp; sourceTree = "<group>"; };
+		C2593E501CE51D1F00923107 /* RigidBody.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RigidBody.cpp; sourceTree = "<group>"; };
+		C2593E511CE51D1F00923107 /* RigidBody.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = RigidBody.hpp; sourceTree = "<group>"; };
 		C27B13581CA2D57400645348 /* closedFrameworks */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = closedFrameworks; sourceTree = BUILT_PRODUCTS_DIR; };
 		C27B13671CA2D7A300645348 /* BaseCore.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BaseCore.cpp; sourceTree = "<group>"; };
 		C27B13681CA2D7A300645348 /* BaseCore.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BaseCore.hpp; sourceTree = "<group>"; };
@@ -206,6 +209,8 @@
 				C2593E4D1CE4FE9E00923107 /* Component.hpp */,
 				C2593E491CE4FE8300923107 /* Transform.cpp */,
 				C2593E4A1CE4FE8300923107 /* Transform.hpp */,
+				C2593E501CE51D1F00923107 /* RigidBody.cpp */,
+				C2593E511CE51D1F00923107 /* RigidBody.hpp */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -408,6 +413,7 @@
 				C27B13871CA2D7A400645348 /* Collision.cpp in Sources */,
 				C2593E4E1CE4FE9E00923107 /* Component.cpp in Sources */,
 				C27B138A1CA2D7A400645348 /* Core.cpp in Sources */,
+				C2593E521CE51D1F00923107 /* RigidBody.cpp in Sources */,
 				C27B138E1CA2D7A400645348 /* Graphics.cpp in Sources */,
 				C27B13901CA2D7A400645348 /* Image.cpp in Sources */,
 				C27B13921CA2D7A400645348 /* main.cpp in Sources */,
