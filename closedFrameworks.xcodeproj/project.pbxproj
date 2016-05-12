@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C2593E481CE4FDC700923107 /* Entity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2593E461CE4FDC700923107 /* Entity.cpp */; };
+		C2593E4B1CE4FE8300923107 /* Transform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2593E491CE4FE8300923107 /* Transform.cpp */; };
+		C2593E4E1CE4FE9E00923107 /* Component.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2593E4C1CE4FE9E00923107 /* Component.cpp */; };
 		C27B135F1CA2D58D00645348 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C27E3AC51C871FF100E1B900 /* Cocoa.framework */; };
 		C27B13601CA2D59200645348 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C27E3ACD1C87240F00E1B900 /* IOKit.framework */; };
 		C27B13611CA2D59800645348 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C22E64271C5122C600386E87 /* CoreVideo.framework */; };
@@ -73,6 +76,12 @@
 		C2071E871C15CBD700648169 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		C22E64231C51206700386E87 /* libglfw3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libglfw3.a; path = lib/libglfw3.a; sourceTree = "<group>"; };
 		C22E64271C5122C600386E87 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		C2593E461CE4FDC700923107 /* Entity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Entity.cpp; sourceTree = "<group>"; };
+		C2593E471CE4FDC700923107 /* Entity.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Entity.hpp; sourceTree = "<group>"; };
+		C2593E491CE4FE8300923107 /* Transform.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Transform.cpp; sourceTree = "<group>"; };
+		C2593E4A1CE4FE8300923107 /* Transform.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Transform.hpp; sourceTree = "<group>"; };
+		C2593E4C1CE4FE9E00923107 /* Component.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Component.cpp; sourceTree = "<group>"; };
+		C2593E4D1CE4FE9E00923107 /* Component.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Component.hpp; sourceTree = "<group>"; };
 		C27B13581CA2D57400645348 /* closedFrameworks */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = closedFrameworks; sourceTree = BUILT_PRODUCTS_DIR; };
 		C27B13671CA2D7A300645348 /* BaseCore.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BaseCore.cpp; sourceTree = "<group>"; };
 		C27B13681CA2D7A300645348 /* BaseCore.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BaseCore.hpp; sourceTree = "<group>"; };
@@ -180,9 +189,31 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		C2593E451CE4FDA900923107 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				C2593E4F1CE4FEAC00923107 /* Components */,
+				C2593E461CE4FDC700923107 /* Entity.cpp */,
+				C2593E471CE4FDC700923107 /* Entity.hpp */,
+			);
+			name = Entity;
+			sourceTree = "<group>";
+		};
+		C2593E4F1CE4FEAC00923107 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				C2593E4C1CE4FE9E00923107 /* Component.cpp */,
+				C2593E4D1CE4FE9E00923107 /* Component.hpp */,
+				C2593E491CE4FE8300923107 /* Transform.cpp */,
+				C2593E4A1CE4FE8300923107 /* Transform.hpp */,
+			);
+			name = Components;
+			sourceTree = "<group>";
+		};
 		C27B13591CA2D57400645348 /* closedFrameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C2593E451CE4FDA900923107 /* Entity */,
 				C27B13B21CA2D91400645348 /* Framework */,
 				C27B13B01CA2D8F300645348 /* Files */,
 				C27B13B31CA2D93D00645348 /* Types */,
@@ -366,6 +397,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2593E4B1CE4FE8300923107 /* Transform.cpp in Sources */,
 				C27B13AB1CA2D80600645348 /* image_DXT.c in Sources */,
 				C27B13AC1CA2D80600645348 /* image_helper.c in Sources */,
 				C27B13AD1CA2D80600645348 /* SOIL.c in Sources */,
@@ -374,12 +406,14 @@
 				C27B13A61CA2D7F600645348 /* utf8.c in Sources */,
 				C27B13851CA2D7A400645348 /* BaseCore.cpp in Sources */,
 				C27B13871CA2D7A400645348 /* Collision.cpp in Sources */,
+				C2593E4E1CE4FE9E00923107 /* Component.cpp in Sources */,
 				C27B138A1CA2D7A400645348 /* Core.cpp in Sources */,
 				C27B138E1CA2D7A400645348 /* Graphics.cpp in Sources */,
 				C27B13901CA2D7A400645348 /* Image.cpp in Sources */,
 				C27B13921CA2D7A400645348 /* main.cpp in Sources */,
 				C27B13971CA2D7A400645348 /* Runner.cpp in Sources */,
 				C27B13991CA2D7A400645348 /* Text.cpp in Sources */,
+				C2593E481CE4FDC700923107 /* Entity.cpp in Sources */,
 				C27B139B1CA2D7A400645348 /* Timer.cpp in Sources */,
 				C27B139F1CA2D7A400645348 /* Utils.cpp in Sources */,
 			);
